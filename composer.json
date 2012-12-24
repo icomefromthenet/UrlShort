@@ -1,0 +1,41 @@
+{
+    "name": "icomefromthenet/urlshort",
+    "description": "Url Shortner",
+    "keywords": [ "url", "shortner","short" ],
+    "homepage": "http://github.com/icomefromthenet/UrlShort",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lewis Dyer",
+            "email": "getintouch@icomefromthenet.com",
+            "homepage": "http://www.icomefromthenet.com"
+        }
+    ],
+
+    "require-dev" : {
+        "icomefromthenet/faker"     : "dev-master",
+        "icomefromthenet/migration" : "dev-master",
+        "monolog/monolog"           : "1.2.*",
+        "silex/silex"               : "dev-master"
+    },
+    
+    "require" : {
+        "icomefromthenet/dbal-gateway" : "dev-master",
+        "icomefromthenet/laterjob"     : "dev-master",
+        "symfony/event-dispatcher"     : "2.1.*",
+        "symfony/console"              : "2.1.*",
+        "pimple/pimple"                : "1.0.*"
+        
+        
+    },
+    
+    "autoload": {
+        "psr-0": {
+            "UrlShort"              : "src/"
+        },
+        "classmap" : ["lib/gsb4ugc/lib","lib/crontab/src"]
+        
+    }
+    
+}

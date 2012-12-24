@@ -1,0 +1,10 @@
+manifest
+*.komodoproject
+composer.lock
+.vagrant
+migration/config/*.php
+faker/config/*.php
+faker/dump/*.sql
+faker/dump/*.xml
+vendor
+resources/cache/*

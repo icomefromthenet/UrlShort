@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SilexBuildFile" default="dist">
+
+    <property name="resource_path" value=""/>
+
+    <!-- ============================================  -->
+    <!-- Target: purge-cache                           -->
+    <!-- ============================================  -->
+    <target name="purge-cache">
+       <echo msg="Clearing Cache Directories" />
+       <delete dir="./resources/cache/twig"  includeemptydirs="true" verbose="true" failonerror="false" />
+       <delete dir="./resources/cache/logs"  includeemptydirs="true" verbose="true" failonerror="false" />
+    </target>
+    
+    
+    <!-- ============================================  -->
+    <!-- Target: prepare-cache                         -->
+    <!-- ============================================  -->
+    <target name="prepare-cache" depends="purge-cache">
+        <echo msg="Creating Cache Directories" />
+        <mkdir dir="./resources/cache" />
+        <mkdir dir="./resources/cache/twig" />
+        <mkdir dir="./resources/cache/logs" />
+        
+        <echo msg="Setting Write Permissions on Cache Dirs" />
+        <chmod file="./resources/cache/twig" mode="0755" />
+        <chmod file="./resources/cache/logs" mode="0755" />
+    </target>
+    
+    
+    <!-- ============================================  -->
+    <!-- Target: warm-cache                            -->
+    <!-- ============================================  -->
+    <target name="warm-cache" depends="prepare-cache">
+       <echo msg="Warming Cache" />
+       
+    </target>
+    
+    <!-- ============================================  -->
+    <!-- Target: prepare-assets                        -->
+    <!-- ============================================  -->
+    <target name="prepare-assets" depends="prepare-cache">
+        <echo msg="Purge Web Asset Directories" />
+        <delete dir="./web/assets" includeemptydirs="true" verbose="true" failonerror="false" />
+       
+        <echo msg="Creating Web Asset Directories" />
+        <mkdir dir="./web/assets" />
+        <mkdir dir="./web/assets/css" />
+        <mkdir dir="./web/assets/script" />
+        <mkdir dir="./web/assets/vendor" />
+        
+        <resolvepath propertyName="resource_path" file="./resources"/>
+        
+        <symlink target="${resource_path}/assets/img" link="./web/assets/img" overwrite="true" />        
+        <symlink target="${resource_path}/assets/vendor/img" link="./web/assets/vendor/img" overwrite="true" />        
+        
+        <echo msg="Setting Write Permissions Web directories" />
+        <chmod file="./web/assets" mode="0777" />
+        <chmod file="./web/assets/css" mode="0777" />
+        <chmod file="./web/assets/script" mode="0777" />
+    
+    </target>
+    
+    <!-- ============================================  -->
+    <!-- Target: compile-assets                        -->
+    <!-- ============================================  -->
+    <target name="compile-assets" depends="prepare-assets">
+        <echo msg="Dumping Assets" />
+        
+        <echo msg="Reversing Write Permissions Web directories" />
+        <chmod file="./web/assets" mode="0644" />
+        <chmod file="./web/assets/css" mode="0644" />
+        <chmod file="./web/assets/script" mode="0644" />
+       
+    </target>
+    
+    
+    <!-- ============================================  -->
+    <!-- (DEFAULT)  Target: dist                       --> 
+    <!-- ============================================  -->
+    <target name="dist">
+       
+       
+       
+       
+    </target>
+    
+    
+    <!-- ============================================  -->
+    <!-- Target: cron jobs                             --> 
+    <!-- ============================================  -->
+    <target name="cron-setup">
+       
+       <echo msg="Clearning User Crontab" />
+       <exec command="crontab -l" escape="false" />
+       
+       <echo msg="Running app cronbind command" />
+       <exec command="./bin/urlshort.php app:cronbind" output="stdout" escape="false" />
+       
+    </target>
+    
+</project>
