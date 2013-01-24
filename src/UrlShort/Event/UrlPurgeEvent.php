@@ -2,7 +2,6 @@
 namespace UrlShort\Event;
 
 use DateTime;
-use UrlShort\Shortner;
 
 /**
   *  Event fire when pruge stored urls
@@ -10,7 +9,7 @@ use UrlShort\Shortner;
   *  @access since 1.0.0
   *  @author Lewis Dyer <getintouch@icomefromthenet.com>
   */
-class UrlPurgeEvent extends ContainerAwareEvent
+class UrlPurgeEvent extends BaseEvent
 {
     
     protected $before;
@@ -18,14 +17,12 @@ class UrlPurgeEvent extends ContainerAwareEvent
     /**
       *  Class Constructor
       *
-      *  @param Shortner $shorten
       *  @param DateTime $before
       */
-    public function __construct(Shortner $shorten, DateTime $before)
+    public function __construct(DateTime $before)
     {
         $this->before = $before;
         
-        parent::__construct($shorten);
     }
     
     /**
@@ -36,7 +33,7 @@ class UrlPurgeEvent extends ContainerAwareEvent
       */
     public function getBefore()
     {
-        return $this->shortCode;
+        return $this->before;
     }
     
     

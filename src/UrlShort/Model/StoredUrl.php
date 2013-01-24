@@ -1,6 +1,8 @@
 <?php
 namespace UrlShort\Model;
 
+use DateTime;
+
 /**
   *  Entity of stored urls
   *
@@ -33,6 +35,26 @@ class StoredUrl
       *  @var string optional description 
       */
     public $description;
+    
+    /**
+      *  @var boolean if the review has passed only set once run 
+      */
+    public $reviewPassed;
+    
+    /**
+      *  @var string if failure a description of why and where. 
+      */
+    public $reviewFailureMessage;
+    
+    /**
+      *  @var Datetime the date of the review 
+      */    
+    public $reviewDate;
+    
+    /**
+      *  @var integer a relation to the tag that has been assigned 
+      */
+    public $tagId;
     
 }
 /* End of File */

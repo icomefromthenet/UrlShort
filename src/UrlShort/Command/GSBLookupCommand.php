@@ -33,6 +33,8 @@ class GSBLookupCommand extends Command
         
         $matches = $client->doLookup($url);
         
+        var_dump($matches);
+        
         $output->writeln("$url: " . count($matches));
                 
         return 0;

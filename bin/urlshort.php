@@ -11,6 +11,10 @@ use UrlShort\Command\SilexHelper,
     UrlShort\Command\GSBUpdateCommand,
     UrlShort\Command\SetupCronCommand;
 
+use  LaterJob\Command\CleanupCommand as LaterJobCleanupCommand;
+use  LaterJob\Command\MonitorCommand as LaterJobMonitorCommand;
+use  LaterJob\Command\PurgeCommand   as LaterJobPurgeCommand;
+use  LaterJob\Command\QueueHelper    as LaterJobQueueHelper;    
 /*
 |--------------------------------------------------------------------------
 | Require Apploader
@@ -33,13 +37,17 @@ require __DIR__. DIRECTORY_SEPARATOR .'..'. DIRECTORY_SEPARATOR . 'app.php';
 */
 $application = new Application();
 
+$application->add(new SetupCronCommand('cron:install'));
 $application->add(new PurgeCommand('app:purge'));
-$application->add(new SetupCronCommand('app:cronbind'));
 $application->add(new GSBPurgeCommand('gsb:purge'));
 $application->add(new GSBUpdateCommand('gsb:update'));
 $application->add(new GSBLookupCommand('gsb:lookup'));
+$application->add(new LaterJobCleanupCommand('laterjob:cleanup'));
+$application->add(new LaterJobMonitorCommand('laterjob:monitor'));
+$application->add(new LaterJobPurgeCommand('laterjob:activity-purge'));
 
 $application->getHelperSet()->set(new SilexHelper($app));
+$application->getHelperSet()->set(new LaterJobQueueHelper($app['urlshort.gsbqueue.queue']));
 
 # run the console
 $application->run();

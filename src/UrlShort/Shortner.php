@@ -1,17 +1,26 @@
 <?php
 namespace UrlShort;
 
-use DateTime, Pimple;
+use GSB_Client;
+use DateTime;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
-
 use UrlShort\Event\UrlShortEvents,
     UrlShort\Event\UrlLookupEvent,
     UrlShort\Event\UrlStoreEvent,
-    UrlShort\Event\UrlSpamCheckEvent,
     UrlShort\Event\UrlRemoveEvent,
     UrlShort\Event\UrlQueryEvent,
     UrlShort\Event\UrlPurgeEvent,
-    UrlShort\Model\StoredUrl;
+    UrlShort\Event\UrlReviewFailEvent,
+    UrlShort\Event\UrlReviewPassEvent,
+    UrlShort\Event\UrlShortEventsMap,
+    UrlShort\Model\StoredUrl,
+    UrlShort\Model\UrlMapper,
+    UrlShort\Decision\BlacklistReview,
+    UrlShort\Decision\WhitelistReview,
+    UrlShort\Decision\ResolveReview,
+    UrlShort\Decision\ReviewToken,
+    UrlShort\Decision\DecisionResolver;
+use Patchwork\Utf8;
 
 
 /**
@@ -20,7 +29,7 @@ use UrlShort\Event\UrlShortEvents,
   *  @author Lewis Dyer <getintouch@icomefromthenet.com>
   *  @since 1.0.0
   */    
-class Shortner extends Pimple
+class Shortner
 {
     
     /**
@@ -28,17 +37,27 @@ class Shortner extends Pimple
       */
     protected $eventDispatcher;
     
+    /**
+      *  @var UrlShort\Model\UrlMapper
+      */
+    protected $mapper;
+    
+    /**
+      *  @var  ShortCodeGenerator 
+      */
+    protected $shortCodeGenerator;
     
     /**
       *  Class Constructor
       *
       *  @param EventDispatcherInterface $event
       */    
-    public function __construct(EventDispatcherInterface $event)
+    public function __construct(EventDispatcherInterface $event, UrlMapper $mapper, ShortGeneratorInterface $generator)
     {
-        $this->eventDispatcher = $event;
+        $this->eventDispatcher    = $event;
+        $this->mapper             = $mapper;
+        $this->shortCodeGenerator = $generator;
     }
-    
         
     
     /**
@@ -48,43 +67,38 @@ class Shortner extends Pimple
       *  @param boolen $notice if this from a redirect request or internal lookup
       *  @return \UrlShort\Model\Url | null;
       */
-    public function lookup($key,$notice)
+    public function lookupReviewedUrl($key,$notice,$reviewStats)
     {
-        # validate the key and notice
+        if(is_string($key)) {
+            throw new UrlShortException('Lookup short must be a string');
+        }
         
-        # create the event
-        $event = new UrlLookupEvent($this,$key,$notice);
+        if(is_bool($reviewStats) === false) {
+            throw new UrlShortException('Invalid argument for $reviewStats must be a boolean');
+        }
         
-        # dispatch the event for processing
-        $this->eventDispatcher->dispatch(UrlShortEvents::LOOKUP,$event);
+        if(($url = $this->mapper->getByShortWithReview($key,$reviewStats)) !== false) {
+            
+            # create the event
+            $event = new UrlLookupEvent($url,$notice);
+            $event->setResult(true);
         
-        # return the result
-        return $event->getResult();
+            # dispatch the event for processing
+            $this->eventDispatcher->dispatch(UrlShortEventsMap::LOOKUP,$event);
+        }
+        
+        return $url;
     }
     
     /**
       *  Query to return a paged list of stored urls
       *
-      *  @param integer $limit the database limit
-      *  @param integer $offset the database offset
-      *  @param string $order asc|desc
-      *  @param DateTime $before
-      *  @param DateTime $after
-      *  @return Doctrine\Common\Collections\Collection
+      * @access public
+      * @return DBALGateway\Container\SelectContainer 
       */
-    public function query($limit,$offset,$order ='ASC', DateTime $before = null, DateTime $after = null)
+    public function query()
     {
-        # validate the params
-        
-        # create the event
-        $event = new UrlQueryEvent($this,$limit, $offset, $order, $before, $after);
-        
-        # dispatch the event for processing
-        $this->eventDispatcher->dispatch(UrlShortEvents::QUERY,$event);
-        
-        # return the result
-        return $event->getResult();
-        
+        return $this->mapper->find();        
     }
     
     /**
@@ -95,18 +109,17 @@ class Shortner extends Pimple
       *  @param integer the database id
       *   
       */
-    public function remove($id)
+    public function remove(StoredUrl $url)
     {
-        # validate the params
+        if($result = $this->mapper->remove($url) !== false) {
+
+            $event = new UrlRemoveEvent($url);
+            $event->setResult(true);
+            
+            $this->eventDispatcher->dispatch(UrlShortEventsMap::REMOVE,$event);
+        }
         
-        # create the event
-        $event = new UrlRemoveEvent($this,$id);
-        
-        # dispatch the event for processing
-        $this->eventDispatcher->dispatch(UrlShortEvents::REMOVE,$event);
-        
-        # return the result
-        return $event->getResult();
+        return $result;
     }
     
     /**
@@ -118,16 +131,14 @@ class Shortner extends Pimple
       */
     public function purge(DateTime $before)
     {
-        # validate the params
+        if($result = (integer)$this->mapper->purge($before) > 0) {
+            $event = new UrlPurgeEvent($before);
+            $event->setResult($result);
+            
+            $this->eventDispatcher->dispatch(UrlShortEventsMap::PURGE,$event);
+        }
         
-        # create the event
-        $event = new UrlPurgeEvent($this,$before);
-        
-        # dispatch the event for processing
-        $this->eventDispatcher->dispatch(UrlShortEvents::PURGE,$event);
-        
-        # return the result
-        return $event->getResult();
+        return $result;
     }
     
     /**
@@ -136,36 +147,86 @@ class Shortner extends Pimple
       *   @access public
       *   @param string $url the full url
       *   @param DateTime $now the current time
+      *   @param string $decription a description of the url
+      *   @param integer $tag_id optional id of a tag
       *   @return UrlShort\Model\Url
       */
-    public function create($url,DateTime $now)
+    public function create($url,DateTime $now, $decription = null, $tag_id = null)
     {
-        # validate the params
-        
-        
-        # create model entity
-        $entity             = new StoredUrl();
-        $entity->longUrl    = $url;
-        $entity->dateStored = $now;
-        
-        # run the spam check
-        $spamEvent          = new UrlSpamCheckEvent($this,$entity);
-        $this->eventDispatcher->dispatch(UrlShortEvents::SPAMCHECK,$spamEvent);
-        
-        if($spamEvent->getResult() === true) {
-            throw new FailedSmapCheckException(sprintf('URL %s has failed SPAM check',$url));            
+        if(is_string($url) == false) {
+            throw new UrlShortException(sprintf('Unable to store url %s it must be a string given is a %s',$url,gettype($url)));
         }
         
-        # create the event
-        $storeEvent         = new UrlStoreEvent($this,$entity);
+        if($tag_id !== null && is_int($tag_id) === false) {
+            throw new UrlShortException(sprintf('Unable to store url given tag %s must be a integer given is a %s',$tag_id,gettype($tag_id)));
+        }
         
-        # dispatch the event for processing
-        $this->eventDispatcher->dispatch(UrlShortEvents::CREATE,$storeEvent);
+        if(!empty($decription) && Utf8::strlen($decription) < 200) {
+            throw new UrlShortException('Unable to store url description given must be between 0 and 200 characters');
+        }
         
-        # return the result
-        return $event->getResult();
+        $entity              = new StoredUrl();
+        $entity->longUrl     = $url;
+        $entity->dateStored  = $now;
+        $entity->tagId       = $tag_id;
+        $entity->description = $decription;
+        
+        if($result = $this->mapper->save($entity) === true) {
+            # set the shortcode and update db
+            $entity->shortCode  = $this->shortCodeGenerator->convert($entity->tagId);    
+            $this->mapper->save($entity);
+            
+            $storeEvent         = new UrlStoreEvent($entity);
+            $storeEvent->setResult(true);
+            $this->eventDispatcher->dispatch(UrlShortEventsMap::CREATE,$storeEvent);    
+        }
+        
+        return $result;
     }
     
+   
+    /**
+      *  Pick url's to check from the queue and execute spam check
+      *
+      *  @access public
+      *  @param StoredUrl $url
+      */    
+    public function review(DecisionResolver $resolver,StoredUrl $url,ResolveReview $resolverReview, BlacklistReview $blacklistReview, WhitelistReview $whitelistReview)
+    {
+       $success = false;
+       $token = new ReviewToken($url);
+
+       # resolve the url       
+       if($resolver->resolve($resolverReview,$token) === true) {
+            
+            # on whitelist
+            $token = new ReviewToken($url);
+       
+            if($resolver->resolve($whitelistReview,$token) === false) {
+         
+                # not on the white list last review check 
+                $token = new ReviewToken($url);
+
+                if($resolver->resolve($blacklistReview,$token) === false) {
+                    # passed black list review.
+                    $success = true;
+                }
+                
+            } else {
+                # on the white list accept url
+                $success = true;                        
+            }
+       } 
+       
+       if($success == true) {
+            $this->eventDispatcher->dispatch(UrlShortEventsMap::REVIEW_FAIL,new UrlReviewFailEvent($token));           
+       } else {
+            $this->eventDispatcher->dispatch(UrlShortEventsMap::REVIEW_PASS,new UrlReviewPassEvent($token));        
+       }
+       
+       return $token;
+        
+    }
     
 }
 /* End of File */

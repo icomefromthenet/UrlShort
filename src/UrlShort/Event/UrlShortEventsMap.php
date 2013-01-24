@@ -7,7 +7,7 @@ namespace UrlShort\Event;
   *  @access since 1.0.0
   *  @author Lewis Dyer <getintouch@icomefromthenet.com>
   */
-final class UrlShortEvents
+final class UrlShortEventsMap
 {
     /**
      * The urlshort.lookup event is thrown each time a url is queried with shortcode.
@@ -64,15 +64,24 @@ final class UrlShortEvents
     const REMOVE = 'urlshort.remove';
     
     
-     /**
-     * The 'urlshort.spamcheck' event is thrown each time a url evaluated against spam check
+    /**
+     * The 'urlshort.review.pass' event is used  when url passes acceptance review
      *
      * The event listener receives an
      * UrlShort\Event\UrlSpamCheckEvent instance.
      *
      * @var string
      */
-    const SPAMCHECK = 'urlshort.spamcheck';
+    const REVIEW_PASS = 'urlshort.review.pass';
+    
+    /**
+     * The 'urlshort.review.fail' event is used when url failes acceptance review
+     *
+     * The event listener receives an
+     * UrlShort\Event\UrlSpamCheckEvent instance.
+     *
+     * @var string
+     */
+    const REVIEW_FAIL = 'urlshort.review.fail';
 }
-
 /* End of File */

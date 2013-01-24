@@ -20,18 +20,18 @@ class SetupCronCommand extends Command
 {
     
     /**
-    * Truncate the Queue and Transition table
+    * Setup the cron tab
     *
     * @param InputInterface $input An InputInterface instance
     * @param OutputInterface $output An OutputInterface instance
     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $bin_file = realpath(__DIR__ ."/../../../bin/urlshort.php > /dev/null");
-        $crontab  = new CrontabManager();        
         
+        $bin_file = realpath(__DIR__ ."/../../../bin/urlshort.php");
+        $crontab  = new CrontabManager();        
         $job = $crontab->newJob();
-        $job->onMinute('30')->doJob($bin_file .' gsb:update');
+        $job->onMinute('30')->onHour('*')->doJob($bin_file .' gsb:update  > /dev/null');
 
         $crontab->add($job);
         $crontab->save();

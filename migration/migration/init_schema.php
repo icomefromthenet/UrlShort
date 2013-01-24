@@ -31,6 +31,17 @@ class init_schema implements EntityInterface
         # Optional description message
         $table->addColumn('description_msg','string',array('length' => 200,'notnull'=> false));
         
+        # Tag Relation (QuickTag)
+        $table->addColumn('tag_id','integer', array("unsigned" => true));
+        
+        # Review bool
+        $table->addColumn('review_passed','boolean', array('notnull'=> false));
+        
+        # Review failure msg
+        $table->addColumn('review_failure_msg','string', array('notnull'=> false));
+        
+        # Review Date
+        $table->addColumn('review_date','datetime', array('notnull'=> false));
         
         $queries = $builder->toSql($db->getDatabasePlatform());
         

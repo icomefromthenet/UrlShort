@@ -1,8 +1,7 @@
 <?php
 namespace UrlShort\Event;
 
-use UrlShort\Shortner,
-    UrlShort\Model\StoredUrl;
+use UrlShort\Model\StoredUrl;
 
 /**
   *  Event fire when url needs storage
@@ -10,7 +9,7 @@ use UrlShort\Shortner,
   *  @access since 1.0.0
   *  @author Lewis Dyer <getintouch@icomefromthenet.com>
   */
-class UrlStoreEvent extends ContainerAwareEvent
+class UrlStoreEvent extends BaseEvent
 {
     /**
       *  @var StoredUrl 
@@ -20,15 +19,11 @@ class UrlStoreEvent extends ContainerAwareEvent
     /**
       *  Class Constructor
       *
-      *  @param Shortner $shorten
-      *  @param string $key the shortcode
-      *  @param boolean $notice , if this lookup came from a redirect request 
+      * @param StoredUrl $url the entity that was stored
       */
-    public function __construct(Shortner $shorten,StoredUrl $url)
+    public function __construct(StoredUrl $url)
     {
         $this->url = $url;
-        
-        parent::__construct($shorten);
     }
     
     
@@ -38,7 +33,7 @@ class UrlStoreEvent extends ContainerAwareEvent
       *  @access public
       *  @return UrlShort\Model\StoredUrl
       */    
-    public function getStorage()
+    public function getUrl()
     {
         return $this->url;
     }

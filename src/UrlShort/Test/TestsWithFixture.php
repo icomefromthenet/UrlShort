@@ -1,7 +1,12 @@
 <?php
 namespace UrlShort\Test;
 
-use PDO,PHPUnit_Extensions_Database_Operation_Composite,PHPUnit_Extensions_Database_TestCase;
+use PDO;
+use PHPUnit_Extensions_Database_Operation_Composite;
+use PHPUnit_Extensions_Database_TestCase;
+use Symfony\Component\HttpKernel\Client;
+use Symfony\Component\HttpKernel\HttpKernel;
+
 
 class TestsWithFixture extends PHPUnit_Extensions_Database_TestCase
 {
@@ -53,6 +58,47 @@ class TestsWithFixture extends PHPUnit_Extensions_Database_TestCase
     public function getDataSet()
     {
         return  $this->createXMLDataSet(__DIR__ . DIRECTORY_SEPARATOR .'fixture.xml');
+    }
+    
+    
+    //------------------------------------------------------------------
+    # WebTestCase Implementation
+    
+    protected $app;
+
+    /**
+    * PHPUnit setUp for setting up the application.
+    *
+    * Note: Child classes that define a setUp method must call
+    * parent::setUp().
+    */
+    public function setUp()
+    {
+        parent::setUp();
+        
+        $this->app = $this->createApplication();
+    }
+
+    /**
+    * Creates the application.
+    *
+    * @return HttpKernel
+    */
+    public function createApplication()
+    {
+       
+    }
+
+    /**
+    * Creates a Client.
+    *
+    * @param array $server An array of server parameters
+    *
+    * @return Client A Client instance
+    */
+    public function createClient(array $server = array())
+    {
+        return new Client($this->app, $server);
     }
     
 }

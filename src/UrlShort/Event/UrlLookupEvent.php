@@ -1,7 +1,7 @@
 <?php
 namespace UrlShort\Event;
 
-use UrlShort\Shortner;
+use UrlShort\Model\StoredUrl;
 
 /**
   *  Event fire when url is lookup by its shortcode
@@ -9,37 +9,35 @@ use UrlShort\Shortner;
   *  @access since 1.0.0
   *  @author Lewis Dyer <getintouch@icomefromthenet.com>
   */
-class UrlLookupEvent extends ContainerAwareEvent
+class UrlLookupEvent extends BaseEvent
 {
     
-    protected $shortCode;
+    protected $url;
     
     protected $notice;
     
     /**
       *  Class Constructor
       *
-      *  @param Shortner $shorten
-      *  @param string $key the shortcode
+      *  @param UrlShort\Model\StoredUrl $url
       *  @param boolean $notice , if this lookup came from a redirect request 
       */
-    public function __construct(Shortner $shorten,$key,$notice)
+    public function __construct(StoredUrl $url, $notice)
     {
-        $this->shortCode = $key;
-        $this->notice    = (boolean) $notice;
+        $this->url     = $url;
+        $this->notice  = (boolean) $notice;
         
-        parent::__construct($shorten);
     }
     
     /**
       *  Get the short code
       *
-      *  @return string the shortcode
+      *  @return UrlShort\Model\StoredUrl $url
       *  @access public
       */
-    public function getShortCode()
+    public function getUrl()
     {
-        return $this->shortCode;
+        return $this->url;
     }
     
     /**

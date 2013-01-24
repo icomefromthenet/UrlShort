@@ -38,7 +38,17 @@ require (__DIR__ . "/resources/config/application.php");
 #
 #------------------------------------------------------------------
 
+# Mount LaterJob API for GSB 
+$app->mount('/queue', new \LaterJobApi\Controllers\QueueProvider('urlshort.gsbqueue.queue'));
+$app->mount('/queue', new \LaterJobApi\Controllers\ActivityProvider('urlshort.gsbqueue.queue'));
+$app->mount('/queue', new \LaterJobApi\Controllers\MonitorProvider('urlshort.gsbqueue.queue'));
+$app->mount('/queue', new \LaterJobApi\Controllers\ScheduleProvider('urlshort.gsbqueue.queue'));
+
+# Mount QuickTag on /tags
+$app->mount('/quicktag', new QuickTag\Silex\Controllers\TagProvider('urlshort.quicktag'));
+
+# mount shorten API
 $app->mount('/shorten/',  new UrlShort\Controller\ShortUrlProvider());
-//$app->mount('/shorten/',  new UrlShort\Controller\ShortUrlProvider());
+
 
 return $app;

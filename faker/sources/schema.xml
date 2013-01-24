@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<schema name="url_short">
+ <writer platform="mysql" format="phpunit" />
+ 
+ 
+ <table name="url_short_storage" generate="200" generatorSeed="1000" randomGenerator="mersenne">
+  <column name="url_id" type="integer">
+   <datatype name="autoincrement" />
+  </column>
+  
+  <column name="short_code" type="string">
+   <datatype name="unique_string" format="DDDDD">
+   </datatype>
+  </column>
+  
+  <column name="long_url" type="string">
+   <datatype name="regex" format="(http|https):\/\/www\.[a-z]{5,15}(\.com|\.com\.au|\.net|\.org|\.edu|\.tv)" />
+  </column>
+  
+  <column name="date_created" type="datetime">
+   <datatype name="date" start="today" modify="+1 day" max="today +10 weeks" />
+  </column>
+  
+  <column name="description_msg" type="string">
+   <datatype name="text" paragraphs="1" minlines="1" />
+  </column>
+  
+  <column name="tag_id" type="integer">
+   <foreign-key name="url_short_tags.tag_id" foreignTable="url_short_tags" foreignColumn="tag_id" />
+  </column>
+  
+  <column name="review_passed" type="boolean">
+   <swap>
+    <when switch="150">
+     <!-- passed review -->
+     <datatype name="boolean" value="true" />
+    </when>
+    <when switch="25">
+     <!-- failed review -->
+      <datatype name="boolean" value="false" />
+    </when>
+    <when switch="25">
+     <!-- not been reviewed -->
+     <datatype name="nulltype" />
+    </when>
+   </swap>
+  </column>
+  
+  <column name="review_failure_msg" type="string">
+   <swap>
+    <when switch="150">
+     <!-- passed review -->
+    <datatype name="nulltype" />
+    </when>
+    <when switch="25">
+     <!-- failed review -->
+      <datatype name="text" paragraphs="1" minlines="1" />
+    </when>
+    <when switch="25">
+     <!-- not been reviewed -->
+     <datatype name="nulltype" />
+    </when>
+   </swap>
+  </column>
+  
+  <column name="review_date" type="datetime">
+    <swap>
+    <when switch="175">
+     <!-- passed review -->
+    <datatype name="date" start="now" modify="+1 day" max="today +10 weeks" />
+    </when>
+    <when switch="25">
+     <!-- not been reviewed -->
+     <datatype name="nulltype" />
+    </when>
+   </swap>
+   
+   
+  </column>
+  
+  
+ </table>
+ 
+ 
+ <table name="url_short_tags" generate="20">
+  <column name="tag_id" type="integer">
+   <datatype name="autoincrement" />
+  </column>
+  <column name="tag_user_context" type="integer">
+   <alternate step="1">
+    <datatype name="constant_number" value="1" />
+    <datatype name="constant_number" value="2" />
+    <datatype name="constant_number" value="3" />
+   </alternate>
+  </column>
+  <column name="tag_date_created" type="datetime">
+   <datatype name="date">
+    <option name="start" value="today" />
+    <option name="modify" value="+1 day" />
+    <option name="max" value="today +10 weeks" />
+   </datatype>
+  </column>
+  <column name="tag_weight" type="float">
+   <datatype name="range">
+    <option name="max" value="100" />
+    <option name="min" value="1" />
+    <option name="random" value="true" />
+    <option name="round" value="2" />
+   </datatype>
+  </column>
+  <column name="tag_title" type="string">
+   <datatype name="alphanumeric">
+    <option name="format" value="ccvdx" />
+   </datatype>
+  </column>
+ </table>
+</schema>

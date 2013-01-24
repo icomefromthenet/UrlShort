@@ -1,7 +1,7 @@
 <?php
 namespace UrlShort\Event;
 
-use UrlShort\Shortner;
+use UrlShort\Model\StoredUrl;
 
 /**
   *  Event fire when remove a stored url
@@ -9,33 +9,30 @@ use UrlShort\Shortner;
   *  @access since 1.0.0
   *  @author Lewis Dyer <getintouch@icomefromthenet.com>
   */
-class UrlRemoveEvent extends ContainerAwareEvent
+class UrlRemoveEvent extends BaseEvent
 {
     
-    protected $id;
+    protected $url;
     
     /**
       *  Class Constructor
       *
-      *  @param Shortner $shorten
-      *  @param integer $id the database id
+      *  @param UrlShort\Model\StoredUrl $url 
       */
-    public function __construct(Shortner $shorten,$id)
+    public function __construct(StoredUrl $url)
     {
-        $this->id = (integer) $id;
-                
-        parent::__construct($shorten);
+        $this->url = $url;
     }
     
     /**
       *  Get the database id to remove
       *
-      *  @return integer the database id
+      *  @return UrlShort\Model\StoredUrl the removed url
       *  @access public
       */
-    public function getId()
+    public function getUrl()
     {
-        return $this->id;
+        return $this->url;
     }
 
 }
