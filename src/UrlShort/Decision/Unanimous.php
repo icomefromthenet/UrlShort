@@ -1,6 +1,7 @@
 <?php
 namespace UrlShort\Decision;
 
+use UrlShort\Decision\StrategyInterface;
 
 /**
 * Will return a negative decision if one of the criteria returns negative result.

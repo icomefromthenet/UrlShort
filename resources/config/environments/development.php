@@ -134,6 +134,13 @@ $app->register(new LaterJobApi\Provider\QueueServiceProvider('urlshort.gsbqueue'
 
             
 # ----------------------------------------------------
+# Pdp Url Parser
+# 
+# ---------------------------------------------------
+
+$app->register(new UrlShort\Pdp\PdpServiceProvider(),array());
+
+# ----------------------------------------------------
 # Setup UrlShortner Provider
 # 
 # ---------------------------------------------------

@@ -31,8 +31,7 @@ class WhitelistReviewProvider implements ServiceProviderInterface
         
         
         $app['urlshort.review.whitelist'] = $app->share(function() use ($app){
-            return new WhitelistReview($app['urlshort.review.whitelist.decision'],
-                                       $app['urlshort.review.whitelist.criteria']);
+            return new WhitelistReview($app['urlshort.review.whitelist.criteria'],$app['urlshort.review.whitelist.decision']);
         });
         
     }

@@ -1,5 +1,5 @@
 <?php
-namespace ShortUrl\Decision;
+namespace UrlShort\Decision;
 
 /**
 * Common interface for decision strategies.

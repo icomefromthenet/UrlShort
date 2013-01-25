@@ -4,6 +4,8 @@ namespace UrlShort\Decision\Provider;
 use Silex\ServiceProviderInterface;
 use Silex\Application;
 use UrlShort\Decision\ResolveReview;
+use UrlShort\Decision\Criteria\ResolveLinkCriteria;
+use UrlShort\Decision\Unanimous;
 
 /**
 * Provides default setup and extension hooks for ResolveReview 
@@ -19,20 +21,21 @@ class ResolveReviewProvider implements ServiceProviderInterface
       
        if(isset($app['urlshort.review.resolve.criteria']) === false) {
             $app['urlshort.review.resolve.criteria'] = $app->share(function() use ($app) {
-                    
+                return  array(
+                    new ResolveLinkCriteria()
+                );
             });
         } 
        
         if(isset($app['urlshort.review.resolve.decision']) === false) {
             $app['urlshort.review.resolve.decision'] = $app->share(function() use ($app)  {
-                return new UrlShort\Decision\Unanimous();
+                return new Unanimous();
             });
         }
         
         
         $app['urlshort.review.resolve'] = $app->share(function() use ($app){
-            return new Review($app['urlshort.review.resolve.decision'],
-                              $app['urlshort.review.resolve.criteria']);
+            return new ResolveReview($app['urlshort.review.resolve.criteria'],$app['urlshort.review.resolve.decision']);
         });
         
     }

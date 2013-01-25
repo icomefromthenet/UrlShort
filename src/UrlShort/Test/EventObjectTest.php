@@ -6,7 +6,8 @@ use UrlShort\Event\UrlLookupEvent;
 use UrlShort\Event\UrlPurgeEvent;
 use UrlShort\Event\UrlRemoveEvent;
 use UrlShort\Event\UrlShortEventsMap;
-use UrlShort\Event\UrlReviewEvent;
+use UrlShort\Event\UrlReviewFailEvent;
+use UrlShort\Event\UrlReviewPassEvent;
 use UrlShort\Event\UrlStoreEvent;
 use UrlShort\Event\UrlQueryEvent;
 use UrlShort\Event\BaseEvent;
@@ -74,18 +75,26 @@ class EventObjectTest extends TestsWithFixture
     }
     
     
-    public function testUrlReviewEventProperties()
+    public function testUrlReviewFailProperties()
     {
-       $decision = $this->getMockBuilder('UrlShort\Decision\AbstractDecision')->disableOriginalConstructor()->getMock();
        $token    = $this->getMockBuilder('UrlShort\Decision\ReviewToken')->disableOriginalConstructor()->getMock();
        
-       $event = new UrlReviewEvent($token,$decision);
+       $event = new UrlReviewFailEvent($token);
         
        $this->assertEquals($token,$event->getToken());
-       $this->assertEquals($decision,$event->getFailedReview()); 
-        
     }
 
+    
+    public function testUrlReviewPassProperties()
+    {
+       $token    = $this->getMockBuilder('UrlShort\Decision\ReviewToken')->disableOriginalConstructor()->getMock();
+       
+       $event = new UrlReviewPassEvent($token);
+        
+       $this->assertEquals($token,$event->getToken());
+       
+        
+    }
 
     public function testUrlQueryEventProperties()
     {

@@ -3,7 +3,7 @@ namespace UrlShort\Decision;
 
 use UrlShort\Model\StoredUrl;
 use UrlShort\UrlShortException;
-
+use Pdp\Domain;
 
 /**
   *  This review token is passed into each ReviewDecision. 
@@ -29,16 +29,23 @@ class ReviewToken
     protected $reviewMessages;
     
     /**
+      *  @var Pdp\Domain the url parsed into segments 
+      */
+    protected $urlParts;
+    
+    /**
       *  Class Constructor
       *
       *  @access public
       *  @param StoredUrl $url to use in the review
+      *  @param Pdp\Domain $parts the url parts
       */
-    public function __construct(StoredUrl $url)
+    public function __construct(StoredUrl $url, Domain $urlParts)
     {
         $this->storedUrl      = $url;
         $this->reviewResult   = array();
         $this->reviewMessages = array();
+        $this->urlParts       = $urlParts;
     }
     
     //------------------------------------------------------------------
@@ -52,6 +59,17 @@ class ReviewToken
     public function getStoredUrl()
     {
         return $this->storedUrl;
+    }
+    
+    /**
+      *  Fetch the url parts
+      *
+      *  @access public
+      *  @return Pdp\Domain url parts
+      */
+    public function getUrlParts()
+    {
+        return $this->urlParts;
     }
     
     //------------------------------------------------------------------

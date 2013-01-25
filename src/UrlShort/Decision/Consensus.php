@@ -1,5 +1,5 @@
 <?php
-namespace URLShort\Decision;
+namespace UrlShort\Decision;
 
 /**
 * Will Return an affirmative decision if the number of positive criteria exceeds the

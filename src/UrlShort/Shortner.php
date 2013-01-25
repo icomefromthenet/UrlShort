@@ -21,6 +21,8 @@ use UrlShort\Event\UrlShortEvents,
     UrlShort\Decision\ReviewToken,
     UrlShort\Decision\DecisionResolver;
 use Patchwork\Utf8;
+use \Pdp\DomainParser;
+
 
 
 /**
@@ -191,21 +193,27 @@ class Shortner
       *  @access public
       *  @param StoredUrl $url
       */    
-    public function review(DecisionResolver $resolver,StoredUrl $url,ResolveReview $resolverReview, BlacklistReview $blacklistReview, WhitelistReview $whitelistReview)
+    public function review(DomainParser $parser,DecisionResolver $resolver,StoredUrl $url,ResolveReview $resolverReview, BlacklistReview $blacklistReview, WhitelistReview $whitelistReview)
     {
        $success = false;
-       $token = new ReviewToken($url);
+       
+       # break the url into parts
+       $parts = $parser->parse($url->longUrl);
+       
+       $token = new ReviewToken($url,$parts);
 
        # resolve the url       
        if($resolver->resolve($resolverReview,$token) === true) {
             
+            $parts = 
+            
             # on whitelist
-            $token = new ReviewToken($url);
+            $token = new ReviewToken($url,$parts);
        
             if($resolver->resolve($whitelistReview,$token) === false) {
          
                 # not on the white list last review check 
-                $token = new ReviewToken($url);
+                $token = new ReviewToken($url,$parts);
 
                 if($resolver->resolve($blacklistReview,$token) === false) {
                     # passed black list review.
