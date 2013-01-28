@@ -41,6 +41,9 @@ class GSBCriteria implements CriteriaInterface
         
         if(count($result) > 0) {
             $onList = true;
+            $token->addReviewMessage('GSBCriteria','Link found on Google Safer Browser Blacklist on list '.$result[0]['listname']);    
+        } else {
+            $token->addReviewMessage('GSBCriteria','Link NOT found on Google Safer Browser Blacklist');    
         }
         
         return $onList;            

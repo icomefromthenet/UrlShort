@@ -10,7 +10,8 @@ use UrlShort\Command\SilexHelper,
     UrlShort\Command\GSBPurgeCommand,
     UrlShort\Command\GSBUpdateCommand,
     UrlShort\Command\SetupCronCommand,
-    UrlShort\Command\UrlSuffixRefreshCommand;
+    UrlShort\Command\UrlSuffixRefreshCommand,
+    UrlShort\Command\UrlParserTestCommand;
 
 use  LaterJob\Command\CleanupCommand as LaterJobCleanupCommand;
 use  LaterJob\Command\MonitorCommand as LaterJobMonitorCommand;
@@ -46,7 +47,8 @@ $application->add(new GSBLookupCommand('gsb:lookup'));
 $application->add(new LaterJobCleanupCommand('laterjob:cleanup'));
 $application->add(new LaterJobMonitorCommand('laterjob:monitor'));
 $application->add(new LaterJobPurgeCommand('laterjob:activity-purge'));
-$application->add(new UrlSuffixRefreshCommand('suffix:refresh'));
+$application->add(new UrlSuffixRefreshCommand('url:refresh'));
+$application->add(new UrlParserTestCommand('url:parse'));
 
 $application->getHelperSet()->set(new SilexHelper($app));
 $application->getHelperSet()->set(new LaterJobQueueHelper($app['urlshort.gsbqueue.queue']));

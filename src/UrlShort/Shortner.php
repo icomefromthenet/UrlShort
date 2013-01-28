@@ -21,7 +21,7 @@ use UrlShort\Event\UrlShortEvents,
     UrlShort\Decision\ReviewToken,
     UrlShort\Decision\DecisionResolver;
 use Patchwork\Utf8;
-use \Pdp\DomainParser;
+use Pdp\DomainParser;
 
 
 
@@ -34,6 +34,7 @@ use \Pdp\DomainParser;
 class Shortner
 {
     
+     
     /**
       *  @var  Symfony\Component\EventDispatcher\EventDispatcherInterface
       */
@@ -67,19 +68,20 @@ class Shortner
       *
       *  @param string $key the short code
       *  @param boolen $notice if this from a redirect request or internal lookup
+      *  @param boolean $reviewStatus
       *  @return \UrlShort\Model\Url | null;
       */
-    public function lookupReviewedUrl($key,$notice,$reviewStats)
+    public function lookup($key,$notice,$reviewStatus = true)
     {
         if(is_string($key)) {
             throw new UrlShortException('Lookup short must be a string');
         }
         
         if(is_bool($reviewStats) === false) {
-            throw new UrlShortException('Invalid argument for $reviewStats must be a boolean');
+            throw new UrlShortException('Review Status must be a boolean');
         }
         
-        if(($url = $this->mapper->getByShortWithReview($key,$reviewStats)) !== false) {
+        if(($url = $this->mapper->getByShortWithReview($key,$reviewStatus)) !== false) {
             
             # create the event
             $event = new UrlLookupEvent($url,$notice);
@@ -149,41 +151,56 @@ class Shortner
       *   @access public
       *   @param string $url the full url
       *   @param DateTime $now the current time
-      *   @param string $decription a description of the url
+      *   @param string $description a description of the url
       *   @param integer $tag_id optional id of a tag
       *   @return UrlShort\Model\Url
       */
-    public function create($url,DateTime $now, $decription = null, $tag_id = null)
+    public function create($url,DateTime $now, $description = null, $tag_id = null)
     {
-        if(is_string($url) == false) {
-            throw new UrlShortException(sprintf('Unable to store url %s it must be a string given is a %s',$url,gettype($url)));
+        $url         = (string) $url;
+        $description = (string) $description;
+        
+        $maxUrlLength  = $this->mapper->getUrlMaxSize();
+        $maxDescLength = $this->mapper->getDescriptionMaxSize();
+        
+        if(!Utf8::strlen($url) > 0 || Utf8::strlen($url) > $maxUrlLength) {
+            throw new UrlShortException(sprintf('URL must be a string be between 0 and %s characters',$maxUrlLength));
         }
         
         if($tag_id !== null && is_int($tag_id) === false) {
-            throw new UrlShortException(sprintf('Unable to store url given tag %s must be a integer given is a %s',$tag_id,gettype($tag_id)));
+            throw new UrlShortException(sprintf('Unable to store url given tag must be a integer given is a %s',gettype($tag_id)));
         }
         
-        if(!empty($decription) && Utf8::strlen($decription) < 200) {
-            throw new UrlShortException('Unable to store url description given must be between 0 and 200 characters');
+        
+        if(empty($description) || Utf8::strlen($description) > $maxDescLength ) {
+            throw new UrlShortException(sprintf('Unable to store url description given must be between 0 and %s characters',$maxDescLength));
         }
         
         $entity              = new StoredUrl();
         $entity->longUrl     = $url;
         $entity->dateStored  = $now;
         $entity->tagId       = $tag_id;
-        $entity->description = $decription;
+        $entity->description = $description;
         
-        if($result = $this->mapper->save($entity) === true) {
+        if($this->mapper->save($entity) === true) {
             # set the shortcode and update db
             $entity->shortCode  = $this->shortCodeGenerator->convert($entity->tagId);    
-            $this->mapper->save($entity);
             
-            $storeEvent         = new UrlStoreEvent($entity);
+            if($this->mapper->save($entity) === false) {
+                throw new UrlShortException('Unable to complete saving the new url::'.$url);
+            }
+            
+            $storeEvent  = new UrlStoreEvent($entity);
             $storeEvent->setResult(true);
-            $this->eventDispatcher->dispatch(UrlShortEventsMap::CREATE,$storeEvent);    
+            
+            $this->eventDispatcher->dispatch(UrlShortEventsMap::CREATE,$storeEvent);
+            
+        } else {
+            
+            $entity = null;
         }
         
-        return $result;
+        return $entity;
     }
     
    

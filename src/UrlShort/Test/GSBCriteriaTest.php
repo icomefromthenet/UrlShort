@@ -58,7 +58,7 @@ class GSBCriteriaTest extends WebTestCase
         $gsbClient->expects($this->once())
                   ->method('doLookup')
                   ->with($this->equalTo($url->longUrl))
-                  ->will($this->returnValue(array(1,2,3)));
+                  ->will($this->returnValue(array(0 => array('listname' => 'goog-malware-shavar'))));
         
                     
         $criteria = new GSBCriteria($gsbClient);    

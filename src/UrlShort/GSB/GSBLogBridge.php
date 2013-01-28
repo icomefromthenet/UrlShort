@@ -2,51 +2,51 @@
 namespace UrlShort\GSB;
 
 use GSB_Logger;
-use Monolog\Logger;
+use Psr\Log\LoggerInterface;
+
 
 class GSBLogBridge extends GSB_Logger
 {
     
     /**
-      *  @var Monolog\Logger; 
+      *  @var Psr\Log\LoggerInterface; 
       */
     protected $logger;
     
     /**
       *  Class Constructor
       *
-      *  @param integer $level -1, none, 0 fatal only, 4 all
       *  @param mono
       *  @access public
       */
-    function __construct(Logger $logger)
+    function __construct(LoggerInterface $logger)
     {
         $this->logger = $logger;
     }
 
     public function fatal($message)
     {
-        $this->logger->addCritical($message);    
+        $this->logger->critical($message,array());    
     }
     
     public function error($message)
     {
-        $this->logger->addError($message);
+        $this->logger->error($message,array());
     }
     
     public function warn($message)
     {
-        $this->logger->addWarning($message);
+        $this->logger->warn($message,array());
     }
     
     public function info($message)
     {
-        $this->logger->addInfo($message);
+        $this->logger->info($message,array());
     }
     
     public function debug($message)
     {
-        $this->logger->addDebug($message);
+        $this->logger->debug($message,array());
     }
         
 }

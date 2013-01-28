@@ -237,5 +237,29 @@ class UrlMapper
         return $this->gateway->selectQuery();        
     }
     
+    
+    /**
+      *  Return the url max size
+      *
+      *  @access public
+      *  @return false
+      */
+    public function getUrlMaxSize()
+    {
+        return $this->gateway->getMetaData()->getColumn('long_url')->getLength();
+    }
+    
+    
+    /**
+      *  Return the description max size
+      *
+      *  @access public
+      *  @return false
+      */
+    public function getDescriptionMaxSize()
+    {
+        return $this->gateway->getMetaData()->getColumn('description_msg')->getLength();        
+    }
+    
 }
 /* End of File */

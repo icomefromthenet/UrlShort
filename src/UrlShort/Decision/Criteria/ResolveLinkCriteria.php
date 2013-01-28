@@ -31,9 +31,11 @@ class ResolveLinkCriteria implements CriteriaInterface
             
         }  catch (BadResponseException $e) {
             # 4.x.x or 5.x.x http error cause the above exception
+            $token->addReviewMessage('ResolveLinkCriteria','Link return 4.x.x or 5.x.x ok failed to resolve');
             return false;
         }
         
+        $token->addReviewMessage('ResolveLinkCriteria','Link return 200 ok from Resolver');
         return true;
                 
     }

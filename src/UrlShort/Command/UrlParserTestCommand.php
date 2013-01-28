@@ -9,12 +9,12 @@ use Symfony\Component\Console\Command\Command,
     Symfony\Component\Console\Input\InputArgument;
 
 /**
-*  Refresh the suffix list for pdp parser
+*  Parse a url and output result
 *
 *  @author Lewis Dyer <getintouch@icomefromthenet.com>
 *  @since 1.0.0
 */
-class UrlSuffixRefreshCommand extends Command
+class UrlParserTestCommand extends Command
 {
     
     /**
@@ -25,11 +25,14 @@ class UrlSuffixRefreshCommand extends Command
     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $app     = $this->getHelper('silexApplication')->getApplication();
-        $manager = $app['pdb.listmanager'];
-        $manager->refreshPublicSuffixList();
+        $url = $input->getArgument('url');
         
-        $output->writeln('Finished Refreshing the Suffix List');
+        $app     = $this->getHelper('silexApplication')->getApplication();
+        $parser = $app['pdb.parser'];
+        
+        $domain = $parser->parse($url);
+        
+        $output->writeln(var_export($domain,true));
         
         return 0;
     }
@@ -38,16 +41,18 @@ class UrlSuffixRefreshCommand extends Command
     
     protected function configure()
     {
-        $this->setDescription('Refresh list public URL suffix cache');
+        $this->setDescription('Parse a url and output results');
         $this->setHelp(<<<EOF
-Refresh the pdp url suffix cache
+Output the result of url parsing by pdp parsing library
+Don't forget to <info>quote the url</info> .
 
 Examples:
 
->> url:refresh 
+>> url:parse "http://www.google.com.au?b=c&f=u"
 
 EOF
 );
+        $this->addArgument('url',InputArgument::REQUIRED, 'A url to parse');
         parent::configure();
     }
 }

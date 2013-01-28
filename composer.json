@@ -14,9 +14,7 @@
     ],
 
     "require-dev" : {
-        "icomefromthenet/faker"     : "dev-master",
-        "icomefromthenet/migration" : "dev-master",
-        "monolog/monolog"           : "1.2.*",
+        "monolog/monolog"           : "1.3.*",
         "symfony/dom-crawler"       : "dev-master",
         "symfony/browser-kit"       : "dev-master"
     },
@@ -26,6 +24,7 @@
         "icomefromthenet/laterjob"     : "dev-master",
         "icomefromthenet/quicktag"     : "dev-master",  
         "symfony/console"              : "2.1.*",
+        "symfony/config"               : "2.1.*",
         "patchwork/utf8"               : "1.0.*",
         "psr/log"                      : "1.0.*",
         "jeremykendall/php-domain-parser": "dev-master",
