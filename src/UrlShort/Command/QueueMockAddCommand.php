@@ -2,13 +2,14 @@
 namespace UrlShort\Command;
 
 use DateTime;
+use RuntimeException;
 use Symfony\Component\Console\Command\Command,
     Symfony\Component\Console\Input\InputInterface,
     Symfony\Component\Console\Output\OutputInterface,
     Symfony\Component\Console\Helper\DialogHelper,
     Symfony\Component\Console\Input\InputArgument;
 
-use UrlShort\Shortner;
+use LaterJob\Log\ConsoleSubscriber;
 
 /**
 * Purge Urls created before the given date.
@@ -16,7 +17,7 @@ use UrlShort\Shortner;
 * @author Lewis Dyer <getintouch@icomefromthenet.com>
 * @since 0.0.1
 */
-class SetupCronCommand extends Command
+class QueueMockAddCommand extends Command
 {
     
     /**
@@ -31,18 +32,13 @@ class SetupCronCommand extends Command
         return $app['urlshort.queue.queue'];
     }
     
-    /**
-      *  Fetch the UrlShortner
-      *
-      *  @return UrlShortner\Shortner
-      */
-    protected function getShortner()
+    
+    protected function getEventDispatcher()
     {
         $app = $this->getHelper('silexApplication')->getApplication();
         
-        return $app['urlshort'];
+        return $app['urlshort.queue.event.dispatcher'];
     }
-    
     
     /**
     * Truncate the Queue and Transition table
@@ -52,47 +48,37 @@ class SetupCronCommand extends Command
     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        # attach console logger so we can see the results of this operation
+        $this->getEventDispatcher()->addSubscriber(new ConsoleSubscriber($output));
+        
         # load the queue
         $queue    = $this->getQueue();
-        $shortner = $this->getShortner();
         
-        $worker = $queue->worker();
+        # verify the argument is a number    
+        $now      = new DateTime();
+        $jCount   = $input->getArgument('jcount');
+        
+        if(!is_numeric($jCount)) {
+            throw new RuntimeException('Argument jcount must be an integer');
+        }
+        
+        # add mock jobs
         
         try {
-            # start the worker
-            $worker->start(new DateTime());
-            
-            $allocator = $worker->receive(new DateTime());
-            $handle = $worker->getId();
-            
-            foreach($allocator as $job) {
-            
-                try {
-
-                    $job->start($handle,new DateTime());
-                    
-                    # fetch the stored url 
-                    $entity = $shortner->lookup($job->getStorage()->urlId);    
-                    
-                    $shortner->review($entity);
-                    
-                    
-                    $job->finish($handle,new DateTime());
-                }
-                catch(LaterJobException $e) {
-                    
-                    if($job->getRetryCount() > 0) {
-                        $job->error($handle,new DateTime(),$e->getMessage());
-                    }
-                    else {
-                        $job->fail($handle,new DateTime(),$e->getMessage());
-                    }
-                }
-            
+           
+            while($jCount > 0) {
+                # each job data needs to be unique value as
+                # we store a hash of job data
+                $queue->send($now,array(
+                    'job_name' => 'mock_job'
+                   ,'made'    => $now->format('Y-m-d H:i:s')
+                   ,'count'   => $jCount
+                ));
+                
+                
+                           
+                $jCount = $jCount-1;
             }
-            
-            # finish the worker
-            $worker->finish(new DateTime());
             
         } catch(LaterJobException $e) {
             $worker->error($handle,new DateTime(),$e->getMessage());
@@ -108,15 +94,17 @@ class SetupCronCommand extends Command
     
     protected function configure()
     {
-        $this->setDescription('The URL Review Worker');
+        $this->setDescription('Adds mock jobs to the queue');
         $this->setHelp(<<<EOF
-Will run a url review worker.
+Will add mock jobs to the queue.
 
 Examples:
 
->> app:url-review 
+>> laterjob:mockjobs 100 
 EOF
 );
+        
+        $this->addArgument('jcount',InputArgument::REQUIRED,'The number of mock jobs to add');
         
         parent::configure();
     }

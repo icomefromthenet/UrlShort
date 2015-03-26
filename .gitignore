@@ -8,3 +8,6 @@ faker/dump/*.sql
 faker/dump/*.xml
 vendor
 resources/cache/*
+node_modules
+.c9
+resources/log/*.log

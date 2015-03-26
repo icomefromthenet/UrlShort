@@ -12,10 +12,10 @@ class ShortUrlProvider implements ControllerProviderInterface
         // creates a new controller based on the default route
         $controllers = $app['controllers_factory'];
 
-        $controllers->get('/urls/{id}', array($this,'getUrlAction'))->assert('id', '\d+');;
+        $controllers->get('/urls/{id}', array($this,'getUrlAction'))->assert('id', '\d+');
         $controllers->get('/urls', array($this,'queryUrlAction'));
         $controllers->post('/urls', array($this,'postUrlAction'));
-        $controllers->delete('/urls/{id}', array($this,'deleteUrlAction'))->assert('id', '\d+');;
+        $controllers->delete('/urls/{id}', array($this,'deleteUrlAction'))->assert('id', '\d+');
         
 
         return $controllers;

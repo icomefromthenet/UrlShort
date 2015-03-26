@@ -39,10 +39,10 @@ require (__DIR__ . "/resources/config/application.php");
 #------------------------------------------------------------------
 
 # Mount LaterJob API for GSB 
-$app->mount('/queue', new \LaterJobApi\Controllers\QueueProvider('urlshort.gsbqueue.queue'));
-$app->mount('/queue', new \LaterJobApi\Controllers\ActivityProvider('urlshort.gsbqueue.queue'));
-$app->mount('/queue', new \LaterJobApi\Controllers\MonitorProvider('urlshort.gsbqueue.queue'));
-$app->mount('/queue', new \LaterJobApi\Controllers\ScheduleProvider('urlshort.gsbqueue.queue'));
+$app->mount('/queue', new \LaterJobApi\Controllers\QueueProvider('urlshort.queue.queue'));
+$app->mount('/queue', new \LaterJobApi\Controllers\ActivityProvider('urlshort.queue.queue'));
+$app->mount('/queue', new \LaterJobApi\Controllers\MonitorProvider('urlshort.queue.queue'));
+$app->mount('/queue', new \LaterJobApi\Controllers\ScheduleProvider('urlshort.queue.queue'));
 
 # Mount QuickTag on /tags
 $app->mount('/quicktag', new QuickTag\Silex\Controllers\TagProvider('urlshort.quicktag'));
@@ -50,5 +50,15 @@ $app->mount('/quicktag', new QuickTag\Silex\Controllers\TagProvider('urlshort.qu
 # mount shorten API
 $app->mount('/shorten/',  new UrlShort\Controller\ShortUrlProvider());
 
+$app->mount('/admin',new UrlShort\Controller\AdminActionsProvider());
+
+# Mount the user controller routes:
+$app->mount('/user', $app['user.provider']);
+
+
+$app->mount('/',new UrlShort\Controller\GlobalActionsProvider());
+
 
 return $app;
+
+

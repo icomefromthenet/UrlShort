@@ -50,6 +50,9 @@ return array (
     'mil' => 
     array (
     ),
+    'blogspot' => 
+    array (
+    ),
   ),
   'aero' => 
   array (
@@ -437,50 +440,35 @@ return array (
   ),
   'ar' => 
   array (
-    '*' => 
-    array (
-    ),
-    'congresodelalengua3' => 
-    array (
-      '!' => '',
-    ),
-    'educ' => 
-    array (
-      '!' => '',
-    ),
-    'gobiernoelectronico' => 
-    array (
-      '!' => '',
-    ),
-    'mecon' => 
-    array (
-      '!' => '',
-    ),
-    'nacion' => 
-    array (
-      '!' => '',
-    ),
-    'nic' => 
-    array (
-      '!' => '',
-    ),
-    'promocion' => 
-    array (
-      '!' => '',
-    ),
-    'retina' => 
-    array (
-      '!' => '',
-    ),
-    'uba' => 
-    array (
-      '!' => '',
-    ),
     'com' => 
     array (
       'blogspot' => 
       array (
       ),
+    ),
+    'edu' => 
+    array (
+    ),
+    'gob' => 
+    array (
+    ),
+    'gov' => 
+    array (
+    ),
+    'int' => 
+    array (
+    ),
+    'mil' => 
+    array (
+    ),
+    'net' => 
+    array (
+    ),
+    'org' => 
+    array (
+    ),
+    'tur' => 
+    array (
     ),
   ),
   'arpa' => 
@@ -583,12 +571,6 @@ return array (
     ),
     'gov' => 
     array (
-      'act' => 
-      array (
-      ),
-      'nt' => 
-      array (
-      ),
       'qld' => 
       array (
       ),
@@ -731,6 +713,9 @@ return array (
     'biz' => 
     array (
     ),
+    'co' => 
+    array (
+    ),
     'com' => 
     array (
     ),
@@ -750,6 +735,9 @@ return array (
     array (
     ),
     'store' => 
+    array (
+    ),
+    'tv' => 
     array (
     ),
   ),
@@ -881,9 +869,6 @@ return array (
     8 => 
     array (
     ),
-  ),
-  'bg	 	 	' => 
-  array (
     9 => 
     array (
     ),
@@ -1151,6 +1136,9 @@ return array (
     'mil' => 
     array (
     ),
+    'mp' => 
+    array (
+    ),
     'mus' => 
     array (
     ),
@@ -1159,6 +1147,9 @@ return array (
     ),
     'nom' => 
     array (
+      '*' => 
+      array (
+      ),
     ),
     'not' => 
     array (
@@ -1266,6 +1257,9 @@ return array (
     array (
     ),
   ),
+  'bv' => 
+  array (
+  ),
   'bw' => 
   array (
     'co' => 
@@ -1305,6 +1299,9 @@ return array (
     array (
     ),
     'gov' => 
+    array (
+    ),
+    'za' => 
     array (
     ),
   ),
@@ -1433,7 +1430,7 @@ return array (
     'asso' => 
     array (
     ),
-    'aéroport' => 
+    'xn--aroport-bya' => 
     array (
     ),
     'int' => 
@@ -1476,7 +1473,16 @@ return array (
   ),
   'cm' => 
   array (
+    'co' => 
+    array (
+    ),
+    'com' => 
+    array (
+    ),
     'gov' => 
+    array (
+    ),
+    'net' => 
     array (
     ),
   ),
@@ -1503,13 +1509,13 @@ return array (
     'mil' => 
     array (
     ),
-    '公司' => 
+    'xn--55qx5d' => 
     array (
     ),
-    '网络' => 
+    'xn--io0a7i' => 
     array (
     ),
-    '網絡' => 
+    'xn--od0alg' => 
     array (
     ),
     'ah' => 
@@ -1614,6 +1620,15 @@ return array (
     'tw' => 
     array (
     ),
+    'amazonaws' => 
+    array (
+      'compute' => 
+      array (
+        'cn-north-1' => 
+        array (
+        ),
+      ),
+    ),
   ),
   'co' => 
   array (
@@ -1659,6 +1674,117 @@ return array (
   ),
   'com' => 
   array (
+    'amazonaws' => 
+    array (
+      'compute' => 
+      array (
+        'ap-northeast-1' => 
+        array (
+        ),
+        'ap-southeast-1' => 
+        array (
+        ),
+        'ap-southeast-2' => 
+        array (
+        ),
+        'eu-west-1' => 
+        array (
+        ),
+        'eu-central-1' => 
+        array (
+        ),
+        'sa-east-1' => 
+        array (
+        ),
+        'us-gov-west-1' => 
+        array (
+        ),
+        'us-west-1' => 
+        array (
+        ),
+        'us-west-2' => 
+        array (
+        ),
+      ),
+      'compute-1' => 
+      array (
+        'z-1' => 
+        array (
+        ),
+        'z-2' => 
+        array (
+        ),
+      ),
+      'us-east-1' => 
+      array (
+      ),
+      'elb' => 
+      array (
+      ),
+      's3' => 
+      array (
+      ),
+      's3-us-west-2' => 
+      array (
+      ),
+      's3-us-west-1' => 
+      array (
+      ),
+      's3-eu-west-1' => 
+      array (
+      ),
+      's3-ap-southeast-1' => 
+      array (
+      ),
+      's3-ap-southeast-2' => 
+      array (
+      ),
+      's3-ap-northeast-1' => 
+      array (
+      ),
+      's3-sa-east-1' => 
+      array (
+      ),
+      's3-us-gov-west-1' => 
+      array (
+      ),
+      's3-fips-us-gov-west-1' => 
+      array (
+      ),
+      's3-website-us-east-1' => 
+      array (
+      ),
+      's3-website-us-west-2' => 
+      array (
+      ),
+      's3-website-us-west-1' => 
+      array (
+      ),
+      's3-website-eu-west-1' => 
+      array (
+      ),
+      's3-website-ap-southeast-1' => 
+      array (
+      ),
+      's3-website-ap-southeast-2' => 
+      array (
+      ),
+      's3-website-ap-northeast-1' => 
+      array (
+      ),
+      's3-website-sa-east-1' => 
+      array (
+      ),
+      's3-website-us-gov-west-1' => 
+      array (
+      ),
+    ),
+    'elasticbeanstalk' => 
+    array (
+    ),
+    'betainabox' => 
+    array (
+    ),
     'ar' => 
     array (
     ),
@@ -1677,9 +1803,6 @@ return array (
     'gb' => 
     array (
     ),
-    'gr' => 
-    array (
-    ),
     'hu' => 
     array (
     ),
@@ -1687,6 +1810,9 @@ return array (
     array (
     ),
     'kr' => 
+    array (
+    ),
+    'mex' => 
     array (
     ),
     'no' => 
@@ -1716,22 +1842,19 @@ return array (
     'za' => 
     array (
     ),
-    'operaunite' => 
+    'africa' => 
     array (
     ),
-    'appspot' => 
+    'gr' => 
     array (
     ),
-    'blogspot' => 
+    'co' => 
     array (
     ),
-    'codespot' => 
+    'cloudcontrolled' => 
     array (
     ),
-    'googleapis' => 
-    array (
-    ),
-    'googlecode' => 
+    'cloudcontrolapp' => 
     array (
     ),
     'dreamhosters' => 
@@ -2187,10 +2310,70 @@ return array (
     'writesthisblog' => 
     array (
     ),
-    'betainabox' => 
+    'firebaseapp' => 
+    array (
+    ),
+    'flynnhub' => 
+    array (
+    ),
+    'githubusercontent' => 
+    array (
+    ),
+    'ro' => 
+    array (
+    ),
+    'appspot' => 
+    array (
+    ),
+    'blogspot' => 
+    array (
+    ),
+    'codespot' => 
+    array (
+    ),
+    'googleapis' => 
+    array (
+    ),
+    'googlecode' => 
+    array (
+    ),
+    'pagespeedmobilizer' => 
+    array (
+    ),
+    'withgoogle' => 
+    array (
+    ),
+    'herokuapp' => 
+    array (
+    ),
+    'herokussl' => 
+    array (
+    ),
+    'nfshost' => 
+    array (
+    ),
+    'operaunite' => 
+    array (
+    ),
+    'outsystemscloud' => 
     array (
     ),
     'rhcloud' => 
+    array (
+    ),
+    'sinaapp' => 
+    array (
+    ),
+    'vipsinaapp' => 
+    array (
+    ),
+    '1kapp' => 
+    array (
+    ),
+    'hk' => 
+    array (
+    ),
+    'yolasite' => 
     array (
     ),
   ),
@@ -2248,6 +2431,21 @@ return array (
     array (
     ),
   ),
+  'cw' => 
+  array (
+    'com' => 
+    array (
+    ),
+    'edu' => 
+    array (
+    ),
+    'net' => 
+    array (
+    ),
+    'org' => 
+    array (
+    ),
+  ),
   'cx' => 
   array (
     'gov' => 
@@ -2274,9 +2472,6 @@ return array (
     'com' => 
     array (
     ),
-    'blogspot' => 
-    array (
-    ),
     'fuettertdasnetz' => 
     array (
     ),
@@ -2293,6 +2488,9 @@ return array (
     array (
     ),
     'traeumtgerade' => 
+    array (
+    ),
+    'blogspot' => 
     array (
     ),
   ),
@@ -2458,9 +2656,6 @@ return array (
     array (
     ),
   ),
-  'eg  ' => 
-  array (
-  ),
   'eg' => 
   array (
     'com' => 
@@ -2520,7 +2715,25 @@ return array (
   ),
   'et' => 
   array (
-    '*' => 
+    'com' => 
+    array (
+    ),
+    'gov' => 
+    array (
+    ),
+    'org' => 
+    array (
+    ),
+    'edu' => 
+    array (
+    ),
+    'biz' => 
+    array (
+    ),
+    'name' => 
+    array (
+    ),
+    'info' => 
     array (
     ),
   ),
@@ -2635,6 +2848,9 @@ return array (
   'ga' => 
   array (
   ),
+  'gb' => 
+  array (
+  ),
   'gd' => 
   array (
   ),
@@ -2670,16 +2886,10 @@ return array (
     'co' => 
     array (
     ),
-    'org' => 
-    array (
-    ),
     'net' => 
     array (
     ),
-    'sch' => 
-    array (
-    ),
-    'gov' => 
+    'org' => 
     array (
     ),
   ),
@@ -2865,55 +3075,58 @@ return array (
     'org' => 
     array (
     ),
-    '公司' => 
+    'xn--55qx5d' => 
     array (
     ),
-    '教育' => 
+    'xn--wcvs22d' => 
     array (
     ),
-    '敎育' => 
+    'xn--lcvr32d' => 
     array (
     ),
-    '政府' => 
+    'xn--mxtq1m' => 
     array (
     ),
-    '個人' => 
+    'xn--gmqw5a' => 
     array (
     ),
-    '个人' => 
+    'xn--ciqpn' => 
     array (
     ),
-    '箇人' => 
+    'xn--gmq050i' => 
     array (
     ),
-    '網络' => 
+    'xn--zf0avx' => 
     array (
     ),
-    '网络' => 
+    'xn--io0a7i' => 
     array (
     ),
-    '组織' => 
+    'xn--mk0axi' => 
     array (
     ),
-    '網絡' => 
+    'xn--od0alg' => 
     array (
     ),
-    '网絡' => 
+    'xn--od0aq3b' => 
     array (
     ),
-    '组织' => 
+    'xn--tn0ag' => 
     array (
     ),
-    '組織' => 
+    'xn--uc0atv' => 
+    array (
+    ),
+    'xn--uc0ay4a' => 
     array (
     ),
     'blogspot' => 
     array (
     ),
-  ),
-  'hk ' => 
-  array (
-    '組织' => 
+    'ltd' => 
+    array (
+    ),
+    'inc' => 
     array (
     ),
   ),
@@ -3114,13 +3327,22 @@ return array (
     'ac' => 
     array (
     ),
+    'biz' => 
+    array (
+    ),
     'co' => 
+    array (
+    ),
+    'desa' => 
     array (
     ),
     'go' => 
     array (
     ),
     'mil' => 
+    array (
+    ),
+    'my' => 
     array (
     ),
     'net' => 
@@ -3159,6 +3381,9 @@ return array (
   ),
   'im' => 
   array (
+    'ac' => 
+    array (
+    ),
     'co' => 
     array (
       'ltd' => 
@@ -3168,19 +3393,19 @@ return array (
       array (
       ),
     ),
-    'net' => 
+    'com' => 
     array (
     ),
-    'gov' => 
+    'net' => 
     array (
     ),
     'org' => 
     array (
     ),
-    'nic' => 
+    'tt' => 
     array (
     ),
-    'ac' => 
+    'tv' => 
     array (
     ),
   ),
@@ -3270,6 +3495,12 @@ return array (
     'com' => 
     array (
     ),
+    'github' => 
+    array (
+    ),
+    'nid' => 
+    array (
+    ),
   ),
   'iq' => 
   array (
@@ -3315,10 +3546,10 @@ return array (
     'sch' => 
     array (
     ),
-    'ایران' => 
+    'xn--mgba3a4f16a' => 
     array (
     ),
-    'ايران' => 
+    'xn--mgba3a4fra' => 
     array (
     ),
   ),
@@ -3342,6 +3573,9 @@ return array (
     'int' => 
     array (
     ),
+    'cupcake' => 
+    array (
+    ),
   ),
   'it' => 
   array (
@@ -3351,136 +3585,289 @@ return array (
     'edu' => 
     array (
     ),
-    'agrigento' => 
+    'abr' => 
+    array (
+    ),
+    'abruzzo' => 
+    array (
+    ),
+    'aosta-valley' => 
+    array (
+    ),
+    'aostavalley' => 
+    array (
+    ),
+    'bas' => 
+    array (
+    ),
+    'basilicata' => 
+    array (
+    ),
+    'cal' => 
+    array (
+    ),
+    'calabria' => 
+    array (
+    ),
+    'cam' => 
+    array (
+    ),
+    'campania' => 
+    array (
+    ),
+    'emilia-romagna' => 
+    array (
+    ),
+    'emiliaromagna' => 
+    array (
+    ),
+    'emr' => 
+    array (
+    ),
+    'friuli-v-giulia' => 
+    array (
+    ),
+    'friuli-ve-giulia' => 
+    array (
+    ),
+    'friuli-vegiulia' => 
+    array (
+    ),
+    'friuli-venezia-giulia' => 
+    array (
+    ),
+    'friuli-veneziagiulia' => 
+    array (
+    ),
+    'friuli-vgiulia' => 
+    array (
+    ),
+    'friuliv-giulia' => 
+    array (
+    ),
+    'friulive-giulia' => 
+    array (
+    ),
+    'friulivegiulia' => 
+    array (
+    ),
+    'friulivenezia-giulia' => 
+    array (
+    ),
+    'friuliveneziagiulia' => 
+    array (
+    ),
+    'friulivgiulia' => 
+    array (
+    ),
+    'fvg' => 
+    array (
+    ),
+    'laz' => 
+    array (
+    ),
+    'lazio' => 
+    array (
+    ),
+    'lig' => 
+    array (
+    ),
+    'liguria' => 
+    array (
+    ),
+    'lom' => 
+    array (
+    ),
+    'lombardia' => 
+    array (
+    ),
+    'lombardy' => 
+    array (
+    ),
+    'lucania' => 
+    array (
+    ),
+    'mar' => 
+    array (
+    ),
+    'marche' => 
+    array (
+    ),
+    'mol' => 
+    array (
+    ),
+    'molise' => 
+    array (
+    ),
+    'piedmont' => 
+    array (
+    ),
+    'piemonte' => 
+    array (
+    ),
+    'pmn' => 
+    array (
+    ),
+    'pug' => 
+    array (
+    ),
+    'puglia' => 
+    array (
+    ),
+    'sar' => 
+    array (
+    ),
+    'sardegna' => 
+    array (
+    ),
+    'sardinia' => 
+    array (
+    ),
+    'sic' => 
+    array (
+    ),
+    'sicilia' => 
+    array (
+    ),
+    'sicily' => 
+    array (
+    ),
+    'taa' => 
+    array (
+    ),
+    'tos' => 
+    array (
+    ),
+    'toscana' => 
+    array (
+    ),
+    'trentino-a-adige' => 
+    array (
+    ),
+    'trentino-aadige' => 
+    array (
+    ),
+    'trentino-alto-adige' => 
+    array (
+    ),
+    'trentino-altoadige' => 
+    array (
+    ),
+    'trentino-s-tirol' => 
+    array (
+    ),
+    'trentino-stirol' => 
+    array (
+    ),
+    'trentino-sud-tirol' => 
+    array (
+    ),
+    'trentino-sudtirol' => 
+    array (
+    ),
+    'trentino-sued-tirol' => 
+    array (
+    ),
+    'trentino-suedtirol' => 
+    array (
+    ),
+    'trentinoa-adige' => 
+    array (
+    ),
+    'trentinoaadige' => 
+    array (
+    ),
+    'trentinoalto-adige' => 
+    array (
+    ),
+    'trentinoaltoadige' => 
+    array (
+    ),
+    'trentinos-tirol' => 
+    array (
+    ),
+    'trentinostirol' => 
+    array (
+    ),
+    'trentinosud-tirol' => 
+    array (
+    ),
+    'trentinosudtirol' => 
+    array (
+    ),
+    'trentinosued-tirol' => 
+    array (
+    ),
+    'trentinosuedtirol' => 
+    array (
+    ),
+    'tuscany' => 
+    array (
+    ),
+    'umb' => 
+    array (
+    ),
+    'umbria' => 
+    array (
+    ),
+    'val-d-aosta' => 
+    array (
+    ),
+    'val-daosta' => 
+    array (
+    ),
+    'vald-aosta' => 
+    array (
+    ),
+    'valdaosta' => 
+    array (
+    ),
+    'valle-aosta' => 
+    array (
+    ),
+    'valle-d-aosta' => 
+    array (
+    ),
+    'valle-daosta' => 
+    array (
+    ),
+    'valleaosta' => 
+    array (
+    ),
+    'valled-aosta' => 
+    array (
+    ),
+    'valledaosta' => 
+    array (
+    ),
+    'vallee-aoste' => 
+    array (
+    ),
+    'valleeaoste' => 
+    array (
+    ),
+    'vao' => 
+    array (
+    ),
+    'vda' => 
+    array (
+    ),
+    'ven' => 
+    array (
+    ),
+    'veneto' => 
     array (
     ),
     'ag' => 
     array (
     ),
-    'alessandria' => 
+    'agrigento' => 
     array (
     ),
     'al' => 
     array (
     ),
-    'ancona' => 
-    array (
-    ),
-    'an' => 
-    array (
-    ),
-    'aosta' => 
-    array (
-    ),
-    'aoste' => 
-    array (
-    ),
-    'ao' => 
-    array (
-    ),
-    'arezzo' => 
-    array (
-    ),
-    'ar' => 
-    array (
-    ),
-    'ascoli-piceno' => 
-    array (
-    ),
-    'ascolipiceno' => 
-    array (
-    ),
-    'ap' => 
-    array (
-    ),
-    'asti' => 
-    array (
-    ),
-    'at' => 
-    array (
-    ),
-    'avellino' => 
-    array (
-    ),
-    'av' => 
-    array (
-    ),
-    'bari' => 
-    array (
-    ),
-    'ba' => 
-    array (
-    ),
-    'andria-barletta-trani' => 
-    array (
-    ),
-    'andriabarlettatrani' => 
-    array (
-    ),
-    'trani-barletta-andria' => 
-    array (
-    ),
-    'tranibarlettaandria' => 
-    array (
-    ),
-    'barletta-trani-andria' => 
-    array (
-    ),
-    'barlettatraniandria' => 
-    array (
-    ),
-    'andria-trani-barletta' => 
-    array (
-    ),
-    'andriatranibarletta' => 
-    array (
-    ),
-    'trani-andria-barletta' => 
-    array (
-    ),
-    'traniandriabarletta' => 
-    array (
-    ),
-    'bt' => 
-    array (
-    ),
-    'belluno' => 
-    array (
-    ),
-    'bl' => 
-    array (
-    ),
-    'benevento' => 
-    array (
-    ),
-    'bn' => 
-    array (
-    ),
-    'bergamo' => 
-    array (
-    ),
-    'bg' => 
-    array (
-    ),
-    'biella' => 
-    array (
-    ),
-    'bi' => 
-    array (
-    ),
-    'bologna' => 
-    array (
-    ),
-    'bo' => 
-    array (
-    ),
-    'bolzano' => 
-    array (
-    ),
-    'bozen' => 
-    array (
-    ),
-    'balsan' => 
+    'alessandria' => 
     array (
     ),
     'alto-adige' => 
@@ -3489,301 +3876,142 @@ return array (
     'altoadige' => 
     array (
     ),
-    'suedtirol' => 
+    'an' => 
     array (
     ),
-    'bz' => 
+    'ancona' => 
     array (
     ),
-    'brescia' => 
+    'andria-barletta-trani' => 
     array (
     ),
-    'bs' => 
+    'andria-trani-barletta' => 
     array (
     ),
-    'brindisi' => 
+    'andriabarlettatrani' => 
     array (
     ),
-    'br' => 
+    'andriatranibarletta' => 
     array (
     ),
-    'cagliari' => 
+    'ao' => 
     array (
     ),
-    'ca' => 
+    'aosta' => 
     array (
     ),
-    'caltanissetta' => 
+    'aoste' => 
     array (
     ),
-    'cl' => 
-    array (
-    ),
-    'campobasso' => 
-    array (
-    ),
-    'cb' => 
-    array (
-    ),
-    'carboniaiglesias' => 
-    array (
-    ),
-    'carbonia-iglesias' => 
-    array (
-    ),
-    'iglesias-carbonia' => 
-    array (
-    ),
-    'iglesiascarbonia' => 
-    array (
-    ),
-    'ci' => 
-    array (
-    ),
-    'caserta' => 
-    array (
-    ),
-    'ce' => 
-    array (
-    ),
-    'catania' => 
-    array (
-    ),
-    'ct' => 
-    array (
-    ),
-    'catanzaro' => 
-    array (
-    ),
-    'cz' => 
-    array (
-    ),
-    'chieti' => 
-    array (
-    ),
-    'ch' => 
-    array (
-    ),
-    'como' => 
-    array (
-    ),
-    'co' => 
-    array (
-    ),
-    'cosenza' => 
-    array (
-    ),
-    'cs' => 
-    array (
-    ),
-    'cremona' => 
-    array (
-    ),
-    'cr' => 
-    array (
-    ),
-    'crotone' => 
-    array (
-    ),
-    'kr' => 
-    array (
-    ),
-    'cuneo' => 
-    array (
-    ),
-    'cn' => 
-    array (
-    ),
-    'dell-ogliastra' => 
-    array (
-    ),
-    'dellogliastra' => 
-    array (
-    ),
-    'ogliastra' => 
-    array (
-    ),
-    'og' => 
-    array (
-    ),
-    'enna' => 
-    array (
-    ),
-    'en' => 
-    array (
-    ),
-    'ferrara' => 
-    array (
-    ),
-    'fe' => 
-    array (
-    ),
-    'fermo' => 
-    array (
-    ),
-    'fm' => 
-    array (
-    ),
-    'firenze' => 
-    array (
-    ),
-    'florence' => 
-    array (
-    ),
-    'fi' => 
-    array (
-    ),
-    'foggia' => 
-    array (
-    ),
-    'fg' => 
-    array (
-    ),
-    'forli-cesena' => 
-    array (
-    ),
-    'forlicesena' => 
-    array (
-    ),
-    'cesena-forli' => 
-    array (
-    ),
-    'cesenaforli' => 
-    array (
-    ),
-    'fc' => 
-    array (
-    ),
-    'frosinone' => 
-    array (
-    ),
-    'fr' => 
-    array (
-    ),
-    'genova' => 
-    array (
-    ),
-    'genoa' => 
-    array (
-    ),
-    'ge' => 
-    array (
-    ),
-    'gorizia' => 
-    array (
-    ),
-    'go' => 
-    array (
-    ),
-    'grosseto' => 
-    array (
-    ),
-    'gr' => 
-    array (
-    ),
-    'imperia' => 
-    array (
-    ),
-    'im' => 
-    array (
-    ),
-    'isernia' => 
-    array (
-    ),
-    'is' => 
-    array (
-    ),
-    'laquila' => 
-    array (
-    ),
-    'aquila' => 
+    'ap' => 
     array (
     ),
     'aq' => 
     array (
     ),
-    'la-spezia' => 
+    'aquila' => 
     array (
     ),
-    'laspezia' => 
+    'ar' => 
     array (
     ),
-    'sp' => 
+    'arezzo' => 
     array (
     ),
-    'latina' => 
+    'ascoli-piceno' => 
     array (
     ),
-    'lt' => 
+    'ascolipiceno' => 
     array (
     ),
-    'lecce' => 
+    'asti' => 
     array (
     ),
-    'le' => 
+    'at' => 
     array (
     ),
-    'lecco' => 
+    'av' => 
     array (
     ),
-    'lc' => 
+    'avellino' => 
     array (
     ),
-    'livorno' => 
+    'ba' => 
     array (
     ),
-    'li' => 
+    'balsan' => 
     array (
     ),
-    'lodi' => 
+    'bari' => 
     array (
     ),
-    'lo' => 
+    'barletta-trani-andria' => 
     array (
     ),
-    'lucca' => 
+    'barlettatraniandria' => 
     array (
     ),
-    'lu' => 
+    'belluno' => 
     array (
     ),
-    'macerata' => 
+    'benevento' => 
     array (
     ),
-    'mc' => 
+    'bergamo' => 
     array (
     ),
-    'mantova' => 
+    'bg' => 
     array (
     ),
-    'mn' => 
+    'bi' => 
     array (
     ),
-    'massa-carrara' => 
+    'biella' => 
     array (
     ),
-    'massacarrara' => 
+    'bl' => 
     array (
     ),
-    'carrara-massa' => 
+    'bn' => 
     array (
     ),
-    'carraramassa' => 
+    'bo' => 
     array (
     ),
-    'ms' => 
+    'bologna' => 
     array (
     ),
-    'matera' => 
+    'bolzano' => 
     array (
     ),
-    'mt' => 
+    'bozen' => 
     array (
     ),
-    'medio-campidano' => 
+    'br' => 
     array (
     ),
-    'mediocampidano' => 
+    'brescia' => 
+    array (
+    ),
+    'brindisi' => 
+    array (
+    ),
+    'bs' => 
+    array (
+    ),
+    'bt' => 
+    array (
+    ),
+    'bz' => 
+    array (
+    ),
+    'ca' => 
+    array (
+    ),
+    'cagliari' => 
+    array (
+    ),
+    'caltanissetta' => 
     array (
     ),
     'campidano-medio' => 
@@ -3792,34 +4020,286 @@ return array (
     'campidanomedio' => 
     array (
     ),
-    'vs' => 
+    'campobasso' => 
     array (
     ),
-    'messina' => 
+    'carbonia-iglesias' => 
+    array (
+    ),
+    'carboniaiglesias' => 
+    array (
+    ),
+    'carrara-massa' => 
+    array (
+    ),
+    'carraramassa' => 
+    array (
+    ),
+    'caserta' => 
+    array (
+    ),
+    'catania' => 
+    array (
+    ),
+    'catanzaro' => 
+    array (
+    ),
+    'cb' => 
+    array (
+    ),
+    'ce' => 
+    array (
+    ),
+    'cesena-forli' => 
+    array (
+    ),
+    'cesenaforli' => 
+    array (
+    ),
+    'ch' => 
+    array (
+    ),
+    'chieti' => 
+    array (
+    ),
+    'ci' => 
+    array (
+    ),
+    'cl' => 
+    array (
+    ),
+    'cn' => 
+    array (
+    ),
+    'co' => 
+    array (
+    ),
+    'como' => 
+    array (
+    ),
+    'cosenza' => 
+    array (
+    ),
+    'cr' => 
+    array (
+    ),
+    'cremona' => 
+    array (
+    ),
+    'crotone' => 
+    array (
+    ),
+    'cs' => 
+    array (
+    ),
+    'ct' => 
+    array (
+    ),
+    'cuneo' => 
+    array (
+    ),
+    'cz' => 
+    array (
+    ),
+    'dell-ogliastra' => 
+    array (
+    ),
+    'dellogliastra' => 
+    array (
+    ),
+    'en' => 
+    array (
+    ),
+    'enna' => 
+    array (
+    ),
+    'fc' => 
+    array (
+    ),
+    'fe' => 
+    array (
+    ),
+    'fermo' => 
+    array (
+    ),
+    'ferrara' => 
+    array (
+    ),
+    'fg' => 
+    array (
+    ),
+    'fi' => 
+    array (
+    ),
+    'firenze' => 
+    array (
+    ),
+    'florence' => 
+    array (
+    ),
+    'fm' => 
+    array (
+    ),
+    'foggia' => 
+    array (
+    ),
+    'forli-cesena' => 
+    array (
+    ),
+    'forlicesena' => 
+    array (
+    ),
+    'fr' => 
+    array (
+    ),
+    'frosinone' => 
+    array (
+    ),
+    'ge' => 
+    array (
+    ),
+    'genoa' => 
+    array (
+    ),
+    'genova' => 
+    array (
+    ),
+    'go' => 
+    array (
+    ),
+    'gorizia' => 
+    array (
+    ),
+    'gr' => 
+    array (
+    ),
+    'grosseto' => 
+    array (
+    ),
+    'iglesias-carbonia' => 
+    array (
+    ),
+    'iglesiascarbonia' => 
+    array (
+    ),
+    'im' => 
+    array (
+    ),
+    'imperia' => 
+    array (
+    ),
+    'is' => 
+    array (
+    ),
+    'isernia' => 
+    array (
+    ),
+    'kr' => 
+    array (
+    ),
+    'la-spezia' => 
+    array (
+    ),
+    'laquila' => 
+    array (
+    ),
+    'laspezia' => 
+    array (
+    ),
+    'latina' => 
+    array (
+    ),
+    'lc' => 
+    array (
+    ),
+    'le' => 
+    array (
+    ),
+    'lecce' => 
+    array (
+    ),
+    'lecco' => 
+    array (
+    ),
+    'li' => 
+    array (
+    ),
+    'livorno' => 
+    array (
+    ),
+    'lo' => 
+    array (
+    ),
+    'lodi' => 
+    array (
+    ),
+    'lt' => 
+    array (
+    ),
+    'lu' => 
+    array (
+    ),
+    'lucca' => 
+    array (
+    ),
+    'macerata' => 
+    array (
+    ),
+    'mantova' => 
+    array (
+    ),
+    'massa-carrara' => 
+    array (
+    ),
+    'massacarrara' => 
+    array (
+    ),
+    'matera' => 
+    array (
+    ),
+    'mb' => 
+    array (
+    ),
+    'mc' => 
     array (
     ),
     'me' => 
     array (
     ),
-    'milano' => 
+    'medio-campidano' => 
     array (
     ),
-    'milan' => 
+    'mediocampidano' => 
+    array (
+    ),
+    'messina' => 
     array (
     ),
     'mi' => 
     array (
     ),
-    'modena' => 
+    'milan' => 
+    array (
+    ),
+    'milano' => 
+    array (
+    ),
+    'mn' => 
     array (
     ),
     'mo' => 
     array (
     ),
-    'monza' => 
+    'modena' => 
     array (
     ),
     'monza-brianza' => 
+    array (
+    ),
+    'monza-e-della-brianza' => 
+    array (
+    ),
+    'monza' => 
     array (
     ),
     'monzabrianza' => 
@@ -3831,232 +4311,37 @@ return array (
     'monzaedellabrianza' => 
     array (
     ),
-    'monza-e-della-brianza' => 
+    'ms' => 
     array (
     ),
-    'mb' => 
-    array (
-    ),
-    'napoli' => 
-    array (
-    ),
-    'naples' => 
+    'mt' => 
     array (
     ),
     'na' => 
     array (
     ),
-    'novara' => 
+    'naples' => 
+    array (
+    ),
+    'napoli' => 
     array (
     ),
     'no' => 
     array (
     ),
-    'nuoro' => 
+    'novara' => 
     array (
     ),
     'nu' => 
     array (
     ),
-    'oristano' => 
+    'nuoro' => 
     array (
     ),
-    'or' => 
+    'og' => 
     array (
     ),
-    'padova' => 
-    array (
-    ),
-    'padua' => 
-    array (
-    ),
-    'pd' => 
-    array (
-    ),
-    'palermo' => 
-    array (
-    ),
-    'pa' => 
-    array (
-    ),
-    'parma' => 
-    array (
-    ),
-    'pr' => 
-    array (
-    ),
-    'pavia' => 
-    array (
-    ),
-    'pv' => 
-    array (
-    ),
-    'perugia' => 
-    array (
-    ),
-    'pg' => 
-    array (
-    ),
-    'pescara' => 
-    array (
-    ),
-    'pe' => 
-    array (
-    ),
-    'pesaro-urbino' => 
-    array (
-    ),
-    'pesarourbino' => 
-    array (
-    ),
-    'urbino-pesaro' => 
-    array (
-    ),
-    'urbinopesaro' => 
-    array (
-    ),
-    'pu' => 
-    array (
-    ),
-    'piacenza' => 
-    array (
-    ),
-    'pc' => 
-    array (
-    ),
-    'pisa' => 
-    array (
-    ),
-    'pi' => 
-    array (
-    ),
-    'pistoia' => 
-    array (
-    ),
-    'pt' => 
-    array (
-    ),
-    'pordenone' => 
-    array (
-    ),
-    'pn' => 
-    array (
-    ),
-    'potenza' => 
-    array (
-    ),
-    'pz' => 
-    array (
-    ),
-    'prato' => 
-    array (
-    ),
-    'po' => 
-    array (
-    ),
-    'ragusa' => 
-    array (
-    ),
-    'rg' => 
-    array (
-    ),
-    'ravenna' => 
-    array (
-    ),
-    'ra' => 
-    array (
-    ),
-    'reggio-calabria' => 
-    array (
-    ),
-    'reggiocalabria' => 
-    array (
-    ),
-    'rc' => 
-    array (
-    ),
-    'reggio-emilia' => 
-    array (
-    ),
-    'reggioemilia' => 
-    array (
-    ),
-    're' => 
-    array (
-    ),
-    'rieti' => 
-    array (
-    ),
-    'ri' => 
-    array (
-    ),
-    'rimini' => 
-    array (
-    ),
-    'rn' => 
-    array (
-    ),
-    'roma' => 
-    array (
-    ),
-    'rome' => 
-    array (
-    ),
-    'rm' => 
-    array (
-    ),
-    'rovigo' => 
-    array (
-    ),
-    'ro' => 
-    array (
-    ),
-    'salerno' => 
-    array (
-    ),
-    'sa' => 
-    array (
-    ),
-    'sassari' => 
-    array (
-    ),
-    'ss' => 
-    array (
-    ),
-    'savona' => 
-    array (
-    ),
-    'sv' => 
-    array (
-    ),
-    'siena' => 
-    array (
-    ),
-    'si' => 
-    array (
-    ),
-    'siracusa' => 
-    array (
-    ),
-    'sr' => 
-    array (
-    ),
-    'sondrio' => 
-    array (
-    ),
-    'so' => 
-    array (
-    ),
-    'taranto' => 
-    array (
-    ),
-    'ta' => 
-    array (
-    ),
-    'tempio-olbia' => 
-    array (
-    ),
-    'tempioolbia' => 
+    'ogliastra' => 
     array (
     ),
     'olbia-tempio' => 
@@ -4065,49 +4350,256 @@ return array (
     'olbiatempio' => 
     array (
     ),
+    'or' => 
+    array (
+    ),
+    'oristano' => 
+    array (
+    ),
     'ot' => 
     array (
     ),
-    'teramo' => 
+    'pa' => 
+    array (
+    ),
+    'padova' => 
+    array (
+    ),
+    'padua' => 
+    array (
+    ),
+    'palermo' => 
+    array (
+    ),
+    'parma' => 
+    array (
+    ),
+    'pavia' => 
+    array (
+    ),
+    'pc' => 
+    array (
+    ),
+    'pd' => 
+    array (
+    ),
+    'pe' => 
+    array (
+    ),
+    'perugia' => 
+    array (
+    ),
+    'pesaro-urbino' => 
+    array (
+    ),
+    'pesarourbino' => 
+    array (
+    ),
+    'pescara' => 
+    array (
+    ),
+    'pg' => 
+    array (
+    ),
+    'pi' => 
+    array (
+    ),
+    'piacenza' => 
+    array (
+    ),
+    'pisa' => 
+    array (
+    ),
+    'pistoia' => 
+    array (
+    ),
+    'pn' => 
+    array (
+    ),
+    'po' => 
+    array (
+    ),
+    'pordenone' => 
+    array (
+    ),
+    'potenza' => 
+    array (
+    ),
+    'pr' => 
+    array (
+    ),
+    'prato' => 
+    array (
+    ),
+    'pt' => 
+    array (
+    ),
+    'pu' => 
+    array (
+    ),
+    'pv' => 
+    array (
+    ),
+    'pz' => 
+    array (
+    ),
+    'ra' => 
+    array (
+    ),
+    'ragusa' => 
+    array (
+    ),
+    'ravenna' => 
+    array (
+    ),
+    'rc' => 
+    array (
+    ),
+    're' => 
+    array (
+    ),
+    'reggio-calabria' => 
+    array (
+    ),
+    'reggio-emilia' => 
+    array (
+    ),
+    'reggiocalabria' => 
+    array (
+    ),
+    'reggioemilia' => 
+    array (
+    ),
+    'rg' => 
+    array (
+    ),
+    'ri' => 
+    array (
+    ),
+    'rieti' => 
+    array (
+    ),
+    'rimini' => 
+    array (
+    ),
+    'rm' => 
+    array (
+    ),
+    'rn' => 
+    array (
+    ),
+    'ro' => 
+    array (
+    ),
+    'roma' => 
+    array (
+    ),
+    'rome' => 
+    array (
+    ),
+    'rovigo' => 
+    array (
+    ),
+    'sa' => 
+    array (
+    ),
+    'salerno' => 
+    array (
+    ),
+    'sassari' => 
+    array (
+    ),
+    'savona' => 
+    array (
+    ),
+    'si' => 
+    array (
+    ),
+    'siena' => 
+    array (
+    ),
+    'siracusa' => 
+    array (
+    ),
+    'so' => 
+    array (
+    ),
+    'sondrio' => 
+    array (
+    ),
+    'sp' => 
+    array (
+    ),
+    'sr' => 
+    array (
+    ),
+    'ss' => 
+    array (
+    ),
+    'suedtirol' => 
+    array (
+    ),
+    'sv' => 
+    array (
+    ),
+    'ta' => 
+    array (
+    ),
+    'taranto' => 
     array (
     ),
     'te' => 
     array (
     ),
+    'tempio-olbia' => 
+    array (
+    ),
+    'tempioolbia' => 
+    array (
+    ),
+    'teramo' => 
+    array (
+    ),
     'terni' => 
-    array (
-    ),
-    'tr' => 
-    array (
-    ),
-    'torino' => 
-    array (
-    ),
-    'turin' => 
-    array (
-    ),
-    'to' => 
-    array (
-    ),
-    'trapani' => 
-    array (
-    ),
-    'tp' => 
-    array (
-    ),
-    'trento' => 
-    array (
-    ),
-    'trentino' => 
     array (
     ),
     'tn' => 
     array (
     ),
-    'treviso' => 
+    'to' => 
     array (
     ),
-    'tv' => 
+    'torino' => 
+    array (
+    ),
+    'tp' => 
+    array (
+    ),
+    'tr' => 
+    array (
+    ),
+    'trani-andria-barletta' => 
+    array (
+    ),
+    'trani-barletta-andria' => 
+    array (
+    ),
+    'traniandriabarletta' => 
+    array (
+    ),
+    'tranibarlettaandria' => 
+    array (
+    ),
+    'trapani' => 
+    array (
+    ),
+    'trentino' => 
+    array (
+    ),
+    'trento' => 
+    array (
+    ),
+    'treviso' => 
     array (
     ),
     'trieste' => 
@@ -4116,16 +4608,37 @@ return array (
     'ts' => 
     array (
     ),
-    'udine' => 
+    'turin' => 
+    array (
+    ),
+    'tv' => 
     array (
     ),
     'ud' => 
     array (
     ),
-    'varese' => 
+    'udine' => 
+    array (
+    ),
+    'urbino-pesaro' => 
+    array (
+    ),
+    'urbinopesaro' => 
     array (
     ),
     'va' => 
+    array (
+    ),
+    'varese' => 
+    array (
+    ),
+    'vb' => 
+    array (
+    ),
+    'vc' => 
+    array (
+    ),
+    've' => 
     array (
     ),
     'venezia' => 
@@ -4134,25 +4647,16 @@ return array (
     'venice' => 
     array (
     ),
-    've' => 
-    array (
-    ),
     'verbania' => 
-    array (
-    ),
-    'vb' => 
     array (
     ),
     'vercelli' => 
     array (
     ),
-    'vc' => 
-    array (
-    ),
     'verona' => 
     array (
     ),
-    'vr' => 
+    'vi' => 
     array (
     ),
     'vibo-valentia' => 
@@ -4161,19 +4665,22 @@ return array (
     'vibovalentia' => 
     array (
     ),
-    'vv' => 
-    array (
-    ),
     'vicenza' => 
-    array (
-    ),
-    'vi' => 
     array (
     ),
     'viterbo' => 
     array (
     ),
+    'vr' => 
+    array (
+    ),
+    'vs' => 
+    array (
+    ),
     'vt' => 
+    array (
+    ),
+    'vv' => 
     array (
     ),
     'blogspot' => 
@@ -4185,16 +4692,10 @@ return array (
     'co' => 
     array (
     ),
-    'org' => 
-    array (
-    ),
     'net' => 
     array (
     ),
-    'sch' => 
-    array (
-    ),
-    'gov' => 
+    'org' => 
     array (
     ),
   ),
@@ -4344,9 +4845,6 @@ return array (
       array (
       ),
       'miyoshi' => 
-      array (
-      ),
-      'nagakute' => 
       array (
       ),
       'nishio' => 
@@ -6405,9 +6903,6 @@ return array (
       array (
       ),
       'sumita' => 
-      array (
-      ),
-      'takizawa' => 
       array (
       ),
       'tanohata' => 
@@ -9441,6 +9936,147 @@ return array (
       array (
       ),
     ),
+    'xn--4pvxs' => 
+    array (
+    ),
+    'xn--vgu402c' => 
+    array (
+    ),
+    'xn--c3s14m' => 
+    array (
+    ),
+    'xn--f6qx53a' => 
+    array (
+    ),
+    'xn--8pvr4u' => 
+    array (
+    ),
+    'xn--uist22h' => 
+    array (
+    ),
+    'xn--djrs72d6uy' => 
+    array (
+    ),
+    'xn--mkru45i' => 
+    array (
+    ),
+    'xn--0trq7p7nn' => 
+    array (
+    ),
+    'xn--8ltr62k' => 
+    array (
+    ),
+    'xn--2m4a15e' => 
+    array (
+    ),
+    'xn--efvn9s' => 
+    array (
+    ),
+    'xn--32vp30h' => 
+    array (
+    ),
+    'xn--4it797k' => 
+    array (
+    ),
+    'xn--1lqs71d' => 
+    array (
+    ),
+    'xn--5rtp49c' => 
+    array (
+    ),
+    'xn--5js045d' => 
+    array (
+    ),
+    'xn--ehqz56n' => 
+    array (
+    ),
+    'xn--1lqs03n' => 
+    array (
+    ),
+    'xn--qqqt11m' => 
+    array (
+    ),
+    'xn--kbrq7o' => 
+    array (
+    ),
+    'xn--pssu33l' => 
+    array (
+    ),
+    'xn--ntsq17g' => 
+    array (
+    ),
+    'xn--uisz3g' => 
+    array (
+    ),
+    'xn--6btw5a' => 
+    array (
+    ),
+    'xn--1ctwo' => 
+    array (
+    ),
+    'xn--6orx2r' => 
+    array (
+    ),
+    'xn--rht61e' => 
+    array (
+    ),
+    'xn--rht27z' => 
+    array (
+    ),
+    'xn--djty4k' => 
+    array (
+    ),
+    'xn--nit225k' => 
+    array (
+    ),
+    'xn--rht3d' => 
+    array (
+    ),
+    'xn--klty5x' => 
+    array (
+    ),
+    'xn--kltx9a' => 
+    array (
+    ),
+    'xn--kltp7d' => 
+    array (
+    ),
+    'xn--uuwu58a' => 
+    array (
+    ),
+    'xn--zbx025d' => 
+    array (
+    ),
+    'xn--ntso0iqx3a' => 
+    array (
+    ),
+    'xn--elqq16h' => 
+    array (
+    ),
+    'xn--4it168d' => 
+    array (
+    ),
+    'xn--klt787d' => 
+    array (
+    ),
+    'xn--rny31h' => 
+    array (
+    ),
+    'xn--7t0a264c' => 
+    array (
+    ),
+    'xn--5rtq34k' => 
+    array (
+    ),
+    'xn--k7yn95e' => 
+    array (
+    ),
+    'xn--tor131o' => 
+    array (
+    ),
+    'xn--d5qv7z876c' => 
+    array (
+    ),
     'kawasaki' => 
     array (
       '*' => 
@@ -10171,6 +10807,9 @@ return array (
     'org' => 
     array (
     ),
+    'nyc' => 
+    array (
+    ),
   ),
   'mo' => 
   array (
@@ -10210,10 +10849,34 @@ return array (
   ),
   'ms' => 
   array (
+    'com' => 
+    array (
+    ),
+    'edu' => 
+    array (
+    ),
+    'gov' => 
+    array (
+    ),
+    'net' => 
+    array (
+    ),
+    'org' => 
+    array (
+    ),
   ),
   'mt' => 
   array (
-    '*' => 
+    'com' => 
+    array (
+    ),
+    'edu' => 
+    array (
+    ),
+    'net' => 
+    array (
+    ),
+    'org' => 
     array (
     ),
   ),
@@ -10630,7 +11293,7 @@ return array (
     'computerhistory' => 
     array (
     ),
-    'comunicações' => 
+    'xn--comunicaes-v6a2o' => 
     array (
     ),
     'contemporary' => 
@@ -10648,7 +11311,7 @@ return array (
     'corporation' => 
     array (
     ),
-    'correios-e-telecomunicações' => 
+    'xn--correios-e-telecomunicaes-ghc29a' => 
     array (
     ),
     'corvette' => 
@@ -11095,7 +11758,7 @@ return array (
     'lans' => 
     array (
     ),
-    'läns' => 
+    'xn--lns-qla' => 
     array (
     ),
     'larsson' => 
@@ -11881,10 +12544,10 @@ return array (
     'zoology' => 
     array (
     ),
-    'ירושלים' => 
+    'xn--9dbhblg6di' => 
     array (
     ),
-    'иком' => 
+    'xn--h1aegh' => 
     array (
     ),
   ),
@@ -12104,6 +12767,9 @@ return array (
   ),
   'net' => 
   array (
+    'cloudfront' => 
+    array (
+    ),
     'gb' => 
     array (
     ),
@@ -12119,7 +12785,7 @@ return array (
     'uk' => 
     array (
     ),
-    'za' => 
+    'in' => 
     array (
     ),
     'at-band-camp' => 
@@ -12227,6 +12893,42 @@ return array (
     'webhop' => 
     array (
     ),
+    'fastly' => 
+    array (
+      'ssl' => 
+      array (
+        'a' => 
+        array (
+        ),
+        'b' => 
+        array (
+        ),
+        'global' => 
+        array (
+        ),
+      ),
+      'prod' => 
+      array (
+        'a' => 
+        array (
+        ),
+        'global' => 
+        array (
+        ),
+      ),
+    ),
+    'azurewebsites' => 
+    array (
+    ),
+    'azure-mobile' => 
+    array (
+    ),
+    'cloudapp' => 
+    array (
+    ),
+    'za' => 
+    array (
+    ),
   ),
   'nf' => 
   array (
@@ -12263,22 +12965,31 @@ return array (
   ),
   'ng' => 
   array (
-    'ac' => 
-    array (
-    ),
     'com' => 
     array (
     ),
     'edu' => 
     array (
     ),
-    'gov' => 
+    'name' => 
     array (
     ),
     'net' => 
     array (
     ),
     'org' => 
+    array (
+    ),
+    'sch' => 
+    array (
+    ),
+    'gov' => 
+    array (
+    ),
+    'mil' => 
+    array (
+    ),
+    'mobi' => 
     array (
     ),
   ),
@@ -12293,10 +13004,10 @@ return array (
     'bv' => 
     array (
     ),
-    'blogspot' => 
+    'co' => 
     array (
     ),
-    'co' => 
+    'blogspot' => 
     array (
     ),
   ),
@@ -12467,13 +13178,13 @@ return array (
     'akrehamn' => 
     array (
     ),
-    'åkrehamn' => 
+    'xn--krehamn-dxa' => 
     array (
     ),
     'algard' => 
     array (
     ),
-    'ålgård' => 
+    'xn--lgrd-poac' => 
     array (
     ),
     'arna' => 
@@ -12488,13 +13199,13 @@ return array (
     'bronnoysund' => 
     array (
     ),
-    'brønnøysund' => 
+    'xn--brnnysund-m8ac' => 
     array (
     ),
     'drobak' => 
     array (
     ),
-    'drøbak' => 
+    'xn--drbak-wua' => 
     array (
     ),
     'egersund' => 
@@ -12506,7 +13217,7 @@ return array (
     'floro' => 
     array (
     ),
-    'florø' => 
+    'xn--flor-jra' => 
     array (
     ),
     'fredrikstad' => 
@@ -12518,7 +13229,7 @@ return array (
     'honefoss' => 
     array (
     ),
-    'hønefoss' => 
+    'xn--hnefoss-q1a' => 
     array (
     ),
     'jessheim' => 
@@ -12527,7 +13238,7 @@ return array (
     'jorpeland' => 
     array (
     ),
-    'jørpeland' => 
+    'xn--jrpeland-54a' => 
     array (
     ),
     'kirkenes' => 
@@ -12542,7 +13253,7 @@ return array (
     'langevag' => 
     array (
     ),
-    'langevåg' => 
+    'xn--langevg-jxa' => 
     array (
     ),
     'leirvik' => 
@@ -12551,7 +13262,7 @@ return array (
     'mjondalen' => 
     array (
     ),
-    'mjøndalen' => 
+    'xn--mjndalen-64a' => 
     array (
     ),
     'mo-i-rana' => 
@@ -12560,7 +13271,7 @@ return array (
     'mosjoen' => 
     array (
     ),
-    'mosjøen' => 
+    'xn--mosjen-eya' => 
     array (
     ),
     'nesoddtangen' => 
@@ -12572,19 +13283,19 @@ return array (
     'osoyro' => 
     array (
     ),
-    'osøyro' => 
+    'xn--osyro-wua' => 
     array (
     ),
     'raholt' => 
     array (
     ),
-    'råholt' => 
+    'xn--rholt-mra' => 
     array (
     ),
     'sandnessjoen' => 
     array (
     ),
-    'sandnessjøen' => 
+    'xn--sandnessjen-ogb' => 
     array (
     ),
     'skedsmokorset' => 
@@ -12605,7 +13316,7 @@ return array (
     'stjordalshalsen' => 
     array (
     ),
-    'stjørdalshalsen' => 
+    'xn--stjrdalshalsen-sqb' => 
     array (
     ),
     'tananger' => 
@@ -12620,7 +13331,7 @@ return array (
     'afjord' => 
     array (
     ),
-    'åfjord' => 
+    'xn--fjord-lra' => 
     array (
     ),
     'agdenes' => 
@@ -12629,13 +13340,13 @@ return array (
     'al' => 
     array (
     ),
-    'ål' => 
+    'xn--l-1fa' => 
     array (
     ),
     'alesund' => 
     array (
     ),
-    'ålesund' => 
+    'xn--lesund-hua' => 
     array (
     ),
     'alstahaug' => 
@@ -12644,13 +13355,13 @@ return array (
     'alta' => 
     array (
     ),
-    'áltá' => 
+    'xn--lt-liac' => 
     array (
     ),
     'alaheadju' => 
     array (
     ),
-    'álaheadju' => 
+    'xn--laheadju-7ya' => 
     array (
     ),
     'alvdal' => 
@@ -12659,13 +13370,13 @@ return array (
     'amli' => 
     array (
     ),
-    'åmli' => 
+    'xn--mli-tla' => 
     array (
     ),
     'amot' => 
     array (
     ),
-    'åmot' => 
+    'xn--mot-tla' => 
     array (
     ),
     'andebu' => 
@@ -12674,7 +13385,7 @@ return array (
     'andoy' => 
     array (
     ),
-    'andøy' => 
+    'xn--andy-ira' => 
     array (
     ),
     'andasuolo' => 
@@ -12683,7 +13394,7 @@ return array (
     'ardal' => 
     array (
     ),
-    'årdal' => 
+    'xn--rdal-poa' => 
     array (
     ),
     'aremark' => 
@@ -12692,13 +13403,13 @@ return array (
     'arendal' => 
     array (
     ),
-    'ås' => 
+    'xn--s-1fa' => 
     array (
     ),
     'aseral' => 
     array (
     ),
-    'åseral' => 
+    'xn--seral-lra' => 
     array (
     ),
     'asker' => 
@@ -12713,13 +13424,13 @@ return array (
     'askoy' => 
     array (
     ),
-    'askøy' => 
+    'xn--asky-ira' => 
     array (
     ),
     'asnes' => 
     array (
     ),
-    'åsnes' => 
+    'xn--snes-poa' => 
     array (
     ),
     'audnedaln' => 
@@ -12737,7 +13448,7 @@ return array (
     'aurskog-holand' => 
     array (
     ),
-    'aurskog-høland' => 
+    'xn--aurskog-hland-jnb' => 
     array (
     ),
     'austevoll' => 
@@ -12749,7 +13460,7 @@ return array (
     'averoy' => 
     array (
     ),
-    'averøy' => 
+    'xn--avery-yua' => 
     array (
     ),
     'balestrand' => 
@@ -12761,7 +13472,7 @@ return array (
     'balat' => 
     array (
     ),
-    'bálát' => 
+    'xn--blt-elab' => 
     array (
     ),
     'balsfjord' => 
@@ -12770,7 +13481,7 @@ return array (
     'bahccavuotna' => 
     array (
     ),
-    'báhccavuotna' => 
+    'xn--bhccavuotna-k7a' => 
     array (
     ),
     'bamble' => 
@@ -12788,13 +13499,13 @@ return array (
     'bajddar' => 
     array (
     ),
-    'bájddar' => 
+    'xn--bjddar-pta' => 
     array (
     ),
     'baidar' => 
     array (
     ),
-    'báidár' => 
+    'xn--bidr-5nac' => 
     array (
     ),
     'berg' => 
@@ -12806,13 +13517,13 @@ return array (
     'berlevag' => 
     array (
     ),
-    'berlevåg' => 
+    'xn--berlevg-jxa' => 
     array (
     ),
     'bearalvahki' => 
     array (
     ),
-    'bearalváhki' => 
+    'xn--bearalvhki-y4a' => 
     array (
     ),
     'bindal' => 
@@ -12824,7 +13535,7 @@ return array (
     'bjarkoy' => 
     array (
     ),
-    'bjarkøy' => 
+    'xn--bjarky-fya' => 
     array (
     ),
     'bjerkreim' => 
@@ -12836,13 +13547,13 @@ return array (
     'bodo' => 
     array (
     ),
-    'bodø' => 
+    'xn--bod-2na' => 
     array (
     ),
     'badaddja' => 
     array (
     ),
-    'bådåddjå' => 
+    'xn--bdddj-mrabd' => 
     array (
     ),
     'budejju' => 
@@ -12857,7 +13568,7 @@ return array (
     'bronnoy' => 
     array (
     ),
-    'brønnøy' => 
+    'xn--brnny-wuac' => 
     array (
     ),
     'bygland' => 
@@ -12869,7 +13580,7 @@ return array (
     'barum' => 
     array (
     ),
-    'bærum' => 
+    'xn--brum-voa' => 
     array (
     ),
     'telemark' => 
@@ -12877,7 +13588,7 @@ return array (
       'bo' => 
       array (
       ),
-      'bø' => 
+      'xn--b-5ga' => 
       array (
       ),
     ),
@@ -12886,38 +13597,38 @@ return array (
       'bo' => 
       array (
       ),
-      'bø' => 
+      'xn--b-5ga' => 
       array (
       ),
       'heroy' => 
       array (
       ),
-      'herøy' => 
+      'xn--hery-ira' => 
       array (
       ),
     ),
     'bievat' => 
     array (
     ),
-    'bievát' => 
+    'xn--bievt-0qa' => 
     array (
     ),
     'bomlo' => 
     array (
     ),
-    'bømlo' => 
+    'xn--bmlo-gra' => 
     array (
     ),
     'batsfjord' => 
     array (
     ),
-    'båtsfjord' => 
+    'xn--btsfjord-9za' => 
     array (
     ),
     'bahcavuotna' => 
     array (
     ),
-    'báhcavuotna' => 
+    'xn--bhcavuotna-s4a' => 
     array (
     ),
     'dovre' => 
@@ -12932,13 +13643,13 @@ return array (
     'dyroy' => 
     array (
     ),
-    'dyrøy' => 
+    'xn--dyry-ira' => 
     array (
     ),
     'donna' => 
     array (
     ),
-    'dønna' => 
+    'xn--dnna-gra' => 
     array (
     ),
     'eid' => 
@@ -12980,7 +13691,7 @@ return array (
     'evenassi' => 
     array (
     ),
-    'evenášši' => 
+    'xn--eveni-0qa01ga' => 
     array (
     ),
     'evje-og-hornnes' => 
@@ -13007,7 +13718,7 @@ return array (
     'finnoy' => 
     array (
     ),
-    'finnøy' => 
+    'xn--finny-yua' => 
     array (
     ),
     'fitjar' => 
@@ -13037,7 +13748,7 @@ return array (
     'fla' => 
     array (
     ),
-    'flå' => 
+    'xn--fl-zia' => 
     array (
     ),
     'folldal' => 
@@ -13064,13 +13775,13 @@ return array (
     'frana' => 
     array (
     ),
-    'fræna' => 
+    'xn--frna-woa' => 
     array (
     ),
     'froya' => 
     array (
     ),
-    'frøya' => 
+    'xn--frya-hra' => 
     array (
     ),
     'fusa' => 
@@ -13082,7 +13793,7 @@ return array (
     'forde' => 
     array (
     ),
-    'førde' => 
+    'xn--frde-gra' => 
     array (
     ),
     'gamvik' => 
@@ -13091,7 +13802,7 @@ return array (
     'gangaviika' => 
     array (
     ),
-    'gáŋgaviika' => 
+    'xn--ggaviika-8ya47h' => 
     array (
     ),
     'gaular' => 
@@ -13103,7 +13814,7 @@ return array (
     'gildeskal' => 
     array (
     ),
-    'gildeskål' => 
+    'xn--gildeskl-g0a' => 
     array (
     ),
     'giske' => 
@@ -13124,7 +13835,7 @@ return array (
     'gjovik' => 
     array (
     ),
-    'gjøvik' => 
+    'xn--gjvik-wua' => 
     array (
     ),
     'gloppen' => 
@@ -13154,7 +13865,7 @@ return array (
     'kraanghke' => 
     array (
     ),
-    'kråanghke' => 
+    'xn--kranghke-b0a' => 
     array (
     ),
     'grue' => 
@@ -13181,13 +13892,13 @@ return array (
     'habmer' => 
     array (
     ),
-    'hábmer' => 
+    'xn--hbmer-xqa' => 
     array (
     ),
     'hapmir' => 
     array (
     ),
-    'hápmir' => 
+    'xn--hpmir-xqa' => 
     array (
     ),
     'hammerfest' => 
@@ -13196,7 +13907,7 @@ return array (
     'hammarfeasta' => 
     array (
     ),
-    'hámmárfeasta' => 
+    'xn--hmmrfeasta-s4ac' => 
     array (
     ),
     'haram' => 
@@ -13214,7 +13925,7 @@ return array (
     'aknoluokta' => 
     array (
     ),
-    'ákŋoluokta' => 
+    'xn--koluokta-7ya57h' => 
     array (
     ),
     'hattfjelldal' => 
@@ -13244,9 +13955,9 @@ return array (
       array (
       ),
     ),
-    'møre-og-romsdal' => 
+    'xn--mre-og-romsdal-qqb' => 
     array (
-      'herøy' => 
+      'xn--hery-ira' => 
       array (
       ),
       'sande' => 
@@ -13265,7 +13976,7 @@ return array (
     'hobol' => 
     array (
     ),
-    'hobøl' => 
+    'xn--hobl-ira' => 
     array (
     ),
     'hof' => 
@@ -13283,7 +13994,7 @@ return array (
     'holtalen' => 
     array (
     ),
-    'holtålen' => 
+    'xn--holtlen-hxa' => 
     array (
     ),
     'hornindal' => 
@@ -13307,25 +14018,25 @@ return array (
     'hagebostad' => 
     array (
     ),
-    'hægebostad' => 
+    'xn--hgebostad-g3a' => 
     array (
     ),
     'hoyanger' => 
     array (
     ),
-    'høyanger' => 
+    'xn--hyanger-q1a' => 
     array (
     ),
     'hoylandet' => 
     array (
     ),
-    'høylandet' => 
+    'xn--hylandet-54a' => 
     array (
     ),
     'ha' => 
     array (
     ),
-    'hå' => 
+    'xn--h-2fa' => 
     array (
     ),
     'ibestad' => 
@@ -13334,7 +14045,7 @@ return array (
     'inderoy' => 
     array (
     ),
-    'inderøy' => 
+    'xn--indery-fya' => 
     array (
     ),
     'iveland' => 
@@ -13349,7 +14060,7 @@ return array (
     'jolster' => 
     array (
     ),
-    'jølster' => 
+    'xn--jlster-bya' => 
     array (
     ),
     'karasjok' => 
@@ -13358,7 +14069,7 @@ return array (
     'karasjohka' => 
     array (
     ),
-    'kárášjohka' => 
+    'xn--krjohka-hwab49j' => 
     array (
     ),
     'karlsoy' => 
@@ -13367,13 +14078,13 @@ return array (
     'galsa' => 
     array (
     ),
-    'gálsá' => 
+    'xn--gls-elac' => 
     array (
     ),
     'karmoy' => 
     array (
     ),
-    'karmøy' => 
+    'xn--karmy-yua' => 
     array (
     ),
     'kautokeino' => 
@@ -13388,7 +14099,7 @@ return array (
     'klabu' => 
     array (
     ),
-    'klæbu' => 
+    'xn--klbu-woa' => 
     array (
     ),
     'kongsberg' => 
@@ -13400,7 +14111,7 @@ return array (
     'kragero' => 
     array (
     ),
-    'kragerø' => 
+    'xn--krager-gya' => 
     array (
     ),
     'kristiansand' => 
@@ -13412,7 +14123,7 @@ return array (
     'krodsherad' => 
     array (
     ),
-    'krødsherad' => 
+    'xn--krdsherad-m8a' => 
     array (
     ),
     'kvalsund' => 
@@ -13421,7 +14132,7 @@ return array (
     'rahkkeravju' => 
     array (
     ),
-    'ráhkkerávju' => 
+    'xn--rhkkervju-01af' => 
     array (
     ),
     'kvam' => 
@@ -13439,13 +14150,13 @@ return array (
     'kvitsoy' => 
     array (
     ),
-    'kvitsøy' => 
+    'xn--kvitsy-fya' => 
     array (
     ),
     'kvafjord' => 
     array (
     ),
-    'kvæfjord' => 
+    'xn--kvfjord-nxa' => 
     array (
     ),
     'giehtavuoatna' => 
@@ -13454,25 +14165,25 @@ return array (
     'kvanangen' => 
     array (
     ),
-    'kvænangen' => 
+    'xn--kvnangen-k0a' => 
     array (
     ),
     'navuotna' => 
     array (
     ),
-    'návuotna' => 
+    'xn--nvuotna-hwa' => 
     array (
     ),
     'kafjord' => 
     array (
     ),
-    'kåfjord' => 
+    'xn--kfjord-iua' => 
     array (
     ),
     'gaivuotna' => 
     array (
     ),
-    'gáivuotna' => 
+    'xn--givuotna-8ya' => 
     array (
     ),
     'larvik' => 
@@ -13487,7 +14198,7 @@ return array (
     'loabat' => 
     array (
     ),
-    'loabát' => 
+    'xn--loabt-0qa' => 
     array (
     ),
     'lebesby' => 
@@ -13514,7 +14225,7 @@ return array (
     'leangaviika' => 
     array (
     ),
-    'leaŋgaviika' => 
+    'xn--leagaviika-52b' => 
     array (
     ),
     'lesja' => 
@@ -13541,7 +14252,7 @@ return array (
     'lindas' => 
     array (
     ),
-    'lindås' => 
+    'xn--linds-pra' => 
     array (
     ),
     'lom' => 
@@ -13553,7 +14264,7 @@ return array (
     'lahppi' => 
     array (
     ),
-    'láhppi' => 
+    'xn--lhppi-xqa' => 
     array (
     ),
     'lund' => 
@@ -13565,7 +14276,7 @@ return array (
     'luroy' => 
     array (
     ),
-    'lurøy' => 
+    'xn--lury-ira' => 
     array (
     ),
     'luster' => 
@@ -13586,25 +14297,25 @@ return array (
     'lerdal' => 
     array (
     ),
-    'lærdal' => 
+    'xn--lrdal-sra' => 
     array (
     ),
     'lodingen' => 
     array (
     ),
-    'lødingen' => 
+    'xn--ldingen-q1a' => 
     array (
     ),
     'lorenskog' => 
     array (
     ),
-    'lørenskog' => 
+    'xn--lrenskog-54a' => 
     array (
     ),
     'loten' => 
     array (
     ),
-    'løten' => 
+    'xn--lten-gra' => 
     array (
     ),
     'malvik' => 
@@ -13613,13 +14324,13 @@ return array (
     'masoy' => 
     array (
     ),
-    'måsøy' => 
+    'xn--msy-ula0h' => 
     array (
     ),
     'muosat' => 
     array (
     ),
-    'muosát' => 
+    'xn--muost-0qa' => 
     array (
     ),
     'mandal' => 
@@ -13646,19 +14357,19 @@ return array (
     'meloy' => 
     array (
     ),
-    'meløy' => 
+    'xn--mely-ira' => 
     array (
     ),
     'meraker' => 
     array (
     ),
-    'meråker' => 
+    'xn--merker-kua' => 
     array (
     ),
     'moareke' => 
     array (
     ),
-    'moåreke' => 
+    'xn--moreke-jua' => 
     array (
     ),
     'midsund' => 
@@ -13688,13 +14399,13 @@ return array (
     'malselv' => 
     array (
     ),
-    'målselv' => 
+    'xn--mlselv-iua' => 
     array (
     ),
     'malatvuopmi' => 
     array (
     ),
-    'málatvuopmi' => 
+    'xn--mlatvuopmi-s4a' => 
     array (
     ),
     'namdalseid' => 
@@ -13712,7 +14423,7 @@ return array (
     'naamesjevuemie' => 
     array (
     ),
-    'nååmesjevuemie' => 
+    'xn--nmesjevuemie-tcba' => 
     array (
     ),
     'laakesvuemie' => 
@@ -13757,7 +14468,7 @@ return array (
     'unjarga' => 
     array (
     ),
-    'unjárga' => 
+    'xn--unjrga-rta' => 
     array (
     ),
     'nesset' => 
@@ -13787,7 +14498,7 @@ return array (
     'davvenjarga' => 
     array (
     ),
-    'davvenjárga' => 
+    'xn--davvenjrga-y4a' => 
     array (
     ),
     'nordre-land' => 
@@ -13799,7 +14510,7 @@ return array (
     'raisa' => 
     array (
     ),
-    'ráisa' => 
+    'xn--risa-5na' => 
     array (
     ),
     'nore-og-uvdal' => 
@@ -13811,13 +14522,13 @@ return array (
     'naroy' => 
     array (
     ),
-    'nærøy' => 
+    'xn--nry-yla5g' => 
     array (
     ),
     'notteroy' => 
     array (
     ),
-    'nøtterøy' => 
+    'xn--nttery-byae' => 
     array (
     ),
     'odda' => 
@@ -13826,7 +14537,7 @@ return array (
     'oksnes' => 
     array (
     ),
-    'øksnes' => 
+    'xn--ksnes-uua' => 
     array (
     ),
     'oppdal' => 
@@ -13835,7 +14546,7 @@ return array (
     'oppegard' => 
     array (
     ),
-    'oppegård' => 
+    'xn--oppegrd-ixa' => 
     array (
     ),
     'orkdal' => 
@@ -13844,19 +14555,19 @@ return array (
     'orland' => 
     array (
     ),
-    'ørland' => 
+    'xn--rland-uua' => 
     array (
     ),
     'orskog' => 
     array (
     ),
-    'ørskog' => 
+    'xn--rskog-uua' => 
     array (
     ),
     'orsta' => 
     array (
     ),
-    'ørsta' => 
+    'xn--rsta-fra' => 
     array (
     ),
     'hedmark' => 
@@ -13867,7 +14578,7 @@ return array (
       'valer' => 
       array (
       ),
-      'våler' => 
+      'xn--vler-qoa' => 
       array (
       ),
     ),
@@ -13883,13 +14594,13 @@ return array (
     'osteroy' => 
     array (
     ),
-    'osterøy' => 
+    'xn--ostery-fya' => 
     array (
     ),
     'ostre-toten' => 
     array (
     ),
-    'østre-toten' => 
+    'xn--stre-toten-zcb' => 
     array (
     ),
     'overhalla' => 
@@ -13898,25 +14609,25 @@ return array (
     'ovre-eiker' => 
     array (
     ),
-    'øvre-eiker' => 
+    'xn--vre-eiker-k8a' => 
     array (
     ),
     'oyer' => 
     array (
     ),
-    'øyer' => 
+    'xn--yer-zna' => 
     array (
     ),
     'oygarden' => 
     array (
     ),
-    'øygarden' => 
+    'xn--ygarden-p1a' => 
     array (
     ),
     'oystre-slidre' => 
     array (
     ),
-    'øystre-slidre' => 
+    'xn--ystre-slidre-ujb' => 
     array (
     ),
     'porsanger' => 
@@ -13925,7 +14636,7 @@ return array (
     'porsangu' => 
     array (
     ),
-    'porsáŋgu' => 
+    'xn--porsgu-sta26f' => 
     array (
     ),
     'porsgrunn' => 
@@ -13934,7 +14645,7 @@ return array (
     'radoy' => 
     array (
     ),
-    'radøy' => 
+    'xn--rady-ira' => 
     array (
     ),
     'rakkestad' => 
@@ -13961,7 +14672,7 @@ return array (
     'rennesoy' => 
     array (
     ),
-    'rennesøy' => 
+    'xn--rennesy-v1a' => 
     array (
     ),
     'rindal' => 
@@ -13982,7 +14693,7 @@ return array (
     'risor' => 
     array (
     ),
-    'risør' => 
+    'xn--risr-ira' => 
     array (
     ),
     'roan' => 
@@ -13997,49 +14708,49 @@ return array (
     'ralingen' => 
     array (
     ),
-    'rælingen' => 
+    'xn--rlingen-mxa' => 
     array (
     ),
     'rodoy' => 
     array (
     ),
-    'rødøy' => 
+    'xn--rdy-0nab' => 
     array (
     ),
     'romskog' => 
     array (
     ),
-    'rømskog' => 
+    'xn--rmskog-bya' => 
     array (
     ),
     'roros' => 
     array (
     ),
-    'røros' => 
+    'xn--rros-gra' => 
     array (
     ),
     'rost' => 
     array (
     ),
-    'røst' => 
+    'xn--rst-0na' => 
     array (
     ),
     'royken' => 
     array (
     ),
-    'røyken' => 
+    'xn--ryken-vua' => 
     array (
     ),
     'royrvik' => 
     array (
     ),
-    'røyrvik' => 
+    'xn--ryrvik-bya' => 
     array (
     ),
     'rade' => 
     array (
     ),
-    'råde' => 
+    'xn--rde-ula' => 
     array (
     ),
     'salangen' => 
@@ -14054,10 +14765,10 @@ return array (
     'salat' => 
     array (
     ),
-    'sálát' => 
+    'xn--slt-elab' => 
     array (
     ),
-    'sálat' => 
+    'xn--slat-5na' => 
     array (
     ),
     'samnanger' => 
@@ -14078,7 +14789,7 @@ return array (
     'sandoy' => 
     array (
     ),
-    'sandøy' => 
+    'xn--sandy-yua' => 
     array (
     ),
     'sarpsborg' => 
@@ -14129,19 +14840,19 @@ return array (
     'skjervoy' => 
     array (
     ),
-    'skjervøy' => 
+    'xn--skjervy-v1a' => 
     array (
     ),
     'skierva' => 
     array (
     ),
-    'skiervá' => 
+    'xn--skierv-uta' => 
     array (
     ),
     'skjak' => 
     array (
     ),
-    'skjåk' => 
+    'xn--skjk-soa' => 
     array (
     ),
     'skodje' => 
@@ -14150,19 +14861,19 @@ return array (
     'skanland' => 
     array (
     ),
-    'skånland' => 
+    'xn--sknland-fxa' => 
     array (
     ),
     'skanit' => 
     array (
     ),
-    'skánit' => 
+    'xn--sknit-yqa' => 
     array (
     ),
     'smola' => 
     array (
     ),
-    'smøla' => 
+    'xn--smla-hra' => 
     array (
     ),
     'snillfjord' => 
@@ -14171,7 +14882,7 @@ return array (
     'snasa' => 
     array (
     ),
-    'snåsa' => 
+    'xn--snsa-roa' => 
     array (
     ),
     'snoasa' => 
@@ -14180,7 +14891,7 @@ return array (
     'snaase' => 
     array (
     ),
-    'snåase' => 
+    'xn--snase-nra' => 
     array (
     ),
     'sogndal' => 
@@ -14219,7 +14930,7 @@ return array (
     'stjordal' => 
     array (
     ),
-    'stjørdal' => 
+    'xn--stjrdal-s1a' => 
     array (
     ),
     'stokke' => 
@@ -14276,67 +14987,67 @@ return array (
     'sogne' => 
     array (
     ),
-    'søgne' => 
+    'xn--sgne-gra' => 
     array (
     ),
     'somna' => 
     array (
     ),
-    'sømna' => 
+    'xn--smna-gra' => 
     array (
     ),
     'sondre-land' => 
     array (
     ),
-    'søndre-land' => 
+    'xn--sndre-land-0cb' => 
     array (
     ),
     'sor-aurdal' => 
     array (
     ),
-    'sør-aurdal' => 
+    'xn--sr-aurdal-l8a' => 
     array (
     ),
     'sor-fron' => 
     array (
     ),
-    'sør-fron' => 
+    'xn--sr-fron-q1a' => 
     array (
     ),
     'sor-odal' => 
     array (
     ),
-    'sør-odal' => 
+    'xn--sr-odal-q1a' => 
     array (
     ),
     'sor-varanger' => 
     array (
     ),
-    'sør-varanger' => 
+    'xn--sr-varanger-ggb' => 
     array (
     ),
     'matta-varjjat' => 
     array (
     ),
-    'mátta-várjjat' => 
+    'xn--mtta-vrjjat-k7af' => 
     array (
     ),
     'sorfold' => 
     array (
     ),
-    'sørfold' => 
+    'xn--srfold-bya' => 
     array (
     ),
     'sorreisa' => 
     array (
     ),
-    'sørreisa' => 
+    'xn--srreisa-q1a' => 
     array (
     ),
     'sorum' => 
     array (
     ),
-    'sørum' => 
+    'xn--srum-gra' => 
     array (
     ),
     'tana' => 
@@ -14363,7 +15074,7 @@ return array (
     'tjome' => 
     array (
     ),
-    'tjøme' => 
+    'xn--tjme-hra' => 
     array (
     ),
     'tokke' => 
@@ -14378,13 +15089,13 @@ return array (
     'tranoy' => 
     array (
     ),
-    'tranøy' => 
+    'xn--trany-yua' => 
     array (
     ),
     'tromso' => 
     array (
     ),
-    'tromsø' => 
+    'xn--troms-zua' => 
     array (
     ),
     'tromsa' => 
@@ -14405,13 +15116,13 @@ return array (
     'trana' => 
     array (
     ),
-    'træna' => 
+    'xn--trna-woa' => 
     array (
     ),
     'trogstad' => 
     array (
     ),
-    'trøgstad' => 
+    'xn--trgstad-r1a' => 
     array (
     ),
     'tvedestrand' => 
@@ -14438,13 +15149,13 @@ return array (
     'tysvar' => 
     array (
     ),
-    'tysvær' => 
+    'xn--tysvr-vra' => 
     array (
     ),
     'tonsberg' => 
     array (
     ),
-    'tønsberg' => 
+    'xn--tnsberg-q1a' => 
     array (
     ),
     'ullensaker' => 
@@ -14462,13 +15173,13 @@ return array (
     'vadso' => 
     array (
     ),
-    'vadsø' => 
+    'xn--vads-jra' => 
     array (
     ),
     'cahcesuolo' => 
     array (
     ),
-    'čáhcesuolo' => 
+    'xn--hcesuolo-7ya35b' => 
     array (
     ),
     'vaksdal' => 
@@ -14486,13 +15197,13 @@ return array (
     'vardo' => 
     array (
     ),
-    'vardø' => 
+    'xn--vard-jra' => 
     array (
     ),
     'varggat' => 
     array (
     ),
-    'várggát' => 
+    'xn--vrggt-xqad' => 
     array (
     ),
     'vefsn' => 
@@ -14507,7 +15218,7 @@ return array (
     'vegarshei' => 
     array (
     ),
-    'vegårshei' => 
+    'xn--vegrshei-c0a' => 
     array (
     ),
     'vennesla' => 
@@ -14534,7 +15245,7 @@ return array (
     'vestvagoy' => 
     array (
     ),
-    'vestvågøy' => 
+    'xn--vestvgy-ixa6o' => 
     array (
     ),
     'vevelstad' => 
@@ -14558,13 +15269,13 @@ return array (
     'varoy' => 
     array (
     ),
-    'værøy' => 
+    'xn--vry-yla5g' => 
     array (
     ),
     'vagan' => 
     array (
     ),
-    'vågan' => 
+    'xn--vgan-qoa' => 
     array (
     ),
     'voagat' => 
@@ -14573,13 +15284,13 @@ return array (
     'vagsoy' => 
     array (
     ),
-    'vågsøy' => 
+    'xn--vgsy-qoa0j' => 
     array (
     ),
     'vaga' => 
     array (
     ),
-    'vågå' => 
+    'xn--vg-yiab' => 
     array (
     ),
     'ostfold' => 
@@ -14588,16 +15299,16 @@ return array (
       array (
       ),
     ),
-    'østfold' => 
+    'xn--stfold-9xa' => 
     array (
-      'våler' => 
+      'xn--vler-qoa' => 
       array (
       ),
     ),
-    'blogspot' => 
+    'co' => 
     array (
     ),
-    'co' => 
+    'blogspot' => 
     array (
     ),
   ),
@@ -14645,7 +15356,7 @@ return array (
   ),
   'nz' => 
   array (
-    '*' => 
+    'ac' => 
     array (
     ),
     'co' => 
@@ -14654,51 +15365,77 @@ return array (
       array (
       ),
     ),
+    'cri' => 
+    array (
+    ),
+    'geek' => 
+    array (
+    ),
+    'gen' => 
+    array (
+    ),
+    'govt' => 
+    array (
+    ),
+    'health' => 
+    array (
+    ),
+    'iwi' => 
+    array (
+    ),
+    'kiwi' => 
+    array (
+    ),
+    'maori' => 
+    array (
+    ),
+    'mil' => 
+    array (
+    ),
+    'xn--mori-qsa' => 
+    array (
+    ),
+    'net' => 
+    array (
+    ),
+    'org' => 
+    array (
+    ),
+    'parliament' => 
+    array (
+    ),
+    'school' => 
+    array (
+    ),
   ),
   'om' => 
   array (
-    '*' => 
+    'co' => 
     array (
     ),
-    'mediaphone' => 
+    'com' => 
     array (
-      '!' => '',
     ),
-    'nawrastelecom' => 
+    'edu' => 
     array (
-      '!' => '',
     ),
-    'nawras' => 
+    'gov' => 
     array (
-      '!' => '',
     ),
-    'omanmobile' => 
+    'med' => 
     array (
-      '!' => '',
     ),
-    'omanpost' => 
+    'museum' => 
     array (
-      '!' => '',
     ),
-    'omantel' => 
+    'net' => 
     array (
-      '!' => '',
     ),
-    'rakpetroleum' => 
+    'org' => 
     array (
-      '!' => '',
     ),
-    'siemens' => 
+    'pro' => 
     array (
-      '!' => '',
-    ),
-    'songfest' => 
-    array (
-      '!' => '',
-    ),
-    'statecouncil' => 
-    array (
-      '!' => '',
     ),
   ),
   'org' => 
@@ -14707,9 +15444,6 @@ return array (
     array (
     ),
     'us' => 
-    array (
-    ),
-    'za' => 
     array (
     ),
     'dyndns' => 
@@ -14868,6 +15602,12 @@ return array (
     'webhop' => 
     array (
     ),
+    'hk' => 
+    array (
+    ),
+    'za' => 
+    array (
+    ),
   ),
   'pa' => 
   array (
@@ -15021,6 +15761,51 @@ return array (
   ),
   'pl' => 
   array (
+    'com' => 
+    array (
+    ),
+    'net' => 
+    array (
+    ),
+    'org' => 
+    array (
+    ),
+    'info' => 
+    array (
+    ),
+    'waw' => 
+    array (
+    ),
+    'gov' => 
+    array (
+      'uw' => 
+      array (
+      ),
+      'um' => 
+      array (
+      ),
+      'ug' => 
+      array (
+      ),
+      'upow' => 
+      array (
+      ),
+      'starostwo' => 
+      array (
+      ),
+      'so' => 
+      array (
+      ),
+      'sr' => 
+      array (
+      ),
+      'po' => 
+      array (
+      ),
+      'pa' => 
+      array (
+      ),
+    ),
     'aid' => 
     array (
     ),
@@ -15036,9 +15821,6 @@ return array (
     'biz' => 
     array (
     ),
-    'com' => 
-    array (
-    ),
     'edu' => 
     array (
     ),
@@ -15046,9 +15828,6 @@ return array (
     array (
     ),
     'gsm' => 
-    array (
-    ),
-    'info' => 
     array (
     ),
     'mail' => 
@@ -15063,16 +15842,10 @@ return array (
     'mil' => 
     array (
     ),
-    'net' => 
-    array (
-    ),
     'nieruchomosci' => 
     array (
     ),
     'nom' => 
-    array (
-    ),
-    'org' => 
     array (
     ),
     'pc' => 
@@ -15118,54 +15891,6 @@ return array (
     array (
     ),
     'turystyka' => 
-    array (
-    ),
-    '6bone' => 
-    array (
-    ),
-    'art' => 
-    array (
-    ),
-    'mbone' => 
-    array (
-    ),
-    'gov' => 
-    array (
-      'uw' => 
-      array (
-      ),
-      'um' => 
-      array (
-      ),
-      'ug' => 
-      array (
-      ),
-      'upow' => 
-      array (
-      ),
-      'starostwo' => 
-      array (
-      ),
-      'so' => 
-      array (
-      ),
-      'sr' => 
-      array (
-      ),
-      'po' => 
-      array (
-      ),
-      'pa' => 
-      array (
-      ),
-    ),
-    'ngo' => 
-    array (
-    ),
-    'irc' => 
-    array (
-    ),
-    'usenet' => 
     array (
     ),
     'augustow' => 
@@ -15423,9 +16148,6 @@ return array (
     'sejny' => 
     array (
     ),
-    'siedlce' => 
-    array (
-    ),
     'slask' => 
     array (
     ),
@@ -15489,9 +16211,6 @@ return array (
     'warszawa' => 
     array (
     ),
-    'waw' => 
-    array (
-    ),
     'wegrow' => 
     array (
     ),
@@ -15528,19 +16247,10 @@ return array (
     'zgorzelec' => 
     array (
     ),
-    'gda' => 
+    'co' => 
     array (
     ),
-    'gdansk' => 
-    array (
-    ),
-    'gdynia' => 
-    array (
-    ),
-    'med' => 
-    array (
-    ),
-    'sopot' => 
+    'art' => 
     array (
     ),
     'gliwice' => 
@@ -15558,7 +16268,19 @@ return array (
     'zakopane' => 
     array (
     ),
-    'co' => 
+    'gda' => 
+    array (
+    ),
+    'gdansk' => 
+    array (
+    ),
+    'gdynia' => 
+    array (
+    ),
+    'med' => 
+    array (
+    ),
+    'sopot' => 
     array (
     ),
   ),
@@ -15582,6 +16304,9 @@ return array (
     'net' => 
     array (
     ),
+  ),
+  'post' => 
+  array (
   ),
   'pr' => 
   array (
@@ -16020,9 +16745,6 @@ return array (
     'mordovia' => 
     array (
     ),
-    'mosreg' => 
-    array (
-    ),
     'msk' => 
     array (
     ),
@@ -16060,9 +16782,6 @@ return array (
     array (
     ),
     'perm' => 
-    array (
-    ),
-    'pskov' => 
     array (
     ),
     'ptz' => 
@@ -16249,6 +16968,9 @@ return array (
     array (
     ),
     'test' => 
+    array (
+    ),
+    'blogspot' => 
     array (
     ),
   ),
@@ -16470,9 +17192,6 @@ return array (
     's' => 
     array (
     ),
-    'sshn' => 
-    array (
-    ),
     't' => 
     array (
     ),
@@ -16492,6 +17211,9 @@ return array (
     array (
     ),
     'z' => 
+    array (
+    ),
+    'com' => 
     array (
     ),
     'blogspot' => 
@@ -16539,8 +17261,17 @@ return array (
     'mil' => 
     array (
     ),
+    'platform' => 
+    array (
+      '*' => 
+      array (
+      ),
+    ),
   ),
   'si' => 
+  array (
+  ),
+  'sj' => 
   array (
   ),
   'sk' => 
@@ -16650,10 +17381,118 @@ return array (
   ),
   'su' => 
   array (
+    'adygeya' => 
+    array (
+    ),
+    'arkhangelsk' => 
+    array (
+    ),
+    'balashov' => 
+    array (
+    ),
+    'bashkiria' => 
+    array (
+    ),
+    'bryansk' => 
+    array (
+    ),
+    'dagestan' => 
+    array (
+    ),
+    'grozny' => 
+    array (
+    ),
+    'ivanovo' => 
+    array (
+    ),
+    'kalmykia' => 
+    array (
+    ),
+    'kaluga' => 
+    array (
+    ),
+    'karelia' => 
+    array (
+    ),
+    'khakassia' => 
+    array (
+    ),
+    'krasnodar' => 
+    array (
+    ),
+    'kurgan' => 
+    array (
+    ),
+    'lenug' => 
+    array (
+    ),
+    'mordovia' => 
+    array (
+    ),
+    'msk' => 
+    array (
+    ),
+    'murmansk' => 
+    array (
+    ),
+    'nalchik' => 
+    array (
+    ),
+    'nov' => 
+    array (
+    ),
+    'obninsk' => 
+    array (
+    ),
+    'penza' => 
+    array (
+    ),
+    'pokrovsk' => 
+    array (
+    ),
+    'sochi' => 
+    array (
+    ),
+    'spb' => 
+    array (
+    ),
+    'togliatti' => 
+    array (
+    ),
+    'troitsk' => 
+    array (
+    ),
+    'tula' => 
+    array (
+    ),
+    'tuva' => 
+    array (
+    ),
+    'vladikavkaz' => 
+    array (
+    ),
+    'vladimir' => 
+    array (
+    ),
+    'vologda' => 
+    array (
+    ),
   ),
   'sv' => 
   array (
-    '*' => 
+    'com' => 
+    array (
+    ),
+    'edu' => 
+    array (
+    ),
+    'gob' => 
+    array (
+    ),
+    'org' => 
+    array (
+    ),
+    'red' => 
     array (
     ),
   ),
@@ -16906,14 +17745,73 @@ return array (
     array (
     ),
   ),
+  'tp' => 
+  array (
+  ),
   'tr' => 
   array (
-    '*' => 
+    'com' => 
+    array (
+      'blogspot' => 
+      array (
+      ),
+    ),
+    'info' => 
     array (
     ),
-    'nic' => 
+    'biz' => 
     array (
-      '!' => '',
+    ),
+    'net' => 
+    array (
+    ),
+    'org' => 
+    array (
+    ),
+    'web' => 
+    array (
+    ),
+    'gen' => 
+    array (
+    ),
+    'tv' => 
+    array (
+    ),
+    'av' => 
+    array (
+    ),
+    'dr' => 
+    array (
+    ),
+    'bbs' => 
+    array (
+    ),
+    'name' => 
+    array (
+    ),
+    'tel' => 
+    array (
+    ),
+    'gov' => 
+    array (
+    ),
+    'bel' => 
+    array (
+    ),
+    'pol' => 
+    array (
+    ),
+    'mil' => 
+    array (
+    ),
+    'k12' => 
+    array (
+    ),
+    'edu' => 
+    array (
+    ),
+    'kep' => 
+    array (
     ),
     'nc' => 
     array (
@@ -17026,13 +17924,13 @@ return array (
     'club' => 
     array (
     ),
-    '網路' => 
+    'xn--zf0ao64a' => 
     array (
     ),
-    '組織' => 
+    'xn--uc0atv' => 
     array (
     ),
-    '商業' => 
+    'xn--czrw28b' => 
     array (
     ),
     'blogspot' => 
@@ -17344,54 +18242,45 @@ return array (
   ),
   'uk' => 
   array (
-    '*' => 
+    'ac' => 
+    array (
+    ),
+    'co' => 
+    array (
+      'blogspot' => 
+      array (
+      ),
+    ),
+    'gov' => 
+    array (
+      'service' => 
+      array (
+      ),
+    ),
+    'ltd' => 
+    array (
+    ),
+    'me' => 
+    array (
+    ),
+    'net' => 
+    array (
+    ),
+    'nhs' => 
+    array (
+    ),
+    'org' => 
+    array (
+    ),
+    'plc' => 
+    array (
+    ),
+    'police' => 
     array (
     ),
     'sch' => 
     array (
       '*' => 
-      array (
-      ),
-    ),
-    'bl' => 
-    array (
-      '!' => '',
-    ),
-    'british-library' => 
-    array (
-      '!' => '',
-    ),
-    'jet' => 
-    array (
-      '!' => '',
-    ),
-    'mod' => 
-    array (
-      '!' => '',
-    ),
-    'national-library-scotland' => 
-    array (
-      '!' => '',
-    ),
-    'nel' => 
-    array (
-      '!' => '',
-    ),
-    'nic' => 
-    array (
-      '!' => '',
-    ),
-    'nls' => 
-    array (
-      '!' => '',
-    ),
-    'parliament' => 
-    array (
-      '!' => '',
-    ),
-    'co' => 
-    array (
-      'blogspot' => 
       array (
       ),
     ),
@@ -17781,9 +18670,6 @@ return array (
     ),
     'nd' => 
     array (
-      'k12' => 
-      array (
-      ),
       'cc' => 
       array (
       ),
@@ -17949,9 +18835,6 @@ return array (
     ),
     'sd' => 
     array (
-      'k12' => 
-      array (
-      ),
       'cc' => 
       array (
       ),
@@ -18057,13 +18940,7 @@ return array (
     ),
     'wv' => 
     array (
-      'k12' => 
-      array (
-      ),
       'cc' => 
-      array (
-      ),
-      'lib' => 
       array (
       ),
     ),
@@ -18151,6 +19028,9 @@ return array (
   ),
   've' => 
   array (
+    'arts' => 
+    array (
+    ),
     'co' => 
     array (
     ),
@@ -18163,10 +19043,19 @@ return array (
     'edu' => 
     array (
     ),
+    'firm' => 
+    array (
+    ),
+    'gob' => 
+    array (
+    ),
     'gov' => 
     array (
     ),
     'info' => 
+    array (
+    ),
+    'int' => 
     array (
     ),
     'mil' => 
@@ -18176,6 +19065,15 @@ return array (
     array (
     ),
     'org' => 
+    array (
+    ),
+    'rec' => 
+    array (
+    ),
+    'store' => 
+    array (
+    ),
+    'tec' => 
     array (
     ),
     'web' => 
@@ -18244,6 +19142,18 @@ return array (
   ),
   'vu' => 
   array (
+    'com' => 
+    array (
+    ),
+    'edu' => 
+    array (
+    ),
+    'net' => 
+    array (
+    ),
+    'org' => 
+    array (
+    ),
   ),
   'wf' => 
   array (
@@ -18275,130 +19185,157 @@ return array (
   'yt' => 
   array (
   ),
-  'امارات' => 
+  'xn--mgbaam7a8h' => 
   array (
   ),
-  'বাংলা' => 
+  'xn--54b7fta0cc' => 
   array (
   ),
-  '中国' => 
+  'xn--fiqs8s' => 
   array (
   ),
-  '中國' => 
+  'xn--fiqz9s' => 
   array (
   ),
-  'الجزائر' => 
+  'xn--lgbbat1ad8j' => 
   array (
   ),
-  'مصر' => 
+  'xn--wgbh1c' => 
   array (
   ),
-  'გე' => 
+  'xn--node' => 
   array (
   ),
-  '香港' => 
+  'xn--j6w193g' => 
   array (
   ),
-  'भारत' => 
+  'xn--h2brj9c' => 
   array (
   ),
-  'بھارت' => 
+  'xn--mgbbh1a71e' => 
   array (
   ),
-  'భారత్' => 
+  'xn--fpcrj9c3d' => 
   array (
   ),
-  'ભારત' => 
+  'xn--gecrj9c' => 
   array (
   ),
-  'ਭਾਰਤ' => 
+  'xn--s9brj9c' => 
   array (
   ),
-  'ভারত' => 
+  'xn--45brj9c' => 
   array (
   ),
-  'இந்தியா' => 
+  'xn--xkc2dl3a5ee0h' => 
   array (
   ),
-  'ایران' => 
+  'xn--mgba3a4f16a' => 
   array (
   ),
-  'ايران' => 
+  'xn--mgba3a4fra' => 
   array (
   ),
-  'الاردن' => 
+  'xn--mgbayh7gpa' => 
   array (
   ),
-  '한국' => 
+  'xn--3e0b707e' => 
   array (
   ),
-  'ලංකා' => 
+  'xn--80ao21a' => 
   array (
   ),
-  'இலங்கை' => 
+  'xn--fzc2c9e2c' => 
   array (
   ),
-  'المغرب' => 
+  'xn--xkc2al3hye2a' => 
   array (
   ),
-  'عمان' => 
+  'xn--mgbc0a9azcg' => 
   array (
   ),
-  'فلسطين' => 
+  'xn--l1acc' => 
   array (
   ),
-  'срб' => 
+  'xn--mgbx4cd0ab' => 
   array (
   ),
-  'рф' => 
+  'xn--mgb9awbf' => 
   array (
   ),
-  'قطر' => 
+  'xn--ygbi2ammx' => 
   array (
   ),
-  'السعودية' => 
+  'xn--90a3ac' => 
+  array (
+    'xn--o1ac' => 
+    array (
+    ),
+    'xn--c1avg' => 
+    array (
+    ),
+    'xn--90azh' => 
+    array (
+    ),
+    'xn--d1at' => 
+    array (
+    ),
+    'xn--o1ach' => 
+    array (
+    ),
+    'xn--80au' => 
+    array (
+    ),
+  ),
+  'xn--p1ai' => 
   array (
   ),
-  'السعودیة' => 
+  'xn--wgbl6a' => 
   array (
   ),
-  'السعودیۃ' => 
+  'xn--mgberp4a5d4ar' => 
   array (
   ),
-  'السعوديه' => 
+  'xn--mgberp4a5d4a87g' => 
   array (
   ),
-  'سورية' => 
+  'xn--mgbqly7c0a67fbc' => 
   array (
   ),
-  'سوريا' => 
+  'xn--mgbqly7cvafr' => 
   array (
   ),
-  '新加坡' => 
+  'xn--ogbpf8fl' => 
   array (
   ),
-  'சிங்கப்பூர்' => 
+  'xn--mgbtf8fl' => 
   array (
   ),
-  'ไทย' => 
+  'xn--yfro4i67o' => 
   array (
   ),
-  'تونس' => 
+  'xn--clchc0ea0b2g2a9gcd' => 
   array (
   ),
-  '台灣' => 
+  'xn--o3cw4h' => 
   array (
   ),
-  '台湾' => 
+  'xn--pgbs0dh' => 
   array (
   ),
-  '臺灣' => 
+  'xn--kpry57d' => 
   array (
   ),
-  'укр' => 
+  'xn--kprw13d' => 
   array (
   ),
-  'اليمن' => 
+  'xn--nnx388a' => 
+  array (
+  ),
+  'xn--j1amh' => 
+  array (
+  ),
+  'xn--mgb2ddes' => 
   array (
   ),
   'xxx' => 
@@ -18427,5 +19364,2357 @@ return array (
     '*' => 
     array (
     ),
+  ),
+  'abb' => 
+  array (
+  ),
+  'abbott' => 
+  array (
+  ),
+  'abogado' => 
+  array (
+  ),
+  'academy' => 
+  array (
+  ),
+  'accenture' => 
+  array (
+  ),
+  'accountant' => 
+  array (
+  ),
+  'accountants' => 
+  array (
+  ),
+  'aco' => 
+  array (
+  ),
+  'active' => 
+  array (
+  ),
+  'actor' => 
+  array (
+  ),
+  'ads' => 
+  array (
+  ),
+  'adult' => 
+  array (
+  ),
+  'afl' => 
+  array (
+  ),
+  'africa' => 
+  array (
+  ),
+  'agency' => 
+  array (
+  ),
+  'aig' => 
+  array (
+  ),
+  'airforce' => 
+  array (
+  ),
+  'airtel' => 
+  array (
+  ),
+  'alibaba' => 
+  array (
+  ),
+  'alipay' => 
+  array (
+  ),
+  'allfinanz' => 
+  array (
+  ),
+  'alsace' => 
+  array (
+  ),
+  'amsterdam' => 
+  array (
+  ),
+  'analytics' => 
+  array (
+  ),
+  'android' => 
+  array (
+  ),
+  'anquan' => 
+  array (
+  ),
+  'apartments' => 
+  array (
+  ),
+  'aquarelle' => 
+  array (
+  ),
+  'aramco' => 
+  array (
+  ),
+  'archi' => 
+  array (
+  ),
+  'army' => 
+  array (
+  ),
+  'arte' => 
+  array (
+  ),
+  'associates' => 
+  array (
+  ),
+  'attorney' => 
+  array (
+  ),
+  'auction' => 
+  array (
+  ),
+  'audio' => 
+  array (
+  ),
+  'author' => 
+  array (
+  ),
+  'auto' => 
+  array (
+  ),
+  'autos' => 
+  array (
+  ),
+  'avianca' => 
+  array (
+  ),
+  'axa' => 
+  array (
+  ),
+  'azure' => 
+  array (
+  ),
+  'baidu' => 
+  array (
+  ),
+  'band' => 
+  array (
+  ),
+  'bank' => 
+  array (
+  ),
+  'bar' => 
+  array (
+  ),
+  'barcelona' => 
+  array (
+  ),
+  'barclaycard' => 
+  array (
+  ),
+  'barclays' => 
+  array (
+  ),
+  'bargains' => 
+  array (
+  ),
+  'bauhaus' => 
+  array (
+  ),
+  'bayern' => 
+  array (
+  ),
+  'bbc' => 
+  array (
+  ),
+  'bbva' => 
+  array (
+  ),
+  'bcn' => 
+  array (
+  ),
+  'beer' => 
+  array (
+  ),
+  'bentley' => 
+  array (
+  ),
+  'berlin' => 
+  array (
+  ),
+  'best' => 
+  array (
+  ),
+  'bharti' => 
+  array (
+  ),
+  'bible' => 
+  array (
+  ),
+  'bid' => 
+  array (
+  ),
+  'bike' => 
+  array (
+  ),
+  'bing' => 
+  array (
+  ),
+  'bingo' => 
+  array (
+  ),
+  'bio' => 
+  array (
+  ),
+  'black' => 
+  array (
+  ),
+  'blackfriday' => 
+  array (
+  ),
+  'bloomberg' => 
+  array (
+  ),
+  'blue' => 
+  array (
+  ),
+  'bms' => 
+  array (
+  ),
+  'bmw' => 
+  array (
+  ),
+  'bnl' => 
+  array (
+  ),
+  'bnpparibas' => 
+  array (
+  ),
+  'boats' => 
+  array (
+  ),
+  'bom' => 
+  array (
+  ),
+  'bond' => 
+  array (
+  ),
+  'boo' => 
+  array (
+  ),
+  'boots' => 
+  array (
+  ),
+  'bot' => 
+  array (
+  ),
+  'boutique' => 
+  array (
+  ),
+  'bradesco' => 
+  array (
+  ),
+  'bridgestone' => 
+  array (
+  ),
+  'broadway' => 
+  array (
+  ),
+  'broker' => 
+  array (
+  ),
+  'brussels' => 
+  array (
+  ),
+  'budapest' => 
+  array (
+  ),
+  'build' => 
+  array (
+  ),
+  'builders' => 
+  array (
+  ),
+  'business' => 
+  array (
+  ),
+  'buy' => 
+  array (
+  ),
+  'buzz' => 
+  array (
+  ),
+  'bzh' => 
+  array (
+  ),
+  'cab' => 
+  array (
+  ),
+  'cal' => 
+  array (
+  ),
+  'call' => 
+  array (
+  ),
+  'camera' => 
+  array (
+  ),
+  'camp' => 
+  array (
+  ),
+  'cancerresearch' => 
+  array (
+  ),
+  'canon' => 
+  array (
+  ),
+  'capetown' => 
+  array (
+  ),
+  'capital' => 
+  array (
+  ),
+  'car' => 
+  array (
+  ),
+  'caravan' => 
+  array (
+  ),
+  'cards' => 
+  array (
+  ),
+  'care' => 
+  array (
+  ),
+  'career' => 
+  array (
+  ),
+  'careers' => 
+  array (
+  ),
+  'cars' => 
+  array (
+  ),
+  'cartier' => 
+  array (
+  ),
+  'casa' => 
+  array (
+  ),
+  'cash' => 
+  array (
+  ),
+  'casino' => 
+  array (
+  ),
+  'catering' => 
+  array (
+  ),
+  'cba' => 
+  array (
+  ),
+  'cbn' => 
+  array (
+  ),
+  'center' => 
+  array (
+  ),
+  'ceo' => 
+  array (
+  ),
+  'cern' => 
+  array (
+  ),
+  'cfa' => 
+  array (
+  ),
+  'cfd' => 
+  array (
+  ),
+  'channel' => 
+  array (
+  ),
+  'chat' => 
+  array (
+  ),
+  'cheap' => 
+  array (
+  ),
+  'chloe' => 
+  array (
+  ),
+  'christmas' => 
+  array (
+  ),
+  'chrome' => 
+  array (
+  ),
+  'church' => 
+  array (
+  ),
+  'circle' => 
+  array (
+  ),
+  'cisco' => 
+  array (
+  ),
+  'citic' => 
+  array (
+  ),
+  'city' => 
+  array (
+  ),
+  'cityeats' => 
+  array (
+  ),
+  'claims' => 
+  array (
+  ),
+  'cleaning' => 
+  array (
+  ),
+  'click' => 
+  array (
+  ),
+  'clinic' => 
+  array (
+  ),
+  'clothing' => 
+  array (
+  ),
+  'club' => 
+  array (
+  ),
+  'coach' => 
+  array (
+  ),
+  'codes' => 
+  array (
+  ),
+  'coffee' => 
+  array (
+  ),
+  'college' => 
+  array (
+  ),
+  'cologne' => 
+  array (
+  ),
+  'commbank' => 
+  array (
+  ),
+  'community' => 
+  array (
+  ),
+  'company' => 
+  array (
+  ),
+  'computer' => 
+  array (
+  ),
+  'comsec' => 
+  array (
+  ),
+  'condos' => 
+  array (
+  ),
+  'construction' => 
+  array (
+  ),
+  'consulting' => 
+  array (
+  ),
+  'contact' => 
+  array (
+  ),
+  'contractors' => 
+  array (
+  ),
+  'cooking' => 
+  array (
+  ),
+  'cool' => 
+  array (
+  ),
+  'corsica' => 
+  array (
+  ),
+  'country' => 
+  array (
+  ),
+  'courses' => 
+  array (
+  ),
+  'credit' => 
+  array (
+  ),
+  'creditcard' => 
+  array (
+  ),
+  'creditunion' => 
+  array (
+  ),
+  'cricket' => 
+  array (
+  ),
+  'crown' => 
+  array (
+  ),
+  'crs' => 
+  array (
+  ),
+  'cruises' => 
+  array (
+  ),
+  'csc' => 
+  array (
+  ),
+  'cuisinella' => 
+  array (
+  ),
+  'cymru' => 
+  array (
+  ),
+  'cyou' => 
+  array (
+  ),
+  'dabur' => 
+  array (
+  ),
+  'dad' => 
+  array (
+  ),
+  'dance' => 
+  array (
+  ),
+  'date' => 
+  array (
+  ),
+  'dating' => 
+  array (
+  ),
+  'datsun' => 
+  array (
+  ),
+  'day' => 
+  array (
+  ),
+  'dclk' => 
+  array (
+  ),
+  'dealer' => 
+  array (
+  ),
+  'deals' => 
+  array (
+  ),
+  'degree' => 
+  array (
+  ),
+  'delivery' => 
+  array (
+  ),
+  'dell' => 
+  array (
+  ),
+  'democrat' => 
+  array (
+  ),
+  'dental' => 
+  array (
+  ),
+  'dentist' => 
+  array (
+  ),
+  'desi' => 
+  array (
+  ),
+  'design' => 
+  array (
+  ),
+  'dev' => 
+  array (
+  ),
+  'diamonds' => 
+  array (
+  ),
+  'diet' => 
+  array (
+  ),
+  'digital' => 
+  array (
+  ),
+  'direct' => 
+  array (
+  ),
+  'directory' => 
+  array (
+  ),
+  'discount' => 
+  array (
+  ),
+  'dnp' => 
+  array (
+  ),
+  'docs' => 
+  array (
+  ),
+  'dog' => 
+  array (
+  ),
+  'doha' => 
+  array (
+  ),
+  'domains' => 
+  array (
+  ),
+  'doosan' => 
+  array (
+  ),
+  'download' => 
+  array (
+  ),
+  'dubai' => 
+  array (
+  ),
+  'durban' => 
+  array (
+  ),
+  'dvag' => 
+  array (
+  ),
+  'earth' => 
+  array (
+  ),
+  'eat' => 
+  array (
+  ),
+  'edeka' => 
+  array (
+  ),
+  'education' => 
+  array (
+  ),
+  'email' => 
+  array (
+  ),
+  'emerck' => 
+  array (
+  ),
+  'energy' => 
+  array (
+  ),
+  'engineer' => 
+  array (
+  ),
+  'engineering' => 
+  array (
+  ),
+  'enterprises' => 
+  array (
+  ),
+  'epson' => 
+  array (
+  ),
+  'equipment' => 
+  array (
+  ),
+  'erni' => 
+  array (
+  ),
+  'esq' => 
+  array (
+  ),
+  'estate' => 
+  array (
+  ),
+  'eurovision' => 
+  array (
+  ),
+  'eus' => 
+  array (
+  ),
+  'events' => 
+  array (
+  ),
+  'everbank' => 
+  array (
+  ),
+  'exchange' => 
+  array (
+  ),
+  'expert' => 
+  array (
+  ),
+  'exposed' => 
+  array (
+  ),
+  'fage' => 
+  array (
+  ),
+  'fail' => 
+  array (
+  ),
+  'fairwinds' => 
+  array (
+  ),
+  'faith' => 
+  array (
+  ),
+  'fan' => 
+  array (
+  ),
+  'fans' => 
+  array (
+  ),
+  'farm' => 
+  array (
+  ),
+  'fashion' => 
+  array (
+  ),
+  'fast' => 
+  array (
+  ),
+  'feedback' => 
+  array (
+  ),
+  'ferrero' => 
+  array (
+  ),
+  'film' => 
+  array (
+  ),
+  'final' => 
+  array (
+  ),
+  'finance' => 
+  array (
+  ),
+  'financial' => 
+  array (
+  ),
+  'firestone' => 
+  array (
+  ),
+  'firmdale' => 
+  array (
+  ),
+  'fish' => 
+  array (
+  ),
+  'fishing' => 
+  array (
+  ),
+  'fit' => 
+  array (
+  ),
+  'fitness' => 
+  array (
+  ),
+  'flights' => 
+  array (
+  ),
+  'florist' => 
+  array (
+  ),
+  'flowers' => 
+  array (
+  ),
+  'flsmidth' => 
+  array (
+  ),
+  'fly' => 
+  array (
+  ),
+  'foo' => 
+  array (
+  ),
+  'football' => 
+  array (
+  ),
+  'ford' => 
+  array (
+  ),
+  'forex' => 
+  array (
+  ),
+  'forsale' => 
+  array (
+  ),
+  'foundation' => 
+  array (
+  ),
+  'frl' => 
+  array (
+  ),
+  'frogans' => 
+  array (
+  ),
+  'fund' => 
+  array (
+  ),
+  'furniture' => 
+  array (
+  ),
+  'futbol' => 
+  array (
+  ),
+  'gal' => 
+  array (
+  ),
+  'gallery' => 
+  array (
+  ),
+  'garden' => 
+  array (
+  ),
+  'gbiz' => 
+  array (
+  ),
+  'gdn' => 
+  array (
+  ),
+  'gea' => 
+  array (
+  ),
+  'gent' => 
+  array (
+  ),
+  'ggee' => 
+  array (
+  ),
+  'gift' => 
+  array (
+  ),
+  'gifts' => 
+  array (
+  ),
+  'gives' => 
+  array (
+  ),
+  'giving' => 
+  array (
+  ),
+  'glass' => 
+  array (
+  ),
+  'gle' => 
+  array (
+  ),
+  'global' => 
+  array (
+  ),
+  'globo' => 
+  array (
+  ),
+  'gmail' => 
+  array (
+  ),
+  'gmo' => 
+  array (
+  ),
+  'gmx' => 
+  array (
+  ),
+  'gold' => 
+  array (
+  ),
+  'goldpoint' => 
+  array (
+  ),
+  'golf' => 
+  array (
+  ),
+  'goo' => 
+  array (
+  ),
+  'goog' => 
+  array (
+  ),
+  'google' => 
+  array (
+  ),
+  'gop' => 
+  array (
+  ),
+  'got' => 
+  array (
+  ),
+  'graphics' => 
+  array (
+  ),
+  'gratis' => 
+  array (
+  ),
+  'green' => 
+  array (
+  ),
+  'gripe' => 
+  array (
+  ),
+  'group' => 
+  array (
+  ),
+  'gucci' => 
+  array (
+  ),
+  'guge' => 
+  array (
+  ),
+  'guide' => 
+  array (
+  ),
+  'guitars' => 
+  array (
+  ),
+  'guru' => 
+  array (
+  ),
+  'hamburg' => 
+  array (
+  ),
+  'hangout' => 
+  array (
+  ),
+  'haus' => 
+  array (
+  ),
+  'healthcare' => 
+  array (
+  ),
+  'help' => 
+  array (
+  ),
+  'here' => 
+  array (
+  ),
+  'hermes' => 
+  array (
+  ),
+  'hiphop' => 
+  array (
+  ),
+  'hitachi' => 
+  array (
+  ),
+  'hiv' => 
+  array (
+  ),
+  'holdings' => 
+  array (
+  ),
+  'holiday' => 
+  array (
+  ),
+  'homes' => 
+  array (
+  ),
+  'honda' => 
+  array (
+  ),
+  'horse' => 
+  array (
+  ),
+  'host' => 
+  array (
+  ),
+  'hosting' => 
+  array (
+  ),
+  'hotmail' => 
+  array (
+  ),
+  'house' => 
+  array (
+  ),
+  'how' => 
+  array (
+  ),
+  'hsbc' => 
+  array (
+  ),
+  'ibm' => 
+  array (
+  ),
+  'ice' => 
+  array (
+  ),
+  'icu' => 
+  array (
+  ),
+  'ifm' => 
+  array (
+  ),
+  'iinet' => 
+  array (
+  ),
+  'immo' => 
+  array (
+  ),
+  'immobilien' => 
+  array (
+  ),
+  'industries' => 
+  array (
+  ),
+  'infiniti' => 
+  array (
+  ),
+  'ing' => 
+  array (
+  ),
+  'ink' => 
+  array (
+  ),
+  'institute' => 
+  array (
+  ),
+  'insure' => 
+  array (
+  ),
+  'international' => 
+  array (
+  ),
+  'investments' => 
+  array (
+  ),
+  'ipiranga' => 
+  array (
+  ),
+  'irish' => 
+  array (
+  ),
+  'ist' => 
+  array (
+  ),
+  'istanbul' => 
+  array (
+  ),
+  'itau' => 
+  array (
+  ),
+  'iwc' => 
+  array (
+  ),
+  'jaguar' => 
+  array (
+  ),
+  'java' => 
+  array (
+  ),
+  'jcb' => 
+  array (
+  ),
+  'jetzt' => 
+  array (
+  ),
+  'jlc' => 
+  array (
+  ),
+  'joburg' => 
+  array (
+  ),
+  'jot' => 
+  array (
+  ),
+  'joy' => 
+  array (
+  ),
+  'jprs' => 
+  array (
+  ),
+  'juegos' => 
+  array (
+  ),
+  'kaufen' => 
+  array (
+  ),
+  'kddi' => 
+  array (
+  ),
+  'kfh' => 
+  array (
+  ),
+  'kim' => 
+  array (
+  ),
+  'kinder' => 
+  array (
+  ),
+  'kitchen' => 
+  array (
+  ),
+  'kiwi' => 
+  array (
+  ),
+  'koeln' => 
+  array (
+  ),
+  'komatsu' => 
+  array (
+  ),
+  'kpn' => 
+  array (
+  ),
+  'krd' => 
+  array (
+  ),
+  'kred' => 
+  array (
+  ),
+  'kyoto' => 
+  array (
+  ),
+  'lacaixa' => 
+  array (
+  ),
+  'land' => 
+  array (
+  ),
+  'landrover' => 
+  array (
+  ),
+  'lat' => 
+  array (
+  ),
+  'latrobe' => 
+  array (
+  ),
+  'law' => 
+  array (
+  ),
+  'lawyer' => 
+  array (
+  ),
+  'lds' => 
+  array (
+  ),
+  'lease' => 
+  array (
+  ),
+  'leclerc' => 
+  array (
+  ),
+  'legal' => 
+  array (
+  ),
+  'lgbt' => 
+  array (
+  ),
+  'liaison' => 
+  array (
+  ),
+  'lidl' => 
+  array (
+  ),
+  'life' => 
+  array (
+  ),
+  'lifeinsurance' => 
+  array (
+  ),
+  'lifestyle' => 
+  array (
+  ),
+  'lighting' => 
+  array (
+  ),
+  'like' => 
+  array (
+  ),
+  'limited' => 
+  array (
+  ),
+  'limo' => 
+  array (
+  ),
+  'lincoln' => 
+  array (
+  ),
+  'linde' => 
+  array (
+  ),
+  'link' => 
+  array (
+  ),
+  'live' => 
+  array (
+  ),
+  'loan' => 
+  array (
+  ),
+  'loans' => 
+  array (
+  ),
+  'london' => 
+  array (
+  ),
+  'lotte' => 
+  array (
+  ),
+  'lotto' => 
+  array (
+  ),
+  'love' => 
+  array (
+  ),
+  'ltd' => 
+  array (
+  ),
+  'ltda' => 
+  array (
+  ),
+  'lupin' => 
+  array (
+  ),
+  'luxe' => 
+  array (
+  ),
+  'luxury' => 
+  array (
+  ),
+  'madrid' => 
+  array (
+  ),
+  'maif' => 
+  array (
+  ),
+  'maison' => 
+  array (
+  ),
+  'makeup' => 
+  array (
+  ),
+  'man' => 
+  array (
+  ),
+  'management' => 
+  array (
+  ),
+  'mango' => 
+  array (
+  ),
+  'market' => 
+  array (
+  ),
+  'marketing' => 
+  array (
+  ),
+  'markets' => 
+  array (
+  ),
+  'marriott' => 
+  array (
+  ),
+  'media' => 
+  array (
+  ),
+  'meet' => 
+  array (
+  ),
+  'melbourne' => 
+  array (
+  ),
+  'meme' => 
+  array (
+  ),
+  'memorial' => 
+  array (
+  ),
+  'menu' => 
+  array (
+  ),
+  'meo' => 
+  array (
+  ),
+  'miami' => 
+  array (
+  ),
+  'microsoft' => 
+  array (
+  ),
+  'mini' => 
+  array (
+  ),
+  'mma' => 
+  array (
+  ),
+  'mobily' => 
+  array (
+  ),
+  'moda' => 
+  array (
+  ),
+  'moe' => 
+  array (
+  ),
+  'moi' => 
+  array (
+  ),
+  'monash' => 
+  array (
+  ),
+  'money' => 
+  array (
+  ),
+  'montblanc' => 
+  array (
+  ),
+  'mormon' => 
+  array (
+  ),
+  'mortgage' => 
+  array (
+  ),
+  'moscow' => 
+  array (
+  ),
+  'motorcycles' => 
+  array (
+  ),
+  'mov' => 
+  array (
+  ),
+  'movistar' => 
+  array (
+  ),
+  'mtn' => 
+  array (
+  ),
+  'mtpc' => 
+  array (
+  ),
+  'nadex' => 
+  array (
+  ),
+  'nagoya' => 
+  array (
+  ),
+  'navy' => 
+  array (
+  ),
+  'nec' => 
+  array (
+  ),
+  'netbank' => 
+  array (
+  ),
+  'network' => 
+  array (
+  ),
+  'neustar' => 
+  array (
+  ),
+  'new' => 
+  array (
+  ),
+  'news' => 
+  array (
+  ),
+  'nexus' => 
+  array (
+  ),
+  'ngo' => 
+  array (
+  ),
+  'nhk' => 
+  array (
+  ),
+  'nico' => 
+  array (
+  ),
+  'ninja' => 
+  array (
+  ),
+  'nissan' => 
+  array (
+  ),
+  'nokia' => 
+  array (
+  ),
+  'norton' => 
+  array (
+  ),
+  'nowruz' => 
+  array (
+  ),
+  'nra' => 
+  array (
+  ),
+  'nrw' => 
+  array (
+  ),
+  'ntt' => 
+  array (
+  ),
+  'nyc' => 
+  array (
+  ),
+  'obi' => 
+  array (
+  ),
+  'okinawa' => 
+  array (
+  ),
+  'omega' => 
+  array (
+  ),
+  'one' => 
+  array (
+  ),
+  'ong' => 
+  array (
+  ),
+  'onl' => 
+  array (
+  ),
+  'online' => 
+  array (
+  ),
+  'ooo' => 
+  array (
+  ),
+  'oracle' => 
+  array (
+  ),
+  'organic' => 
+  array (
+  ),
+  'osaka' => 
+  array (
+  ),
+  'otsuka' => 
+  array (
+  ),
+  'ovh' => 
+  array (
+  ),
+  'page' => 
+  array (
+  ),
+  'panerai' => 
+  array (
+  ),
+  'paris' => 
+  array (
+  ),
+  'pars' => 
+  array (
+  ),
+  'partners' => 
+  array (
+  ),
+  'parts' => 
+  array (
+  ),
+  'party' => 
+  array (
+  ),
+  'pharmacy' => 
+  array (
+  ),
+  'philips' => 
+  array (
+  ),
+  'photo' => 
+  array (
+  ),
+  'photography' => 
+  array (
+  ),
+  'photos' => 
+  array (
+  ),
+  'physio' => 
+  array (
+  ),
+  'piaget' => 
+  array (
+  ),
+  'pics' => 
+  array (
+  ),
+  'pictet' => 
+  array (
+  ),
+  'pictures' => 
+  array (
+  ),
+  'pid' => 
+  array (
+  ),
+  'pin' => 
+  array (
+  ),
+  'pink' => 
+  array (
+  ),
+  'pizza' => 
+  array (
+  ),
+  'place' => 
+  array (
+  ),
+  'plumbing' => 
+  array (
+  ),
+  'pohl' => 
+  array (
+  ),
+  'poker' => 
+  array (
+  ),
+  'porn' => 
+  array (
+  ),
+  'praxi' => 
+  array (
+  ),
+  'press' => 
+  array (
+  ),
+  'prod' => 
+  array (
+  ),
+  'productions' => 
+  array (
+  ),
+  'prof' => 
+  array (
+  ),
+  'promo' => 
+  array (
+  ),
+  'properties' => 
+  array (
+  ),
+  'property' => 
+  array (
+  ),
+  'pub' => 
+  array (
+  ),
+  'qpon' => 
+  array (
+  ),
+  'quebec' => 
+  array (
+  ),
+  'racing' => 
+  array (
+  ),
+  'read' => 
+  array (
+  ),
+  'realtor' => 
+  array (
+  ),
+  'recipes' => 
+  array (
+  ),
+  'red' => 
+  array (
+  ),
+  'redstone' => 
+  array (
+  ),
+  'rehab' => 
+  array (
+  ),
+  'reise' => 
+  array (
+  ),
+  'reisen' => 
+  array (
+  ),
+  'reit' => 
+  array (
+  ),
+  'ren' => 
+  array (
+  ),
+  'rent' => 
+  array (
+  ),
+  'rentals' => 
+  array (
+  ),
+  'repair' => 
+  array (
+  ),
+  'report' => 
+  array (
+  ),
+  'republican' => 
+  array (
+  ),
+  'rest' => 
+  array (
+  ),
+  'restaurant' => 
+  array (
+  ),
+  'review' => 
+  array (
+  ),
+  'reviews' => 
+  array (
+  ),
+  'rich' => 
+  array (
+  ),
+  'ricoh' => 
+  array (
+  ),
+  'rio' => 
+  array (
+  ),
+  'rip' => 
+  array (
+  ),
+  'rocher' => 
+  array (
+  ),
+  'rocks' => 
+  array (
+  ),
+  'rodeo' => 
+  array (
+  ),
+  'room' => 
+  array (
+  ),
+  'rsvp' => 
+  array (
+  ),
+  'ruhr' => 
+  array (
+  ),
+  'ryukyu' => 
+  array (
+  ),
+  'saarland' => 
+  array (
+  ),
+  'safe' => 
+  array (
+  ),
+  'safety' => 
+  array (
+  ),
+  'sakura' => 
+  array (
+  ),
+  'sale' => 
+  array (
+  ),
+  'salon' => 
+  array (
+  ),
+  'samsung' => 
+  array (
+  ),
+  'sandvik' => 
+  array (
+  ),
+  'sandvikcoromant' => 
+  array (
+  ),
+  'sanofi' => 
+  array (
+  ),
+  'sap' => 
+  array (
+  ),
+  'sapo' => 
+  array (
+  ),
+  'sarl' => 
+  array (
+  ),
+  'saxo' => 
+  array (
+  ),
+  'sbs' => 
+  array (
+  ),
+  'sca' => 
+  array (
+  ),
+  'scb' => 
+  array (
+  ),
+  'schmidt' => 
+  array (
+  ),
+  'scholarships' => 
+  array (
+  ),
+  'school' => 
+  array (
+  ),
+  'schule' => 
+  array (
+  ),
+  'schwarz' => 
+  array (
+  ),
+  'science' => 
+  array (
+  ),
+  'scor' => 
+  array (
+  ),
+  'scot' => 
+  array (
+  ),
+  'seat' => 
+  array (
+  ),
+  'seek' => 
+  array (
+  ),
+  'sener' => 
+  array (
+  ),
+  'services' => 
+  array (
+  ),
+  'sew' => 
+  array (
+  ),
+  'sex' => 
+  array (
+  ),
+  'sexy' => 
+  array (
+  ),
+  'sharp' => 
+  array (
+  ),
+  'shia' => 
+  array (
+  ),
+  'shiksha' => 
+  array (
+  ),
+  'shoes' => 
+  array (
+  ),
+  'shouji' => 
+  array (
+  ),
+  'shriram' => 
+  array (
+  ),
+  'singles' => 
+  array (
+  ),
+  'site' => 
+  array (
+  ),
+  'skin' => 
+  array (
+  ),
+  'sky' => 
+  array (
+  ),
+  'skype' => 
+  array (
+  ),
+  'smile' => 
+  array (
+  ),
+  'social' => 
+  array (
+  ),
+  'software' => 
+  array (
+  ),
+  'sohu' => 
+  array (
+  ),
+  'solar' => 
+  array (
+  ),
+  'solutions' => 
+  array (
+  ),
+  'sony' => 
+  array (
+  ),
+  'soy' => 
+  array (
+  ),
+  'space' => 
+  array (
+  ),
+  'spiegel' => 
+  array (
+  ),
+  'spreadbetting' => 
+  array (
+  ),
+  'stada' => 
+  array (
+  ),
+  'star' => 
+  array (
+  ),
+  'statoil' => 
+  array (
+  ),
+  'stc' => 
+  array (
+  ),
+  'stcgroup' => 
+  array (
+  ),
+  'stockholm' => 
+  array (
+  ),
+  'storage' => 
+  array (
+  ),
+  'study' => 
+  array (
+  ),
+  'style' => 
+  array (
+  ),
+  'sucks' => 
+  array (
+  ),
+  'supplies' => 
+  array (
+  ),
+  'supply' => 
+  array (
+  ),
+  'support' => 
+  array (
+  ),
+  'surf' => 
+  array (
+  ),
+  'surgery' => 
+  array (
+  ),
+  'suzuki' => 
+  array (
+  ),
+  'swatch' => 
+  array (
+  ),
+  'swiss' => 
+  array (
+  ),
+  'sydney' => 
+  array (
+  ),
+  'symantec' => 
+  array (
+  ),
+  'systems' => 
+  array (
+  ),
+  'tab' => 
+  array (
+  ),
+  'taipei' => 
+  array (
+  ),
+  'taobao' => 
+  array (
+  ),
+  'tatar' => 
+  array (
+  ),
+  'tattoo' => 
+  array (
+  ),
+  'tax' => 
+  array (
+  ),
+  'tci' => 
+  array (
+  ),
+  'technology' => 
+  array (
+  ),
+  'telefonica' => 
+  array (
+  ),
+  'temasek' => 
+  array (
+  ),
+  'tennis' => 
+  array (
+  ),
+  'tienda' => 
+  array (
+  ),
+  'tips' => 
+  array (
+  ),
+  'tires' => 
+  array (
+  ),
+  'tirol' => 
+  array (
+  ),
+  'tmall' => 
+  array (
+  ),
+  'today' => 
+  array (
+  ),
+  'tokyo' => 
+  array (
+  ),
+  'tools' => 
+  array (
+  ),
+  'top' => 
+  array (
+  ),
+  'toray' => 
+  array (
+  ),
+  'toshiba' => 
+  array (
+  ),
+  'tours' => 
+  array (
+  ),
+  'town' => 
+  array (
+  ),
+  'toys' => 
+  array (
+  ),
+  'trade' => 
+  array (
+  ),
+  'trading' => 
+  array (
+  ),
+  'training' => 
+  array (
+  ),
+  'trust' => 
+  array (
+  ),
+  'tui' => 
+  array (
+  ),
+  'tushu' => 
+  array (
+  ),
+  'ubs' => 
+  array (
+  ),
+  'university' => 
+  array (
+  ),
+  'uno' => 
+  array (
+  ),
+  'uol' => 
+  array (
+  ),
+  'vacations' => 
+  array (
+  ),
+  'vana' => 
+  array (
+  ),
+  'vegas' => 
+  array (
+  ),
+  'ventures' => 
+  array (
+  ),
+  'versicherung' => 
+  array (
+  ),
+  'vet' => 
+  array (
+  ),
+  'viajes' => 
+  array (
+  ),
+  'video' => 
+  array (
+  ),
+  'villas' => 
+  array (
+  ),
+  'vip' => 
+  array (
+  ),
+  'virgin' => 
+  array (
+  ),
+  'vision' => 
+  array (
+  ),
+  'vista' => 
+  array (
+  ),
+  'vistaprint' => 
+  array (
+  ),
+  'viva' => 
+  array (
+  ),
+  'vlaanderen' => 
+  array (
+  ),
+  'vodka' => 
+  array (
+  ),
+  'vote' => 
+  array (
+  ),
+  'voting' => 
+  array (
+  ),
+  'voto' => 
+  array (
+  ),
+  'voyage' => 
+  array (
+  ),
+  'wales' => 
+  array (
+  ),
+  'walter' => 
+  array (
+  ),
+  'wang' => 
+  array (
+  ),
+  'wanggou' => 
+  array (
+  ),
+  'watch' => 
+  array (
+  ),
+  'watches' => 
+  array (
+  ),
+  'weather' => 
+  array (
+  ),
+  'webcam' => 
+  array (
+  ),
+  'website' => 
+  array (
+  ),
+  'wed' => 
+  array (
+  ),
+  'wedding' => 
+  array (
+  ),
+  'whoswho' => 
+  array (
+  ),
+  'wien' => 
+  array (
+  ),
+  'wiki' => 
+  array (
+  ),
+  'williamhill' => 
+  array (
+  ),
+  'win' => 
+  array (
+  ),
+  'windows' => 
+  array (
+  ),
+  'wme' => 
+  array (
+  ),
+  'work' => 
+  array (
+  ),
+  'works' => 
+  array (
+  ),
+  'world' => 
+  array (
+  ),
+  'wtc' => 
+  array (
+  ),
+  'wtf' => 
+  array (
+  ),
+  'xbox' => 
+  array (
+  ),
+  'xerox' => 
+  array (
+  ),
+  'xihuan' => 
+  array (
+  ),
+  'xin' => 
+  array (
+  ),
+  'xn--11b4c3d' => 
+  array (
+  ),
+  'xn--1qqw23a' => 
+  array (
+  ),
+  'xn--30rr7y' => 
+  array (
+  ),
+  'xn--3bst00m' => 
+  array (
+  ),
+  'xn--3ds443g' => 
+  array (
+  ),
+  'xn--3pxu8k' => 
+  array (
+  ),
+  'xn--42c2d9a' => 
+  array (
+  ),
+  'xn--45q11c' => 
+  array (
+  ),
+  'xn--4gbrim' => 
+  array (
+  ),
+  'xn--55qw42g' => 
+  array (
+  ),
+  'xn--55qx5d' => 
+  array (
+  ),
+  'xn--5tzm5g' => 
+  array (
+  ),
+  'xn--6frz82g' => 
+  array (
+  ),
+  'xn--6qq986b3xl' => 
+  array (
+  ),
+  'xn--80adxhks' => 
+  array (
+  ),
+  'xn--80asehdb' => 
+  array (
+  ),
+  'xn--80aswg' => 
+  array (
+  ),
+  'xn--9dbq2a' => 
+  array (
+  ),
+  'xn--9et52u' => 
+  array (
+  ),
+  'xn--b4w605ferd' => 
+  array (
+  ),
+  'xn--c1avg' => 
+  array (
+  ),
+  'xn--c2br7g' => 
+  array (
+  ),
+  'xn--cg4bki' => 
+  array (
+  ),
+  'xn--czr694b' => 
+  array (
+  ),
+  'xn--czrs0t' => 
+  array (
+  ),
+  'xn--czru2d' => 
+  array (
+  ),
+  'xn--d1acj3b' => 
+  array (
+  ),
+  'xn--eckvdtc9d' => 
+  array (
+  ),
+  'xn--efvy88h' => 
+  array (
+  ),
+  'xn--fhbei' => 
+  array (
+  ),
+  'xn--fiq228c5hs' => 
+  array (
+  ),
+  'xn--fiq64b' => 
+  array (
+  ),
+  'xn--fjq720a' => 
+  array (
+  ),
+  'xn--flw351e' => 
+  array (
+  ),
+  'xn--hxt814e' => 
+  array (
+  ),
+  'xn--i1b6b1a6a2e' => 
+  array (
+  ),
+  'xn--imr513n' => 
+  array (
+  ),
+  'xn--io0a7i' => 
+  array (
+  ),
+  'xn--j1aef' => 
+  array (
+  ),
+  'xn--jlq61u9w7b' => 
+  array (
+  ),
+  'xn--kcrx77d1x4a' => 
+  array (
+  ),
+  'xn--kpu716f' => 
+  array (
+  ),
+  'xn--kput3i' => 
+  array (
+  ),
+  'xn--mgba3a3ejt' => 
+  array (
+  ),
+  'xn--mgbab2bd' => 
+  array (
+  ),
+  'xn--mgbb9fbpob' => 
+  array (
+  ),
+  'xn--mgbt3dhd' => 
+  array (
+  ),
+  'xn--mk1bu44c' => 
+  array (
+  ),
+  'xn--mxtq1m' => 
+  array (
+  ),
+  'xn--ngbc5azd' => 
+  array (
+  ),
+  'xn--ngbe9e0a' => 
+  array (
+  ),
+  'xn--nqv7f' => 
+  array (
+  ),
+  'xn--nqv7fs00ema' => 
+  array (
+  ),
+  'xn--nyqy26a' => 
+  array (
+  ),
+  'xn--p1acf' => 
+  array (
+  ),
+  'xn--pbt977c' => 
+  array (
+  ),
+  'xn--pssy2u' => 
+  array (
+  ),
+  'xn--q9jyb4c' => 
+  array (
+  ),
+  'xn--qcka1pmc' => 
+  array (
+  ),
+  'xn--rhqv96g' => 
+  array (
+  ),
+  'xn--ses554g' => 
+  array (
+  ),
+  'xn--t60b56a' => 
+  array (
+  ),
+  'xn--tckwe' => 
+  array (
+  ),
+  'xn--unup4y' => 
+  array (
+  ),
+  'xn--vermgensberater-ctb' => 
+  array (
+  ),
+  'xn--vermgensberatung-pwb' => 
+  array (
+  ),
+  'xn--vhquv' => 
+  array (
+  ),
+  'xn--vuq861b' => 
+  array (
+  ),
+  'xn--xhq521b' => 
+  array (
+  ),
+  'xn--zfr164b' => 
+  array (
+  ),
+  'xyz' => 
+  array (
+  ),
+  'yachts' => 
+  array (
+  ),
+  'yamaxun' => 
+  array (
+  ),
+  'yandex' => 
+  array (
+  ),
+  'yodobashi' => 
+  array (
+  ),
+  'yoga' => 
+  array (
+  ),
+  'yokohama' => 
+  array (
+  ),
+  'youtube' => 
+  array (
+  ),
+  'yun' => 
+  array (
+  ),
+  'zara' => 
+  array (
+  ),
+  'zero' => 
+  array (
+  ),
+  'zip' => 
+  array (
+  ),
+  'zone' => 
+  array (
+  ),
+  'zuerich' => 
+  array (
   ),
 );

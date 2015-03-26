@@ -31,7 +31,9 @@ class SetupCronCommand extends Command
         $bin_file = realpath(__DIR__ ."/../../../bin/urlshort.php");
         $crontab  = new CrontabManager();        
         $job = $crontab->newJob();
-        $job->onMinute('30')->onHour('*')->doJob($bin_file .' gsb:update  > /dev/null');
+        $job->onMinute('10')->onHour('*')->doJob($bin_file .' laterjob:mockprocess 20  > /dev/null');
+        $job->onMinute('0')->onHour('*')->doJob($bin_file .' laterjob:monitor  > /dev/null');
+
 
         $crontab->add($job);
         $crontab->save();

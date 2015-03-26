@@ -6,7 +6,7 @@
 $app['resources_path']  = realpath(__DIR__ . "/../../resources") . DIRECTORY_SEPARATOR;
 $app['cache_path']      = realpath(__DIR__ . "/../../resources/cache") . DIRECTORY_SEPARATOR;
 $app['web_root']        = realpath(__DIR__  . "/../../web") . DIRECTORY_SEPARATOR;
-
+$app['views_path']      = realpath(__DIR__ . "/../../resources/views") . DIRECTORY_SEPARATOR;
 
 
 # ----------------------------------------------------
@@ -14,7 +14,7 @@ $app['web_root']        = realpath(__DIR__  . "/../../web") . DIRECTORY_SEPARATO
 # 
 # ---------------------------------------------------
 
-$app['environment'] = @$_SERVER["APP_ENVIRONMENT"] ?: "development";
+$app['environment'] = @$_GLOBALS["APP_ENVIRONMENT"] ?: "development";
 
 # Load a environment specific configuration file
 if (file_exists(__DIR__ . '/environments/'.$app['environment'].'.php')) {

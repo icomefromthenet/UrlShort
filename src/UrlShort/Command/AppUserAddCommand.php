@@ -9,30 +9,29 @@ use Symfony\Component\Console\Command\Command,
     Symfony\Component\Console\Input\InputArgument;
 
 /**
-*  Parse a url and output result
+*  Adds a new user to the database
 *
 *  @author Lewis Dyer <getintouch@icomefromthenet.com>
 *  @since 1.0.0
 */
-class UrlParserTestCommand extends Command
+class AppUserAddCommand extends Command
 {
     
     /**
-    * Truncate the Queue and Transition table
+    * Adds a new user to the database
     *
     * @param InputInterface $input An InputInterface instance
     * @param OutputInterface $output An OutputInterface instance
     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $url = $input->getArgument('url');
+        $email = $input->getArgument('email');
+        $password = $input->getArgument('password');
         
         $app     = $this->getHelper('silexApplication')->getApplication();
-        $parser = $app['pdb.parser'];
-        
-        $domain = $parser->parseURL($url);
-        
-        $output->writeln(var_export($domain,true));
+ 
+        $user = $app['user.manager']->createUser($email, $password, 'John Doe', array('ROLE_ADMIN'));
+        $app['user.manager']->insert($user);
         
         return 0;
     }
@@ -41,18 +40,19 @@ class UrlParserTestCommand extends Command
     
     protected function configure()
     {
-        $this->setDescription('Parse a url and output results');
+        $this->setDescription('Adds a user to the database');
         $this->setHelp(<<<EOF
-Output the result of url parsing by pdp parsing library
-Don't forget to <info>quote the url</info> .
+Adds a user to the database, use to add test users 
 
 Examples:
 
->> url:parse "http://www.google.com.au?b=c&f=u"
+>> app:useradd person@gmail.com mypassword
 
 EOF
 );
-        $this->addArgument('url',InputArgument::REQUIRED, 'A url to parse');
+        $this->addArgument('email',InputArgument::REQUIRED, 'An email account ');
+        $this->addArgument('password',InputArgument::REQUIRED, 'A password to use ');
+        
         parent::configure();
     }
 }

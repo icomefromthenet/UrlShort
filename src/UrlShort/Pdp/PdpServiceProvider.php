@@ -3,7 +3,7 @@ namespace UrlShort\Pdp;
 
 use Silex\Application;
 use Silex\ServiceProviderInterface;
-use Pdp\DomainParser;
+use Pdp\Parser;
 use Pdp\PublicSuffixListManager;
 use UrlShort\UrlShortException;
 
@@ -27,7 +27,7 @@ class PdpServiceProvider implements ServiceProviderInterface
         
         
         $app['pdb.parser'] = $app->share(function() use ($app){
-            return new DomainParser($app['pdb.listmanager']->getList());
+            return new Parser($app['pdb.listmanager']->getList());
         });
         
     }
