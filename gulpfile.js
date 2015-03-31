@@ -8,6 +8,9 @@ var rename    = require('gulp-rename');
 var less      = require('gulp-less');
 var uglify    = require('gulp-uglify');
 var fs        = require('fs');
+var watch     = require('gulp-watch');
+var batch     = require('gulp-batch');
+var plumber   = require('gulp-plumber');
 
 
 var projectConfig   = {
@@ -18,8 +21,10 @@ var projectConfig   = {
           'jquery.js'
          ,'mithril.js'
          ,'collections.min.js'
+         ,'moment.js'
          ,'util.js'
-         ,'queue/common/model.js'
+         ,'urlshort.queue.common.model.js'
+         ,'urlshort.queue.activity.model.js'
          ]
      }
      ,css : {
@@ -57,6 +62,7 @@ gulp.task('scripts', function() {
     }
     
     return gulp.src(aFiles)
+      .pipe(plumber())
       .pipe(concat('app.js'))
       .pipe(gulp.dest(config.dest))
       .pipe(uglify())
@@ -82,6 +88,7 @@ gulp.task('css', function() {
     
     
     return gulp.src(aFiles)
+      .pipe(plumber())
       .pipe(concat('app.css'))
       .pipe(gulp.dest(config.dest))
       .pipe(minifyCSS())
@@ -89,6 +96,30 @@ gulp.task('css', function() {
       .pipe(gulp.dest(config.dest));
       
 });
+
+
+gulp.task('watch_scripts', function () {
+    
+    var aFiles = [];
+    var config = projectConfig.js;
+    
+    for (var file in config.build ) {
+      aFiles.push(config.src+config.build[file]);
+         
+    }
+    
+    // check for bad path
+    try {
+      aFiles.forEach(fs.statSync);
+    } catch (e) {
+      console.log(e);
+    }
+    
+    watch(aFiles, batch(function () {
+        gulp.start('scripts');
+    }));
+});
+
 
 
 // Default Task

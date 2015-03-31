@@ -12,123 +12,33 @@
  
  var apiKey = 'aaaa';
  
-  
- // Ensure the top-level namespace
- extend(urlshort,'queue.activity');
- 
- !function() { 
-  
-    var activity = urlshort.queue.activity;
-  
-  // A model for Queue Activity state constants
-  
-  activity.StateList = function() {
-        
-        return [ new activity.State(1)    
-                ,new activity.State(2)    
-                ,new activity.State(3)    
-                ,new activity.State(4)    
-                ,new activity.State(5)];
-     
-  };
-  
-  // Model entity for a Queue Job State
-  
-  activity.State = function(stateId) {
-     
-    if(!this.isValid(stateId)) {
-       throw new Error('Invalid state id at '+stateId);
-    }  
-       
-    this.stateId = m.prop(stateId);
-      
-  };
-  
-  activity.State.prototype.getList = function() {
-      // this map so we know which int constant means where state
-      return  ['STATE_ADD','STATE_START','STATE_FINISH','STATE_ERROR','STATE_FAIL']; 
-  }; 
-  
-  activity.State.prototype.isValid = function(stateId) {
-        
-        var isValid   = false;
-        var stateDesc = this.getList();
-          
-        if(stateDesc[stateId-1]) {
-          isValid = true;
-        } 
-        
-        return isValid;
-   };
-   
-   activity.State.prototype.getLiteral = function() {
-        var stateDesc = this.getList();    
-        
-        return stateDesc[this.stateId()-1];  
-          
-    };  
- 
-  //  model for an Acitvity Record
-  
-  activity.Activity = function (data) {
-      
-      this.transitionId         = m.prop(data.transitionId);
-      this.dateOccured          = m.prop(Date.createFromMysql(data.dateOccured));
-      this.stateId              = new activity.State(data.stateID);
-      this.workerId             = m.prop(data.workerId);
-      this.jobId                = m.prop(data.jobId);
-      this.transitionMessage    = m.prop(data.transitionMessage);
-      this.processHandle        = m.prop(data.processHandle);
-      
-  };
-  
- // Collection for the Model
+//set the api key
+urlshort.queue.activity.ActivityRequest.apiKey('example key');
 
- activity.ActivityList = Array;
+var oPagedStore = new urlshort.queue.common.PageDataStore();
+
+oPagedStore.init({method:'GET','pageLimit':110}
+                ,urlshort.queue.activity.ActivityRequest);
+
+oPagedStore.onRefresh({
     
- // Factory to setup and instance of our Request builder  
- activity.ActivityAPI = (function(apiKey) {
-    
-    var request =  new urlshort.queue.common.Request(apiKey,'/queue/activities', {
-        'limit'   : 'limit'
-        ,'offset' : 'offet'
-        ,'order'  : 'order'
-        ,'before' : 'before'
-        ,'after'  : 'after'
-    });
-    
-    
-    request.findActivity = function() {
-        return this.prepareRequest({
-           method : 'GET' 
-           type: function(act) {
-               return new activity.Activity(this.mapOptionsReverse(act));
-           }.bind(request)           
+}).then(function(data){
+
+    oPagedStore.onPageForwards().then(function(data){
+        oPagedStore.onPageBackwards().then(function(data){
+            oPagedStore.onPageForwards().then(function(data){
+                //console.log(data)
+            
+            });
+            
         });
         
-    }
-    
-    return  request;
+    })
+});
 
- }(apiKey));
- 
- 
 
- // A view model 
- 
- activity.vm = (function(){
-    var vm = {};
-    vm.init = function() {
-        // the activity list
-        vm.list = new activity.ActivityList();
 
-        // fetch activity data from the RemoteStore
-        
-    }
-     
- }());
-     
-}();
+
 </script>
 
 {% endblock pagescript %}
