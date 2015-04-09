@@ -5,22 +5,12 @@ use DateTime;
 use UrlShort\Model\UrlQuery;
 use UrlShort\Model\UrlGatewaty;
 use UrlShort\UrlShortServiceProvider;
-use UrlShort\Test\TestsWithFixture;
+use UrlShort\Test\Base\TestsWithFixture; 
 
-class ModelQueryTest extends TestsWithFixture
+class UrlStorageQueryTest extends TestsWithFixture
 {
     
-    /**
-    * Creates the application.
-    *
-    * @return HttpKernel
-    */
-    public function createApplication()
-    {
-        return require __DIR__ .'/../../../app.php';       
-    }
-    
-    
+   
     
     public function testFilterById()
     {

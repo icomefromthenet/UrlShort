@@ -9,9 +9,10 @@ class UrlShortServiceProvider implements ServiceProviderInterface
     public function register(Application $app)
     {
         
+        
         $app['urlshort.meta'] = $app->share(function() use ($app) {
            
-            $table = new \DBALGateway\Metadata\Table($app['urlshort.tablename']);
+            $table = new \DBALGateway\Metadata\Table('url_storage');
         
             # setup primay key
             $table->addColumn('url_id','integer',array("unsigned" => true,'autoincrement' => true));
@@ -47,7 +48,7 @@ class UrlShortServiceProvider implements ServiceProviderInterface
         
         $app['urlshort.gateway'] = $app->share(function () use ($app) {
             
-            $tableName = $app['urlshort.tablename'];
+            $tableName = 'url_storage';
             $doctrine  = $app['db'];
             $event     = $app['dispatcher'];
             $meta      = $app['urlshort.meta'];
@@ -63,22 +64,6 @@ class UrlShortServiceProvider implements ServiceProviderInterface
            
            return new \UrlShort\Model\UrlMapper($event,$gateway);
         });
-        
-        $app['urlshort.generator'] = $app->share(function() use ($app) {
-           $chars = "123456789bcdfghjkmnpqrstvwxyz";
-           return new \UrlShort\ShortCodeGenerator($chars); 
-        });
-        
-        $app['urlshort'] = $app->share(function() use ($app){
-           
-           $event      = $app['dispatcher'];
-           $mapper     = $app['urlshort.mapper'];
-           $generator  = $app['urlshort.generator'];
-           
-           return new \UrlShort\Shortner($event,$mapper,$generator);
-            
-        });
-        
         
         $app['urlshort.approvalstatus.meta']  = $app->share(function() use ($app){
             
@@ -104,6 +89,25 @@ class UrlShortServiceProvider implements ServiceProviderInterface
             return new \UrlShort\Model\ApprovalStatusGateway($tableName,$doctrine,$event,$meta,null,$builder);
            
         });
+        
+        
+        $app['urlshort.generator'] = $app->share(function() use ($app) {
+           $chars = "123456789bcdfghjkmnpqrstvwxyz";
+           return new \UrlShort\ShortCodeGenerator($chars); 
+        });
+        
+        $app['urlshort'] = $app->share(function() use ($app){
+           
+           $event      = $app['dispatcher'];
+           $mapper     = $app['urlshort.mapper'];
+           $generator  = $app['urlshort.generator'];
+           
+           return new \UrlShort\Shortner($event,$mapper,$generator);
+            
+        });
+        
+        
+        
         
     }
 

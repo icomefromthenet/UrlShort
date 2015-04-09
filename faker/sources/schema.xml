@@ -3,7 +3,8 @@
  <writer platform="mysql" format="phpunit" />
  
  
- <table name="url_short_storage" generate="200" generatorSeed="1000" randomGenerator="mersenne">
+ <table name="url_storage" generate="200" generatorSeed="1000" randomGenerator="mersenne">
+ 
   <column name="url_id" type="integer">
    <datatype name="autoincrement" />
   </column>
@@ -29,55 +30,9 @@
    <foreign-key name="url_short_tags.tag_id" foreignTable="url_short_tags" foreignColumn="tag_id" />
   </column>
   
-  <column name="review_passed" type="boolean">
-   <swap>
-    <when switch="150">
-     <!-- passed review -->
-     <datatype name="boolean" value="true" />
-    </when>
-    <when switch="25">
-     <!-- failed review -->
-      <datatype name="boolean" value="false" />
-    </when>
-    <when switch="25">
-     <!-- not been reviewed -->
-     <datatype name="nulltype" />
-    </when>
-   </swap>
+  <column name="last_activity_id" type="integer">
+   <datatype name="nulltype" /> 
   </column>
-  
-  <column name="review_failure_msg" type="string">
-   <swap>
-    <when switch="150">
-     <!-- passed review -->
-    <datatype name="nulltype" />
-    </when>
-    <when switch="25">
-     <!-- failed review -->
-      <datatype name="text" paragraphs="1" minlines="1" />
-    </when>
-    <when switch="25">
-     <!-- not been reviewed -->
-     <datatype name="nulltype" />
-    </when>
-   </swap>
-  </column>
-  
-  <column name="review_date" type="datetime">
-    <swap>
-    <when switch="175">
-     <!-- passed review -->
-    <datatype name="date" start="now" modify="+1 day" max="today +10 weeks" />
-    </when>
-    <when switch="25">
-     <!-- not been reviewed -->
-     <datatype name="nulltype" />
-    </when>
-   </swap>
-   
-   
-  </column>
-  
   
  </table>
  
@@ -114,4 +69,6 @@
    </datatype>
   </column>
  </table>
+ 
+ 
 </schema>

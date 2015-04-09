@@ -1,5 +1,5 @@
 <?php
-namespace UrlShort\Test;
+namespace UrlShort\Test\Base;
 
 use PDO;
 use PHPUnit_Extensions_Database_Operation_Composite;
@@ -86,8 +86,13 @@ class TestsWithFixture extends PHPUnit_Extensions_Database_TestCase
     */
     public function createApplication()
     {
-       
+        $app = require __DIR__ .'/../../../../app.php';
+        
+        $app->boot();
+        
+        return $app;
     }
+    
 
     /**
     * Creates a Client.

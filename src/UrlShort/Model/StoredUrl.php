@@ -60,27 +60,19 @@ class StoredUrl
     public $status;
     
     
-    public $subStatus;
-    
     
     public function getStatus()
     {
         return $this->status;
     }
     
-    public function getSubstatus()
-    {
-        return $this->subStatus;
-    }
+    
     
     public function setStatus($statusCode)
     {
         $this->status = $statusCode;
     }
     
-    public function setSubStatus($subStatusCode)
-    {
-        $this->subStatus = $subStatusCode;
-    }
+    
 }
 /* End of File */

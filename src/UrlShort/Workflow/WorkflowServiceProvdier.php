@@ -10,7 +10,13 @@ class UrlShortServiceProvider implements ServiceProviderInterface
     
     public function register(Application $app)
     {
-        //$app['urlshort.workflow.machine']    
+        $app['urlshort.workflow.process.approval']    = $this->share(function($app){
+           return new ApprovalProcess(); 
+        });
+        
+        $app['urlshort.workflow.process.billing']    = $this->share(function($app){
+           return new BillingProcess();
+        });
         
     }
     

@@ -6,7 +6,7 @@ use Doctrine\DBAL\Connection,
     Migration\Components\Migration\EntityInterface;
 use Doctrine\DBAL\Schema\Schema as SchemaBuilder;
 
-class approvla_status_codes_2015_04_04_03_28_58 implements EntityInterface
+class approval_status_codes_2015_04_04_03_28_58 implements EntityInterface
 {
 
     protected function getMeta(SchemaBuilder $builder)

@@ -1,5 +1,5 @@
 <?php
-namespace UrlShort\Test;
+namespace UrlShort\Test\Base;
 
 use \PHPUnit_Extensions_Database_Operation_IDatabaseOperation;
 use \PHPUnit_Extensions_Database_DB_IDatabaseConnection;

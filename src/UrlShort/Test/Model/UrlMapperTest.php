@@ -8,20 +8,7 @@ use UrlShort\Test\TestsWithFixture;
 class ModelUrlMapperTest extends TestsWithFixture
 {
     
-    /**
-    * Creates the application.
-    *
-    * @return HttpKernel
-    */
-    public function createApplication()
-    {
-        $app = require __DIR__ .'/../../../app.php';
-        
-        $app->boot();
-        
-        return $app;
-    }
-    
+   
     
     
     public function testMapperRemove()

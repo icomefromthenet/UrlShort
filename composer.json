@@ -15,7 +15,9 @@
 
     "require-dev" : {
         "symfony/dom-crawler"       : "dev-master",
-        "symfony/browser-kit"       : "dev-master"
+        "symfony/browser-kit"       : "dev-master",
+        "phpunit/phpunit"           : "4.6.*",
+        "phpunit/dbunit"            : ">=1.2"
     },
     
     "require" : {

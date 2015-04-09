@@ -11,7 +11,7 @@ class approval_activity_2015_04_04_04_14_21 implements EntityInterface
 
     protected function getMeta(SchemaBuilder $builder)
     {
-        $table = $builder->createTable('approval_activity'); 
+        $table = $builder->createTable('activity_log'); 
         
         # setup primay key
         
@@ -19,39 +19,32 @@ class approval_activity_2015_04_04_04_14_21 implements EntityInterface
         
         $table->setPrimaryKey(array("activity_id"));
         
-        $table->addColumn('status','string',array('length'=> 4,'notnull' => true));
-        $table->addColumn('sub_status','string',array('length'=> 4,'notnull' => false));
-        $table->addColumn('comment','string',array('length'=> 500,'notnull' => true));
+        $table->addColumn('status', 'string', array('length'=> 10, 'notnull' => true));
+        $table->addColumn('comment','string', array('length'=> 500, 'notnull' => true));
         $table->addColumn('change_dte','datetime',array('notnull' => true));
         $table->addColumn('user_id','integer',array("unsigned" => true,'notnull' => true));
         $table->addColumn('url_id','integer',array("unsigned" => true,'notnull' => true));
         
-        $table->addForeignKeyConstraint('url_short_storage', 
+        $table->addForeignKeyConstraint('url_storage', 
             array("url_id"), 
             array("url_id"), 
             array("onDelete" => "CASCADE"),
-            'approval_activity_fk1'
+            'activity_log_fk1'
         );
         
         $table->addForeignKeyConstraint('status_codes', 
             array("status"), 
             array("status_code"), 
             array("onDelete" => "CASCADE"),
-            'approval_activity_fk2'
+            'activity_log_fk2'
         );
         
-        $table->addForeignKeyConstraint('status_codes', 
-            array("sub_status"), 
-            array("status_code"), 
-            array("onDelete" => "CASCADE"),
-            'approval_activity_fk3'
-        );
         
-         $table->addForeignKeyConstraint('users', 
+        $table->addForeignKeyConstraint('users', 
             array("user_id"), 
             array("id"), 
             array("onDelete" => "CASCADE"),
-            'approval_activity_fk4'
+            'activity_log_fk3'
         );
     }
 

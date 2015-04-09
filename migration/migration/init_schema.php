@@ -13,7 +13,7 @@ class init_schema implements EntityInterface
     public function up(Connection $db, Schema $sc)
     {
         $builder = new SchemaBuilder();
-        $table   = $builder->createTable('url_short_storage');
+        $table   = $builder->createTable('url_storage');
         
         $table->addColumn('url_id','integer',array("unsigned" => true,'autoincrement' => true));
         $table->setPrimaryKey(array("url_id"));
@@ -34,14 +34,9 @@ class init_schema implements EntityInterface
         # Tag Relation (QuickTag)
         $table->addColumn('tag_id','integer', array("unsigned" => true));
         
-        # Review bool
-        $table->addColumn('review_passed','boolean', array('notnull'=> false));
-        
-        # Review failure msg
-        $table->addColumn('review_failure_msg','string', array('notnull'=> false));
-        
-        # Review Date
-        $table->addColumn('review_date','datetime', array('notnull'=> false));
+       
+        # last activity link
+        $table->addColumn('last_activity_id', 'integer', array('unsigned'=>true));
         
         $queries = $builder->toSql($db->getDatabasePlatform());
         
