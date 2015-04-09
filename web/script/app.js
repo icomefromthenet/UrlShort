@@ -13642,13 +13642,14 @@ extend(urlshort,'queue.common');
   /**
    * Proxy Store to cache records using page windows
    * 
-   * Users setup a query called onRefresh with query params
-   * After they can page forward with onPageForwards and back onPageBackwards
-   * the cache is used if the page is already loaded.
+   * Users setup a query by calling onRefresh with query params
+   * and after that a page forward with onPageForwards and a page back with onPageBackwards
    * 
-   * Cant load page x unless all pages up to x are already loaded
-   * if the query params other than limit or offset change onRefresh must
-   * be called to clear out cache
+   * Cache is used if the page is already loaded.
+   * 
+   * Note: Cant load page x unless all pages up to x are already loaded
+   * also if the query params other than limit or offset change onRefresh must
+   * be called to clear out cache.
    */ 
   urlshort.queue.common.PageDataStore = function() {
       
@@ -13758,10 +13759,12 @@ extend(urlshort,'queue.common');
       
       
       /**
-       * Will initilise the store
+       * Will init the store
        * 
+       * @param object                           requestConfig  The config options e.g pageLimit,method
+       * @param urlshort.queue.common.Request    oRequest       The common API Request classs
        */ 
-      this.init = function(requestConfig,oRequest){
+      this.init = function(requestConfig,oRequest) {
           this.requestAPI(oRequest);
           this.recordCollection([]);
           this.requestConfig(requestConfig)
@@ -13831,6 +13834,7 @@ extend(urlshort,'queue.common');
        * Refresh the records using a new set
        * of query parameters
        * 
+       * @param object requestParams (data attribute to inject into m.request)
        */ 
       this.onRefresh = function(requestParams) {
           this.recordCollection([]);
@@ -14059,7 +14063,7 @@ extend(urlshort,'queue.activity');
      * @param string ISO8601 date duration
      * @return string the date duration
      */ 
-    vm.selectedDateRage = function(rangeName) {
+    vm.selectedDateRange = function(rangeName) {
         if(typeof rangeName !== 'undefined') {
             var dur;
             switch(rangeName) {
@@ -14121,3 +14125,41 @@ extend(urlshort,'queue.activity');
      
      
 }(window, document, m, $, moment);
+!function(window, document, m, $, moment) { 
+  
+  var activity = urlshort.queue.activity;
+  var common   = urlshort.queue.common;
+  
+  activity.view = function(ctrl) {
+    return m("h1",[]);
+  };
+  
+  
+}(window, document, m, $, moment);  
+  
+!function(window, document, m, $, moment) { 
+  
+  var activity = urlshort.queue.activity;
+  var common   = urlshort.queue.common;
+  
+  activity.controller = function() {
+      
+      // Init Page Store
+      var pageStore = new common.PageDataStore();
+      pageStore.init({
+           'method'     : 'GET'
+          ,'pageLimit'  : 500
+      },activity.ActivityRequest);
+      
+      // Init View Model
+      activity.vm.init({
+          'store'        : pageStore
+         ,'listedStates' : [1,2,3,4,5]
+         ,'dateRange'    : 'P7D'
+      });
+      
+  };
+  
+  
+}(window, document, m, $, moment);  
+  

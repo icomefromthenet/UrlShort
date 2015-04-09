@@ -3,8 +3,10 @@
 {% block sub_title 'Queue - ' %}
 {% block body %}
 <h2 class="content-subhead">Queue Control</h2>
-
-
+<div id="inner-container">
+    
+    
+</div>
 {% endblock body %}
 
 {% block pagescript %}
@@ -15,27 +17,7 @@
 //set the api key
 urlshort.queue.activity.ActivityRequest.apiKey('example key');
 
-var oPagedStore = new urlshort.queue.common.PageDataStore();
-
-oPagedStore.init({method:'GET','pageLimit':110}
-                ,urlshort.queue.activity.ActivityRequest);
-
-oPagedStore.onRefresh({
-    
-}).then(function(data){
-
-    oPagedStore.onPageForwards().then(function(data){
-        oPagedStore.onPageBackwards().then(function(data){
-            oPagedStore.onPageForwards().then(function(data){
-                //console.log(data)
-            
-            });
-            
-        });
-        
-    })
-});
-
+m.module(document.getElementById('inner-container'), urlshort.queue.activity);
 
 
 

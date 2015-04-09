@@ -56,6 +56,8 @@ extend(urlshort,'queue.activity');
         ,'order'  : 'order'
         ,'before' : 'before'
         ,'after'  : 'after'
+        ,'job_id' : 'jobId'
+        'worker_id' : 'workerId'
     });
     
     
@@ -161,8 +163,7 @@ extend(urlshort,'queue.activity');
         vm.visisbleStates(opt.listedStates);
         vm.selectedDateRange(opt.dateRange);
         
-        
-        return vm.listActivities();
+        return vm.onRefresh();
     }
      
     // Properties for filtersing
@@ -207,7 +208,7 @@ extend(urlshort,'queue.activity');
      * @param string ISO8601 date duration
      * @return string the date duration
      */ 
-    vm.selectedDateRage = function(rangeName) {
+    vm.selectedDateRange = function(rangeName) {
         if(typeof rangeName !== 'undefined') {
             var dur;
             switch(rangeName) {
@@ -256,7 +257,21 @@ extend(urlshort,'queue.activity');
      * 
      */ 
     vm.onRefresh = function() {
+        var config = [];
+        // build config
+        
+        // calculate date range
+        config.before
+        config.after
+        config.workerId
+        config.jobId   
+         ,'before' : 'before'
+        ,'after'  : 'after'
+        
+        
+        
         vm.recordStore([]);
+        vm.PageDataStore().onRefresh(config);
         
         
     }

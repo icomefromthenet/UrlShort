@@ -217,13 +217,14 @@ extend(urlshort,'queue.common');
   /**
    * Proxy Store to cache records using page windows
    * 
-   * Users setup a query called onRefresh with query params
-   * After they can page forward with onPageForwards and back onPageBackwards
-   * the cache is used if the page is already loaded.
+   * Users setup a query by calling onRefresh with query params
+   * and after that a page forward with onPageForwards and a page back with onPageBackwards
    * 
-   * Cant load page x unless all pages up to x are already loaded
-   * if the query params other than limit or offset change onRefresh must
-   * be called to clear out cache
+   * Cache is used if the page is already loaded.
+   * 
+   * Note: Cant load page x unless all pages up to x are already loaded
+   * also if the query params other than limit or offset change onRefresh must
+   * be called to clear out cache.
    */ 
   urlshort.queue.common.PageDataStore = function() {
       
@@ -333,10 +334,12 @@ extend(urlshort,'queue.common');
       
       
       /**
-       * Will initilise the store
+       * Will init the store
        * 
+       * @param object                           requestConfig  The config options e.g pageLimit,method
+       * @param urlshort.queue.common.Request    oRequest       The common API Request classs
        */ 
-      this.init = function(requestConfig,oRequest){
+      this.init = function(requestConfig,oRequest) {
           this.requestAPI(oRequest);
           this.recordCollection([]);
           this.requestConfig(requestConfig)
@@ -406,6 +409,7 @@ extend(urlshort,'queue.common');
        * Refresh the records using a new set
        * of query parameters
        * 
+       * @param object requestParams (data attribute to inject into m.request)
        */ 
       this.onRefresh = function(requestParams) {
           this.recordCollection([]);

@@ -79,6 +79,32 @@ class UrlShortServiceProvider implements ServiceProviderInterface
             
         });
         
+        
+        $app['urlshort.approvalstatus.meta']  = $app->share(function() use ($app){
+            
+            $table = new \DBALGateway\Metadata\Table('status_codes');
+        
+            # setup primay key
+            $table->addColumn('status_code','string',array('length'=> 4,'notnull' => true));
+            $table->setPrimaryKey(array("url_id"));
+            
+            # setup unique short code index
+            $table->addColumn('status_parent_code','string',array('length'=> 4,'notnull' => true));
+            $table->addColumn('status_description','string',array('length'=> 100,'notnull' => false));
+           
+        });
+        
+        $app['urlshort.apporvalstatus.gateway'] = $app->share(function() use ($app){
+            $doctrine  = $app['db'];
+            $event     = $app['dispatcher'];
+            $meta      = $app['urlshort.meta'];
+            $builder   = new \UrlShort\Model\ApprovalStatusBuilder();
+            $tableName = 'status_codes';
+            
+            return new \UrlShort\Model\ApprovalStatusGateway($tableName,$doctrine,$event,$meta,null,$builder);
+           
+        });
+        
     }
 
     public function boot(Application $app)

@@ -25,6 +25,8 @@ var projectConfig   = {
          ,'util.js'
          ,'urlshort.queue.common.model.js'
          ,'urlshort.queue.activity.model.js'
+         ,'urlshort.queue.activity.view.js'
+         ,'urlshort.queue.activity.controller.js'
          ]
      }
      ,css : {
